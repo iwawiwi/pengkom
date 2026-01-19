@@ -6,202 +6,157 @@
     <title>Materi Ajar Pengenalan Komputasi - ITERA</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            line-height: 1.4;
+            font-size: 14px;
+            background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
         }
         h1 {
-            color: #2c3e50;
             text-align: center;
-            margin-bottom: 10px;
+            color: #333;
+            margin: 5px 0;
         }
         .subtitle {
             text-align: center;
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 12px;
         }
-        .section {
-            margin-bottom: 40px;
+        .logos {
+            text-align: center;
+            margin-bottom: 10px;
         }
-        .section h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .logos img {
+            height: 50px;
+            margin: 0 10px;
+        }
+        h2 {
+            color: #444;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            margin: 15px 0 10px 0;
+            font-size: 16px;
         }
         .meeting-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 8px;
+            list-style-type: none;
+            padding: 0;
         }
-        .meeting-item {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            transition: transform 0.2s, box-shadow 0.2s;
+        li {
+            margin: 0;
+            padding: 8px;
+            background: #ffffff;
+            border-left: 3px solid #007bff;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-        .meeting-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .meeting-item a {
+        a {
             text-decoration: none;
-            color: #2c3e50;
+            color: #007bff;
             font-weight: bold;
-            display: block;
+            font-size: 13px;
         }
-        .meeting-item .topic {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 5px;
+        a:hover {
+            text-decoration: underline;
         }
-        .additional-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+        .topic {
+            color: #666;
+            font-size: 11px;
+            margin-top: 3px;
         }
-        .link-card {
-            background: #3498db;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
+        .additional {
             text-align: center;
-            min-width: 200px;
-            transition: background-color 0.2s;
-        }
-        .link-card:hover {
-            background: #2980b9;
-        }
-        .link-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+            margin-top: 15px;
         }
         .footer {
             text-align: center;
-            margin-top: 40px;
-            color: #7f8c8d;
-            font-size: 0.9em;
+            margin-top: 20px;
+            color: #666;
+            font-size: 11px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Materi Ajar Pengenalan Komputasi</h1>
-        <p class="subtitle">Institut Teknologi Sumatera (ITERA) | Kode Matakuliah: WI25-00003</p>
-        
-        <div class="section">
-            <h2>Slide Presentasi per Pertemuan</h2>
-            <div class="meeting-list">
-                <div class="meeting-item">
-                    <a href="pertemuan01.html">Pertemuan 1: Computational Thinking</a>
-                    <div class="topic">Pengantar, 4 Pilar CT, Python Intro</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan02.html">Pertemuan 2: Variabel dan Tipe Data</a>
-                    <div class="topic">Menyimpan Informasi, Tipe Data Dasar</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan03.html">Pertemuan 3: Logika Percabangan (If/Else)</a>
-                    <div class="topic">Decision Making, Comparison Operators</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan04.html">Pertemuan 4: Logika Lanjutan (Elif, AND/OR/NOT)</a>
-                    <div class="topic">Multiple Conditions, Logic Operators</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan05.html">Pertemuan 5: Perulangan Dasar (For Loops)</a>
-                    <div class="topic">Looping, Ranges, Automation</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan06.html">Pertemuan 6: Bekerja dengan Data Majemuk (Lists)</a>
-                    <div class="topic">Lists, Indexing, Data Structures</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan07.html">Pertemuan 7: Review dan Kuis Tengah Semester</a>
-                    <div class="topic">Review Modul 1-2, Preparation for UTS</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan08.html">Pertemuan 8: Ujian Tengah Semester (UTS)</a>
-                    <div class="topic">Mid-semester Exam</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan09.html">Pertemuan 9: Fungsi (Def Functions)</a>
-                    <div class="topic">Functions, Reusability, Parameters</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan10.html">Pertemuan 10: Manipulasi Teks (Strings)</a>
-                    <div class="topic">String Operations, Text Processing</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan11.html">Pertemuan 11: Menggunakan Library (Modul Eksternal)</a>
-                    <div class="topic">Imports, External Modules, Libraries</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan12.html">Pertemuan 12: Pengenalan Visualisasi Data (Matplotlib)</a>
-                    <div class="topic">Data Visualization, Charts, Graphs</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan13.html">Pertemuan 13: Bekerja dengan File (Input/Output)</a>
-                    <div class="topic">File Handling, Read/Write Operations</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan14.html">Pertemuan 14: Strategi Pemecahan Masalah (Desain Algoritma)</a>
-                    <div class="topic">Problem Solving, Algorithm Design</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan15.html">Pertemuan 15: Kuis Akhir dan Finalisasi Proyek</a>
-                    <div class="topic">Final Quiz, Project Finalization</div>
-                </div>
-                <div class="meeting-item">
-                    <a href="pertemuan16.html">Pertemuan 16: Presentasi Proyek Akhir (UAS)</a>
-                    <div class="topic">Final Project Presentation</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Materi Tambahan</h2>
-            <div class="additional-links">
-                <div class="link-card">
-                    <a href="Topik%20Materi%20Pengenalan%20Komputasi.pdf" target="_blank">
-                        📄 Syllabus Lengkap (PDF)
-                    </a>
-                </div>
-                <div class="link-card">
-                    <a href="README.md">
-                        📖 Dokumentasi Repositori
-                    </a>
-                </div>
-                <div class="link-card">
-                    <a href="template.html">
-                        🛠️ Template Slide Baru
-                    </a>
-                </div>
-                <div class="link-card">
-                    <a href="examples/">
-                        🎯 Contoh Presentasi
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2026 Institut Teknologi Sumatera (ITERA) | Materi Ajar Pengenalan Komputasi</p>
-        </div>
+    <h1>Materi Ajar Pengenalan Komputasi</h1>
+    <div class="logos">
+        <img src="logo/logo_itera.png" alt="Logo ITERA">
+        <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+    </div>
+    <p class="subtitle">Institut Teknologi Sumatera (ITERA) | Kode Matakuliah: WI25-00003</p>
+    
+    <h2>Slide Presentasi per Pertemuan</h2>
+    <ul class="meeting-list">
+        <li>
+            <a href="pertemuan01.html">🧠 Pertemuan 1: Computational Thinking</a>
+            <div class="topic">Pengantar, 4 Pilar CT, Python Intro</div>
+        </li>
+        <li>
+            <a href="pertemuan02.html">📦 Pertemuan 2: Variabel dan Tipe Data</a>
+            <div class="topic">Menyimpan Informasi, Tipe Data Dasar</div>
+        </li>
+        <li>
+            <a href="pertemuan03.html">🔀 Pertemuan 3: Logika Percabangan (If/Else)</a>
+            <div class="topic">Decision Making, Comparison Operators</div>
+        </li>
+        <li>
+            <a href="pertemuan04.html">⚖️ Pertemuan 4: Logika Lanjutan (Elif, AND/OR/NOT)</a>
+            <div class="topic">Multiple Conditions, Logic Operators</div>
+        </li>
+        <li>
+            <a href="pertemuan05.html">🔄 Pertemuan 5: Perulangan Dasar (For Loops)</a>
+            <div class="topic">Looping, Ranges, Automation</div>
+        </li>
+        <li>
+            <a href="pertemuan06.html">📋 Pertemuan 6: Bekerja dengan Data Majemuk (Lists)</a>
+            <div class="topic">Lists, Indexing, Data Structures</div>
+        </li>
+        <li>
+            <a href="pertemuan07.html">📝 Pertemuan 7: Review dan Kuis Tengah Semester</a>
+            <div class="topic">Review Modul 1-2, Preparation for UTS</div>
+        </li>
+        <li>
+            <a href="pertemuan08.html">📊 Pertemuan 8: Ujian Tengah Semester (UTS)</a>
+            <div class="topic">Mid-semester Exam</div>
+        </li>
+        <li>
+            <a href="pertemuan09.html">⚙️ Pertemuan 9: Fungsi (Def Functions)</a>
+            <div class="topic">Functions, Reusability, Parameters</div>
+        </li>
+        <li>
+            <a href="pertemuan10.html">📝 Pertemuan 10: Manipulasi Teks (Strings)</a>
+            <div class="topic">String Operations, Text Processing</div>
+        </li>
+        <li>
+            <a href="pertemuan11.html">📚 Pertemuan 11: Menggunakan Library (Modul Eksternal)</a>
+            <div class="topic">Imports, External Modules, Libraries</div>
+        </li>
+        <li>
+            <a href="pertemuan12.html">📈 Pertemuan 12: Pengenalan Visualisasi Data (Matplotlib)</a>
+            <div class="topic">Data Visualization, Charts, Graphs</div>
+        </li>
+        <li>
+            <a href="pertemuan13.html">💾 Pertemuan 13: Bekerja dengan File (Input/Output)</a>
+            <div class="topic">File Handling, Read/Write Operations</div>
+        </li>
+        <li>
+            <a href="pertemuan14.html">🧩 Pertemuan 14: Strategi Pemecahan Masalah (Desain Algoritma)</a>
+            <div class="topic">Problem Solving, Algorithm Design</div>
+        </li>
+        <li>
+            <a href="pertemuan15.html">🎯 Pertemuan 15: Kuis Akhir dan Finalisasi Proyek</a>
+            <div class="topic">Final Quiz, Project Finalization</div>
+        </li>
+        <li>
+            <a href="pertemuan16.html">🎉 Pertemuan 16: Presentasi Proyek Akhir (UAS)</a>
+            <div class="topic">Final Project Presentation</div>
+        </li>
+    </ul>
+    
+    <div class="footer">
+        <p>&copy; 2026 Institut Teknologi Sumatera (ITERA) | Materi Ajar Pengenalan Komputasi</p>
     </div>
 </body>
 </html>
