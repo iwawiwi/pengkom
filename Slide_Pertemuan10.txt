@@ -1,0 +1,150 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 10: Manipulasi String
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 10:                              ║
+║           Manipulasi String                          ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Konsep String                                    ║
+║  2. String Methods                                   ║
+║  3. String Slicing                                   ║
+║  4. String Formatting                               ║
+║  5. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: STRING METHODS
+```
+╔══════════════════════════════════════════════════════╗
+║               STRING METHODS                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  upper(), lower(), title(), capitalize()             ║
+║  strip(), lstrip(), rstrip()                         ║
+║  replace(), find(), count()                          ║
+║  split(), join()                                     ║
+║  isalpha(), isdigit(), isalnum()                     ║
+║  startswith(), endswith()                            ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: CONTOH STRING METHODS
+```
+╔══════════════════════════════════════════════════════╗
+║            CONTOH STRING METHODS                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  s = "  Hello, Python!  "                            ║
+║                                                      ║
+║  s.upper()        # "  HELLO, PYTHON!  "             ║
+║  s.strip()        # "Hello, Python!"                  ║
+║  s.replace("o", "x")  # "Hellx, Pythxn!"             ║
+║  s.split(",")     # ["  Hello", " Python!  "]        ║
+║  s.count("o")     # 2                                 ║
+║  s.find("Python") # 9                                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: STRING FORMATTING
+```
+╔══════════════════════════════════════════════════════╗
+║             STRING FORMATTING                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # f-string (Python 3.6+)                           ║
+║  nama = "Budi"                                       ║
+║  print(f"Halo, {nama}!")                             ║
+║                                                      ║
+║  # format() method                                   ║
+║  print("Halo, {}!".format(nama))                    ║
+║                                                      ║
+║  # Formatting angka                                  ║
+║  harga = 5000000                                     ║
+║  print(f"Rp {harga:,}")  # Rp 5,000,000              ║
+║  print(f"{3.14159:.2f}")  # 3.14                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: LATIHAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  LATIHAN                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Email Validation                         ║
+║  ▸ Cek apakah email valid                           ║
+║                                                      ║
+║  LATIHAN 2: Password Generator                       ║
+║  ▸ Generate password acak                           ║
+║                                                      ║
+║  LATIHAN 3: Text Analyzer                            ║
+║  ▸ Hitung vokal, konsonan, kata                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ String methods untuk manipulasi                  ║
+║                                                    ║
+║  ✓ Slicing untuk mengambil sebagian                 ║
+║                                                    ║
+║  ✓ f-string untuk formatting                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Menggunakan Library                          ║
+║  ▸ Math library                                     ║
+║  ▸ Random library                                   ║
+║  ▸ Pandas introduction                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

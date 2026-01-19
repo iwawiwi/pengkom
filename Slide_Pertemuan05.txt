@@ -1,0 +1,449 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 5: Perulangan (Loops)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 5:                               ║
+║           Perulangan (Loops)                         ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review Pertemuan 4                               ║
+║  2. Konsep Perulangan                                ║
+║  3. for loop dengan range()                         ║
+║  4. while loop                                      ║
+║  5. break dan continue                              ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Menjelaskan konsep perulangan                    ║
+║                                                    ║
+║  ✓ Menulis struktur for loop                        ║
+║                                                    ║
+║  ✓ Menulis struktur while loop                      ║
+║                                                    ║
+║  ✓ Menggunakan break dan continue                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: APA ITU PERULANGAN?
+```
+╔══════════════════════════════════════════════════════╗
+║            APA ITU PERULANGAN?                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Perulangan (loop) adalah struktur kontrol          ║
+║  yang memungkinkan blok kode dieksekusi             ║
+║  berulang kali.                                      ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  TANPA LOOP:                                         ║
+║  print("Hello")                                      ║
+║  print("Hello")  → DITULIS 5x                       ║
+║  print("Hello")                                      ║
+║  print("Hello")                                      ║
+║  print("Hello")                                      ║
+║                                                      ║
+║  DENGAN LOOP:                                        ║
+║  for i in range(5):                                 ║
+║      print("Hello")  → Otomatis 5x                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: for LOOP
+```
+╔══════════════════════════════════════════════════════╗
+║                    for LOOP                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  FOR item IN iterable:                               ║
+║      # Kode yang diulang                            ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  for i in range(5):                                 ║
+║      print(i)                                       ║
+║                                                      ║
+║  Output:                                             ║
+║  0                                                   ║
+║  1                                                   ║
+║  2                                                   ║
+║  3                                                   ║
+║  4                                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: range()
+```
+╔══════════════════════════════════════════════════════╗
+║                   range()                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  range(n)          → 0, 1, 2, ..., n-1              ║
+║  range(start, end) → start, ..., end-1              ║
+║  range(start, end, step) → dengan jarak step        ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  range(5)         → [0, 1, 2, 3, 4]                 ║
+║  range(2, 6)      → [2, 3, 4, 5]                    ║
+║  range(0, 10, 2)  → [0, 2, 4, 6, 8]                 ║
+║  range(5, 0, -1)  → [5, 4, 3, 2, 1]                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: CONTOH for LOOP
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH for LOOP                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Cetak 1-10                                       ║
+║  for i in range(1, 11):                             ║
+║      print(i)                                       ║
+║                                                      ║
+║  # Bilangan genap 0-20                               ║
+║  for i in range(0, 21, 2):                          ║
+║      print(i)                                       ║
+║                                                      ║
+║  # Hitung mundur 10-1                               ║
+║  for i in range(10, 0, -1):                         ║
+║      print(i)                                       ║
+║                                                      ║
+║  # Total 1-100                                      ║
+║  total = 0                                          ║
+║  for i in range(1, 101):                            ║
+║      total += i                                     ║
+║  print("Total:", total)                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: while LOOP
+```
+╔══════════════════════════════════════════════════════╗
+║                   while LOOP                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  WHILE kondisi:                                      ║
+║      # Kode yang diulang selama kondisi TRUE        ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  i = 0                                               ║
+║  while i < 5:                                        ║
+║      print(i)                                       ║
+║      i += 1  # PENTING! Update kondisi              ║
+║                                                      ║
+║  Output:                                             ║
+║  0                                                   ║
+║  1                                                   ║
+║  2                                                   ║
+║  3                                                   ║
+║  4                                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: PERINGATAN - INFINITE LOOP
+```
+╔══════════════════════════════════════════════════════╗
+║           PERINGATAN - INFINITE LOOP                 ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  JANGAN LUPA MENGUPDATE KONDISI!                     ║
+║                                                      ║
+║  BENAR:                                              ║
+║  i = 0                                               ║
+║  while i < 5:                                        ║
+║      print(i)                                        ║
+║      i = i + 1                                       ║
+║                                                      ║
+║  SALAH (Infinite Loop!):                             ║
+║  i = 0                                               ║
+║  while i < 5:                                        ║
+║      print(i)                                        ║
+║      # i tidak pernah diupdate → loop tak terbatas  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: break dan continue
+```
+╔══════════════════════════════════════════════════════╗
+║              break dan continue                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  break: Keluar dari loop                            ║
+║  continue: Skip ke iterasi berikutnya                ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  # break                                            ║
+║  for i in range(10):                                 ║
+║      if i == 5:                                     ║
+║          break  # Keluar saat i == 5                ║
+║      print(i)                                       ║
+║  # Output: 0, 1, 2, 3, 4                            ║
+║                                                      ║
+║  # continue                                         ║
+║  for i in range(5):                                 ║
+║      if i == 2:                                     ║
+║          continue  # Skip i == 2                    ║
+║      print(i)                                       ║
+║  # Output: 0, 1, 3, 4                               ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: CONTOH KOMBINASI
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH KOMBINASI                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Kalkulator interaktif                             ║
+║                                                      ║
+║  while True:                                         ║
+║      operasi = input("Operasi (+/-/*//, q=quit): ") ║
+║      if operasi == 'q':                             ║
+║          break  # Keluar loop                       ║
+║      a = float(input("Angka 1: "))                  ║
+║      b = float(input("Angka 2: "))                  ║
+║      if operasi == '+':                             ║
+║          print(a + b)                                ║
+║      elif operasi == '-':                            ║
+║          print(a - b)                                ║
+║      # ... operasi lainnya                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Faktorial                                ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: n                                            ║
+║  Output: n! = 1*2*3*...*n                           ║
+║  Contoh: 5! = 120                                    ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 2: Bilangan Prima                           ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: n                                            ║
+║  Output: "Prima" atau "Bukan Prima"                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 3: Pola Bintang                             ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: 5                                           ║
+║  Output:                                            ║
+║  *                                                   ║
+║  **                                                  ║
+║  ***                                                 ║
+║  ****                                                ║
+║  *****                                               ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 4: Deret Fibonacci                         ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: n                                            ║
+║  Output: 0, 1, 1, 2, 3, 5, ... (n bilangan)         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ Perulangan                                        ║
+║    - for: untuk jumlah yang diketahui               ║
+║    - while: untuk kondisi tertentu                  ║
+║                                                      ║
+║  ✓ range()                                           ║
+║    - range(n), range(start, end), range(start, end, step)║
+║                                                      ║
+║  ✓ Loop Control                                      ║
+║    - break: keluar dari loop                        ║
+║    - continue: skip iterasi                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 5:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Hitung Rata-rata                                 ║
+║     - Input: n buah angka                           ║
+║     - Output: rata-rata                             ║
+║                                                      ║
+║  2. Tabel Perkalian                                  ║
+║     - Input: n                                      ║
+║     - Output: tabel 1-n                             ║
+║                                                      ║
+║  3. Game Tebak Angka dengan Batas Percobaan         ║
+║     - Komputer pilih 1-100                          ║
+║     - Maks 5 percobaan                              ║
+║                                                      ║
+║  Simpan: Tugas5_NIM_Nama.py                          ║
+║  Deadline: Sebelum Pertemuan 6                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: LIST (DAFTAR)                                ║
+║                                                      ║
+║  Yang akan dipelajari:                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ Membuat list                                      ║
+║  ▸ Mengakses elemen list                            ║
+║  ▸ Memodifikasi list                                ║
+║  ▸ Method dan fungsi list                           ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Baca materi list di W3Schools                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 18: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

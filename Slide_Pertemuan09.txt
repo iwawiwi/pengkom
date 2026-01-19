@@ -1,0 +1,270 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 9: Fungsi/Methods
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 9:                               ║
+║           Fungsi/Methods                             ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review UTS                                       ║
+║  2. Konsep Fungsi                                    ║
+║  3. Mendefinisikan Fungsi                           ║
+║  4. Parameter dan Return Value                      ║
+║  5. Scope Variabel                                   ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Menjelaskan konsep fungsi dalam pemrograman      ║
+║                                                    ║
+║  ✓ Menulis fungsi dengan parameter dan return       ║
+║                                                    ║
+║  ✓ Memahami scope variabel (local/global)          ║
+║                                                    ║
+║  ✓ Menerapkan fungsi untuk memecah masalah besar   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: APA ITU FUNGSI?
+```
+╔══════════════════════════════════════════════════════╗
+║              APA ITU FUNGSI?                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Fungsi adalah blok kode yang dapat digunakan       ║
+║  kembali (reusable) untuk melakukan tugas            ║
+║  tertentu.                                           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Analogi: Mesin Penjual Otomatis                    ║
+║                                                      ║
+║  Input (uang+tombol)                                 ║
+║         ↓                                           ║
+║    ┌──────────────┐                                 ║
+║    │   PROSES     │  ← Fungsi                       ║
+║    │ (otomatis)   │                                 ║
+║    └──────────────┘                                 ║
+║         ↓                                           ║
+║  Output (minuman)                                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: MENDEFINISIKAN FUNGSI
+```
+╔══════════════════════════════════════════════════════╗
+║           MENDEFINISIKAN FUNGSI                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  def nama_fungsi(parameter):                         ║
+║      # Blok kode                                     ║
+║      return nilai  # opsional                        ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  def sapa():                                         ║
+║      print("Halo, Selamat Pagi!")                   ║
+║                                                      ║
+║  def sapa_nama(nama):                                ║
+║      print(f"Halo, {nama}!")                         ║
+║                                                      ║
+║  def tambah(a, b):                                   ║
+║      return a + b                                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: MEMANGGIL FUNGSI
+```
+╔══════════════════════════════════════════════════════╗
+║             MEMANGGIL FUNGSI                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  def sapa():                                         ║
+║      print("Halo!")                                  ║
+║                                                      ║
+║  def tambah(a, b):                                   ║
+║      return a + b                                    ║
+║                                                      ║
+║  # Memanggil fungsi                                  ║
+║  sapa()                # Output: Halo!              ║
+║                                                      ║
+║  hasil = tambah(5, 3)                                ║
+║  print(hasil)          # Output: 8                  ║
+║                                                      ║
+║  # Dengan keyword argument                          ║
+║  print(tambah(b=5, a=3))  # Output: 8               ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: PARAMETER DAN RETURN
+```
+╔══════════════════════════════════════════════════════╗
+║           PARAMETER DAN RETURN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Tanpa parameter, tanpa return                     ║
+║  def halo():                                         ║
+║      print("Halo")                                   ║
+║                                                      ║
+║  # Dengan parameter, tanpa return                    ║
+║  def kuadrat(x):                                     ║
+║      print(x * x)                                    ║
+║                                                      ║
+║  # Dengan parameter dan return                       ║
+║  def pangkat(x, y):                                  ║
+║      return x ** y                                   ║
+║                                                      ║
+║  # Default parameter                                 ║
+║  def greet(nama, pesan="Halo"):                      ║
+║      print(f"{nama}, {pesan}!")                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: SCOPE VARIABEL
+```
+╔══════════════════════════════════════════════════════╗
+║              SCOPE VARIABEL                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Global scope                                      ║
+║  x = 10                                              ║
+║                                                      ║
+║  def fungsi():                                       ║
+║      # Local scope                                   ║
+║      y = 5                                           ║
+║      print(f"Local x: {x}")  # Bisa akses global   ║
+║      print(f"Local y: {y}")                          ║
+║                                                      ║
+║  fungsi()                                            ║
+║  # print(y)  # ERROR! y adalah local variable       ║
+║                                                      ║
+║  # Mengubah variabel global                          ║
+║  def ubah_global():                                  ║
+║      global x                                        ║
+║      x = 20                                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: LATIHAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  LATIHAN                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Fungsi Geometri                          ║
+║  ─────────────────────────────────────────────────   ║
+║  Buat fungsi untuk menghitung:                       ║
+║  - Luas persegi                                      ║
+║  - Luas persegi panjang                              ║
+║  - Luas segitiga                                     ║
+║  - Luas lingkaran                                    ║
+║                                                      ║
+║  LATIHAN 2: Fungsi Rekursif                         ║
+║  ─────────────────────────────────────────────────   ║
+║  Buat fungsi faktorial dengan rekursi               ║
+║  5! = 5*4*3*2*1 = 120                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Fungsi adalah blok kode reusable                  ║
+║                                                    ║
+║  ✓ def untuk mendefinisikan                          ║
+║                                                    ║
+║  ✓ return untuk mengembalikan nilai                 ║
+║                                                    ║
+║  ✓ Parameter: input untuk fungsi                    ║
+║                                                    ║
+║  ✓ Scope: local vs global                           ║
+║                                                    ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 9:                                  ║
+║  ▸ Fungsi Konversi Suhu (C ↔ F ↔ K)                 ║
+║  ▸ Fungsi Kalkulator BMI                            ║
+║  ▸ Fungsi Game (tebak angka)                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Manipulasi String                            ║
+║  ▸ String methods                                   ║
+║  ▸ String slicing dan indexing                      ║
+║  ▸ String formatting                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

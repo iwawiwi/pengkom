@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pengenalan Komputasi - Pertemuan 1</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+        <div class="slides">
+            <!-- SLIDE 1: JUDUL -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 1: Computational Thinking</h3>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: OUTLINE -->
+            <section>
+                <h3>Outline Materi</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Konsep Dasar
+                        </h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Pengantar Mata Kuliah</li>
+                            <li><strong>Computational Thinking</strong></li>
+                            <li>4 Pilar CT</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Praktek</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Pengenalan Python</li>
+                            <li>Environment Setup (Colab)</li>
+                            <li><strong>Hands-on Practice</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: TUJUAN PEMBELAJARAN -->
+            <section>
+                <h3>Tujuan Pembelajaran</h3>
+                <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
+                    <p>Setelah pertemuan ini, Anda diharapkan mampu:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="card" style="padding: 15px;">✅ Mendefinisikan CT</div>
+                        <div class="card" style="padding: 15px;">✅ Menjelaskan 4 Pilar CT</div>
+                        <div class="card" style="padding: 15px;">✅ Menulis Program Python</div>
+                        <div class="card" style="padding: 15px;">✅ Menggunakan Google Colab</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: PENGANTAR MATA KULIAH -->
+            <section>
+                <h3>Pengantar Mata Kuliah</h3>
+                <div class="flex-container card" style="font-size: 0.75em;">
+                    <div class="flex-col">
+                        <h4 style="margin-bottom: 10px;">Identitas</h4>
+                        <ul class="text-left" style="list-style: none; margin: 0; padding: 0;">
+                            <li><strong>Nama:</strong> Pengenalan Komputasi</li>
+                            <li><strong>Kode:</strong> PK001</li>
+                            <li><strong>SKS:</strong> 2 (1 Teori + 1 Praktik)</li>
+                        </ul>
+                    </div>
+                    <div style="width: 1px; background: #ddd; height: 150px;"></div>
+                    <div class="flex-col">
+                        <h4 style="margin-bottom: 10px;">Metode</h4>
+                        <ul class="text-left" style="list-style: none; margin: 0; padding: 0;">
+                            <li><strong>Bahasa:</strong> Python 🐍</li>
+                            <li><strong>Tools:</strong> Google Colab</li>
+                            <li><strong>Style:</strong> Learning by Doing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: STRUKTUR KURIKULUM -->
+            <section>
+                <h3>Timeline Semester</h3>
+                <table class="text-small">
+                    <thead>
+                        <tr>
+                            <th width="20%">Minggu</th>
+                            <th width="80%">Topik Pembahasan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-6</td>
+                            <td><strong>Dasar Python</strong><br><small>Variabel, Tipe Data, Logika, Loop, List</small>
+                            </td>
+                        </tr>
+                        <tr style="background: #fafafa;">
+                            <td>7-8</td>
+                            <td><strong>Evaluasi Tengah Semester</strong><br><small>Quiz & UTS</small></td>
+                        </tr>
+                        <tr>
+                            <td>9-13</td>
+                            <td><strong>Python Lanjutan</strong><br><small>Fungsi, String Processing, Library, File
+                                    Handling</small></td>
+                        </tr>
+                        <tr>
+                            <td>14-16</td>
+                            <td><strong>Proyek Akhir</strong><br><small>Visualisasi Data & Presentasi Proyek</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SLIDE 6: APA ITU COMPUTATIONAL THINKING? -->
+            <section>
+                <h3>Computational Thinking (CT)</h3>
+                <div class="custom-quote text-small">
+                    <p>"Computational thinking is a way of solving problems, designing systems, and understanding human
+                        behavior that draws on concepts fundamental to computing."</p>
+                    <div style="text-align: right; margin-top: 10px; font-weight: bold;">— Jeannette Wing</div>
+                </div>
+                <div class="card" style="margin-top: 30px; background: #333; color: white;">
+                    <p class="text-small">Singkatnya: <strong>Cara berpikir sistematis</strong> untuk memecahkan masalah
+                        kompleks.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: MENGAPA CT? -->
+            <section>
+                <h3>Mengapa CT itu Penting?</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <ul>
+                            <li style="margin-bottom: 20px;"><strong>🌍 Universal Skill</strong><br>Bukan hanya untuk
+                                programmer, tapi untuk semua profesi.</li>
+                            <li style="margin-bottom: 20px;"><strong>💡 Problem Solving</strong><br>Menyelesaikan
+                                masalah dengan cara yang terstruktur.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col text-left text-small">
+                        <ul>
+                            <li style="margin-bottom: 20px;"><strong>🎨 Kreativitas</strong><br>Mendorong berpikir 'out
+                                of the box'.</li>
+                            <li style="margin-bottom: 20px;"><strong>⚡ Efisiensi</strong><br>Mencari solusi yang paling
+                                optimal dan hemat sumber daya.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: 4 PILAR CT -->
+            <section>
+                <h3>4 Pilar Computational Thinking</h3>
+                <div class="pillars-grid text-smaller">
+                    <div class="pillar-box">
+                        <div style="font-size: 2em; margin-bottom: 10px;">🧩</div>
+                        <h4>Decomposition</h4>
+                        <p>Memecah masalah menjadi bagian kecil.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div style="font-size: 2em; margin-bottom: 10px;">🔍</div>
+                        <h4>Pattern Recognition</h4>
+                        <p>Mengenali pola dan kesamaan.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div style="font-size: 2em; margin-bottom: 10px;">✨</div>
+                        <h4>Abstraction</h4>
+                        <p>Fokus pada hal penting, abaikan detail.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📝</div>
+                        <h4>Algorithm</h4>
+                        <p>Langkah-langkah penyelesaian.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: DECOMPOSITION DETAIL -->
+            <section>
+                <h3>1. Decomposition</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <p class="text-small">Memecah masalah yang kompleks dan besar menjadi masalah-masalah yang lebih
+                            kecil dan mudah dikelola.</p>
+                    </div>
+                    <div class="flex-col card card-highlight text-small">
+                        <h4>🍳 Contoh: Masak Rendang</h4>
+                        <hr>
+                        <ol>
+                            <li>Siapkan bahan & bumbu</li>
+                            <li>Potong daging</li>
+                            <li>Rebus santan</li>
+                            <li>Masak hingga kering</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: PATTERN RECOGNITION DETAIL -->
+            <section>
+                <h3>2. Pattern Recognition</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <p class="text-small">Melihat persamaan, pola, trend, atau keteraturan dalam data yang nantinya
+                            akan digunakan untuk membuat prediksi.</p>
+                    </div>
+                    <div class="flex-col card card-highlight text-small">
+                        <h4>🌦️ Contoh: Cuaca</h4>
+                        <hr>
+                        <ul>
+                            <li>Desember: Sering hujan</li>
+                            <li>Juli: Kemarau/Panas</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><em>"Setiap tahun polanya mirip, jadi kita bisa sedia payung."</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: ABSTRACTION DETAIL -->
+            <section>
+                <h3>3. Abstraction</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <p class="text-small">Melakukan generalisasi dan mengidentifikasi prinsip-prinsip umum yang
+                            menghasilkan pola tersebut. Mengabaikan detail yang tidak perlu.</p>
+                    </div>
+                    <div class="flex-col card card-highlight text-small">
+                        <h4>🗺️ Contoh: Google Maps</h4>
+                        <hr>
+                        <ul>
+                            <li><strong>Tampil:</strong> Jalan, Nama Kota, Macet</li>
+                            <li><strong>Hidden:</strong> Jumlah pohon, warna atap rumah</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><em>"Fokus hanya pada info navigasi."</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: ALGORITHM DETAIL -->
+            <section>
+                <h3>4. Algorithm Design</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <p class="text-small">Mengembangkan petunjuk pemecahan masalah yang sama secara step-by-step,
+                            langkah demi langkah, tahapan demi tahapan.</p>
+                    </div>
+                    <div class="flex-col card card-highlight text-small">
+                        <h4>🍜 Contoh: Masak Mie</h4>
+                        <hr>
+                        <ol>
+                            <li>Panaskan 500ml air</li>
+                            <li>Tunggu mendidih</li>
+                            <li>Masukkan mie</li>
+                            <li>Tunggu 3 menit</li>
+                            <li>Tiriskan & beri bumbu</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 13: STUDI KASUS -->
+            <section>
+                <h3>Studi Kasus: Cari Buku 📚</h3>
+                <p class="text-small" style="margin-bottom: 30px;">Bagaimana menerapkan CT saat mencari buku di
+                    perpustakaan?</p>
+                <div
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; font-size: 0.6em;">
+                    <div class="card"><strong>Decomposition:</strong><br>Cek katalog ➡️ Cari rak ➡️ Cari nomor buku
+                    </div>
+                    <div class="card"><strong>Pattern:</strong><br>Buku fiksi di lantai 1, Sains di lantai 2.</div>
+                    <div class="card"><strong>Abstraction:</strong><br>Hiraukan warna sampul, fokus pada Kode Buku.
+                    </div>
+                    <div class="card"><strong>Algorithm:</strong><br>Jalan ke lorong A ➡️ Cari rak 3 ➡️ Ambil buku.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 14: PYTHON INTRO -->
+            <section>
+                <h3>Pengenalan Python</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p>Bahasa pemrograman tingkat tinggi yang dibuat oleh <strong>Guido van Rossum</strong> (1991).
+                        </p>
+                        <br>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✅ <strong>Mudah Dibaca:</strong> Mirip bahasa Inggris.</li>
+                            <li>✅ <strong>Populer:</strong> Dipakai Google, Netflix, NASA.</li>
+                            <li>✅ <strong>Serbaguna:</strong> Web, Data Science, AI, Scripting.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                            alt="Python" style="width: 200px;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 15: TOOLS -->
+            <section>
+                <h3>Persiapan Tools</h3>
+                <p class="text-small" style="margin-bottom: 30px;">Kita akan gunakan tools berbasis Cloud, jadi tidak
+                    perlu install apapun!</p>
+                <div class="flex-container">
+                    <div class="flex-col card" style="border: 2px solid #4285F4;">
+                        <h4 style="color: #4285F4;">Google Colab</h4>
+                        <p class="text-smaller">Rekomendasi Utama</p>
+                        <hr>
+                        <ul class="text-smaller">
+                            <li>Seperti Google Docs tapi untuk koding.</li>
+                            <li>Gratis & Powerful.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>OnlineGDB</h4>
+                        <p class="text-smaller">Alternatif</p>
+                        <hr>
+                        <ul class="text-smaller">
+                            <li>Compiler online sederhana.</li>
+                            <li>Cepat untuk tes kode kecil.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 16: FIRST PROGRAM -->
+            <section>
+                <h3>Program Pertama: Hello World</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col text-left">
+                        <p class="text-small">
+                            Di Python, kita menggunakan fungsi <code>print()</code> untuk menampilkan teks ke layar.
+                            <br><br>
+                            Teks harus diapit tanda kutip <code>"..."</code>.
+                        </p>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python" data-trim data-noescape>
+# hello.py
+print("Hello, World!")
+print("Saya belajar Python")
+                            </code></pre>
+                        <div class="code-output">
+                            Output Terminal:
+                            Hello, World!
+                            Saya belajar Python
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 17: CARA COLAB -->
+            <section>
+                <h3>Cara Pakai Google Colab</h3>
+                <div class="card text-left text-small" style="background: #e8f0fe;">
+                    <ol style="margin-left: 20px;">
+                        <li style="margin-bottom: 15px;">Buka <strong>colab.research.google.com</strong></li>
+                        <li style="margin-bottom: 15px;">Klik <strong>New Notebook</strong> di pojok kanan bawah.</li>
+                        <li style="margin-bottom: 15px;">Ketik kode di dalam kotak (Cell).</li>
+                        <li>Tekan tombol <strong>Play ▶️</strong> di kiri cell (atau Shift+Enter).</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- SLIDE 18: HANDS ON -->
+            <section>
+                <h3>Hands-On Practice 💻</h3>
+                <div class="text-left text-small">
+                    <p>Silakan buka laptop dan coba kode berikut:</p>
+                </div>
+                <div class="flex-container" style="align-items: flex-start; margin-top: 20px;">
+                    <div class="flex-col">
+                        <div class="card">
+                            <h4>Latihan 1</h4>
+                            <pre><code class="python">print("Halo, saya [Nama]!")
+print("NIM saya [NIM]")</code></pre>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="card">
+                            <h4>Latihan 2</h4>
+                            <pre><code class="python">print("Baris 1")
+print("Baris 2")
+# Ini komentar</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 19: SUMMARY -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <div class="card text-left" style="background: #fdfdfd;">
+                    <ul class="text-small" style="line-height: 2;">
+                        <li>🔑 <strong>Computational Thinking</strong> adalah about problem solving, bukan cuma koding.
+                        </li>
+                        <li>4️⃣ Ada <strong>4 Pilar</strong>: Decomposition, Pattern Rec., Abstraction, Algorithm.</li>
+                        <li>🐍 <strong>Python</strong> adalah bahasa yang beginner-friendly.</li>
+                        <li>☁️ <strong>Google Colab</strong> memudahkan kita belajar tanpa install apapun.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SLIDE 20: TUGAS -->
+            <section>
+                <h3>Tugas Minggu Ini 📝</h3>
+                <div class="flex-container card" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                    <div class="flex-col text-left">
+                        <h4>Instruksi</h4>
+                        <ol class="text-smaller">
+                            <li>Buat Notebook Colab baru.</li>
+                            <li>Judul: <code>Tugas1_NIM_Nama</code>.</li>
+                            <li>Buat program yang menampilkan biodata lengkap & hobi Anda.</li>
+                            <li>Tulis refleksi singkat di bagian bawah (Text Cell).</li>
+                        </ol>
+                    </div>
+                    <div class="flex-col text-center">
+                        <div style="font-size: 3em;">⚠️</div>
+                        <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 21: NEXT TOPIC -->
+            <section>
+                <h3>Pertemuan Berikutnya</h3>
+                <div style="margin-top: 40px;">
+                    <span style="font-size: 4em; display: block; margin-bottom: 20px;">📦</span>
+                    <h4>Variabel & Tipe Data</h4>
+                    <p class="text-small">Kita akan belajar cara menyimpan data di memori komputer.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 22: Q&A -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Slide ini dapat diakses di LMS.<br>
+                    Have a nice day! 👋
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t', // Show slide numbers
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

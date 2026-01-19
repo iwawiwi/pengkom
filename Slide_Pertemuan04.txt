@@ -1,0 +1,443 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 4: Kondisi Majemuk (if-elif-else)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 4:                               ║
+║           Kondisi Majemuk                            ║
+║           (if-elif-else)                             ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║══════════════════════════════════════════════╣
+║
+╠════════                                                      ║
+║  1. Review Pertemuan 3                               ║
+║  2. if-elif-else                                     ║
+║  3. Operator Logika (and, or, not)                  ║
+║  4. Nested if                                       ║
+║  5. Kombinasi Kondisi                               ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Menulis struktur if-elif-else                    ║
+║                                                    ║
+║  ✓ Menggunakan operator logika                      ║
+║                                                    ║
+║  ✓ Membuat nested if                                ║
+║                                                    ║
+║  ✓ Memecahkan masalah kompleks dengan kombinasi    ║
+║    kondisi                                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: STRUKTUR if-elif-else
+```
+╔══════════════════════════════════════════════════════╗
+║            STRUKTUR if-elif-else                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  IF kondisi1:                                        ║
+║      # Kode jika kondisi1 TRUE                       ║
+║  ELIF kondisi2:                                      ║
+║      # Kode jika kondisi2 TRUE                       ║
+║  ELIF kondisi3:                                      ║
+║      # Kode jika kondisi3 TRUE                       ║
+║  ELSE:                                               ║
+║      # Kode jika semua kondisi FALSE                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: CONTOH if-elif-else
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH if-elif-else                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  hari = 3                                            ║
+║                                                      ║
+║  if hari == 1:                                       ║
+║      print("Senin")                                  ║
+║  elif hari == 2:                                     ║
+║      print("Selasa")                                 ║
+║  elif hari == 3:                                     ║
+║      print("Rabu")                                   ║
+║  elif hari == 4:                                     ║
+║      print("Kamis")                                  ║
+║  elif hari == 5:                                     ║
+║      print("Jumat")                                  ║
+║  elif hari == 6:                                     ║
+║      print("Sabtu")                                  ║
+║  elif hari == 7:                                     ║
+║      print("Minggu")                                 ║
+║  else:                                               ║
+║      print("Tidak valid")                            ║
+║                                                      ║
+║  Output: Rabu                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: OPERATOR LOGIKA
+```
+╔══════════════════════════════════════════════════════╗
+║              OPERATOR LOGIKA                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  and: Keduanya harus TRUE                            ║
+║  or: Salah satu TRUE saja                            ║
+║  not: Membalik nilai boolean                         ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  AND Truth Table:                                    ║
+║  True and True = True                                ║
+║  True and False = False                              ║
+║  False and True = False                              ║
+║  False and False = False                             ║
+║                                                      ║
+║  OR Truth Table:                                     ║
+║  True or True = True                                 ║
+║  True or False = True                                ║
+║  False or True = True                                ║
+║  False or False = False                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: CONTOH OPERATOR LOGIKA
+```
+╔══════════════════════════════════════════════════════╗
+║            CONTOH OPERATOR LOGIKA                    ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  x = 10                                              ║
+║                                                      ║
+║  # AND                                              ║
+║  print(x > 5 and x < 15)   # True (keduanya True)   ║
+║  print(x > 15 and x < 20)  # False (salah satu)     ║
+║                                                      ║
+║  # OR                                               ║
+║  print(x > 5 or x < 5)     # True (satu True)       ║
+║  print(x > 15 or x < 5)    # False (keduanya False) ║
+║                                                      ║
+║  # NOT                                              ║
+║  print(not(x > 5))         # False                  ║
+║  print(not(x < 5))         # True                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: NESTED IF
+```
+╔══════════════════════════════════════════════════════╗
+║                  NESTED IF                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  IF di dalam IF                                      ║
+║                                                      ║
+║  IF kondisi1:                                        ║
+║      IF kondisi2:                                    ║
+║          # Kode jika kondisi1 DAN kondisi2 TRUE     ║
+║      ELSE:                                           ║
+║          # Kode jika kondisi1 TRUE tapi kondisi2 FALSE║
+║  ELSE:                                               ║
+║      # Kode jika kondisi1 FALSE                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: CONTOH NESTED IF
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH NESTED IF                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  nilai = 85                                          ║
+║  absensi = 90                                        ║
+║                                                      ║
+║  if nilai >= 70:                                     ║
+║      if absensi >= 80:                               ║
+║          print("Grade: A")                           ║
+║      elif absensi >= 60:                             ║
+║          print("Grade: B")                           ║
+║      else:                                           ║
+║          print("Grade: C")                           ║
+║  else:                                               ║
+║      print("Tidak Lulus")                            ║
+║                                                      ║
+║  Output: Grade: B                                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: COMBINED EXAMPLE
+```
+╔══════════════════════════════════════════════════════╗
+║             COMBINED EXAMPLE                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Validasi kelayakan electoral                      ║
+║                                                      ║
+║  usia = 17                                           ║
+║  warga_negara = "WNI"                                ║
+║                                                      ║
+║  if usia >= 17 and warga_negara == "WNI":            ║
+║      print("Bisa membuat KTP dan MEMILIH")           ║
+║  elif usia >= 17:                                    ║
+║      print("Bisa memilih, tapi bukan WNI")           ║
+║  else:                                               ║
+║      print("Belum memenuhi syarat")                  ║
+║                                                      ║
+║  Output: Bisa membuat KTP dan MEMILIH                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: TIPS MENULIS KONDISI
+```
+╔══════════════════════════════════════════════════════╗
+║            TIPS MENULIS KONDISI                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Mulai dari kondisi yang paling umum              ║
+║                                                      ║
+║  2. Gunakan elif untuk kondisi mutually exclusive    ║
+║                                                      ║
+║  3. Gunakan nested if untuk kondisi dependent        ║
+║                                                      ║
+║  4. Gunakan kurung untuk kompleksitas                ║
+║                                                      ║
+║  5. Else adalah "catch-all" untuk error handling     ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  CONTOH PENGGUNAAN KURUNG:                           ║
+║  if (a > 5 and b < 10) or (a < 3 and b > 7):        ║
+║      # kode                                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Sistem Penilaian                        ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input:                                              ║
+║  - nilai (0-100)                                     ║
+║  - kehadiran (%)                                    ║
+║                                                      ║
+║  Output: Grade                                       ║
+║  - Nilai >= 90 dan hadir >= 80%: A                  ║
+║  - Nilai >= 80 dan hadir >= 70%: B                  ║
+║  - Nilai >= 70 dan hadir >= 60%: C                  ║
+║  - Nilai >= 60 dan hadir >= 50%: D                  ║
+║  - Selain itu: E                                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 2: Kalkulator Gaji                          ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input:                                              ║
+║  - gol (A/B/C/D)                                     ║
+║  - masa kerja (tahun)                                ║
+║                                                      ║
+║  Output: Total Gaji                                  ║
+║  - Gol A: 5jt, B: 4jt, C: 3jt, D: 2jt               ║
+║  - Tunjangan masa kerja:                             ║
+║    >= 10 tahun: +1jt                                 ║
+║    5-9 tahun: +500rb                                 ║
+║    < 5 tahun: +0                                     ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 3: Persegi atau Persegi Panjang            ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: panjang, lebar                               ║
+║  Output: "Persegi" atau "Persegi Panjang"           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ if-elif-else                                      ║
+║    - Multiple kondisi dengan elif                   ║
+║    - Else sebagai default                           ║
+║                                                      ║
+║  ✓ Operator Logika                                   ║
+║    - and (keduanya harus True)                      ║
+║    - or (salah satu True)                           ║
+║    - not (membalik boolean)                         ║
+║                                                      ║
+║  ✓ Nested if                                         ║
+║    - if di dalam if                                  ║
+║    - Untuk kondisi dependent                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 4:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Sistem Kategori BMI                              ║
+║     - Input: berat(kg), tinggi(m)                   ║
+║     - Output: BMI + kategori                        ║
+║                                                      ║
+║  2. Program Kasir Sederhana                          ║
+║     - Input: total belanja, member (y/n)            ║
+║     - Output: total setelah diskon                  ║
+║                                                      ║
+║  3. Game Tebak Angka                                 ║
+║     - Komputer pilih angka random 1-100             ║
+║     - User tebak, beri hint                         ║
+║                                                      ║
+║  Simpan: Tugas4_NIM_Nama.py                          ║
+║  Deadline: Sebelum Pertemuan 5                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: PERULANGAN (LOOPS)                           ║
+║                                                      ║
+║  Yang akan dipelajari:                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ for loop                                         ║
+║  ▸ while loop                                       ║
+║  ▸ range()                                          ║
+║  ▸ break dan continue                               ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Baca materi loops di W3Schools                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 18: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

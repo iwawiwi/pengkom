@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 11 - Menggunakan Library</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 11: Menggunakan Library</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: OUTLINE === -->
+            <section>
+                <h3>Outline Materi</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teori</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Review String</li>
+                            <li>Apa itu Library?</li>
+                            <li>Standard Library (Math, Random)</li>
+                            <li>External Library (Pandas Intro)</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Praktek</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Menggunakan <code>import</code></li>
+                            <li>Studi Kasus: Kalkulator Scientific</li>
+                            <li>Studi Kasus: Game Dadu</li>
+                            <li><strong>Hands-on Practice</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: APA ITU LIBRARY === -->
+            <section>
+                <h3>Apa itu Library?</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p><strong>Library</strong> (atau Modul) adalah kumpulan kode/fungsi yang sudah ditulis orang
+                            lain untuk kita gunakan.</p>
+                        <p><em>"Jangan menemukan kembali roda (Don't reinvent the wheel)."</em></p>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python">
+# Cara Menggunakan
+import nama_library
+
+# Atau
+import nama_library as alias
+
+# Atau
+from nama_library import fungsi_tertentu
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: MATH LIBRARY === -->
+            <section>
+                <h3>Library: Math</h3>
+                <p class="text-small">Fungsi matematika tingkat lanjut.</p>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">
+import math
+
+print(math.sqrt(25))    # 5.0
+print(math.pow(2, 3))   # 8.0
+print(math.pi)          # 3.1415...
+print(math.ceil(4.2))   # 5 (Pembulatan ke atas)
+print(math.floor(4.8))  # 4 (Pembulatan ke bawah)
+                            </code></pre>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>Trigonometri</h4>
+                        <pre><code class="python">
+# Input dalam Radian
+print(math.sin(math.pi/2)) # 1.0
+
+# Konversi Sudut
+sudut = math.radians(90)
+print(math.sin(sudut))     # 1.0
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 5: RANDOM LIBRARY === -->
+            <section>
+                <h3>Library: Random</h3>
+                <p class="text-small">Untuk membuat simulasi atau pengacakan.</p>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">
+import random
+
+# Angka acak 0.0 - 1.0
+print(random.random())
+
+# Angka bulat acak (dadu)
+print(random.randint(1, 6))
+
+# Pilihan acak dari list
+buah = ["Apel", "Jeruk", "Mangga"]
+print(random.choice(buah))
+                            </code></pre>
+                    </div>
+                    <div class="flex-col card">
+                        <p class="text-smaller">Gunakan <code>random.seed()</code> jika ingin hasil acak yang konsisten
+                            (reproducible).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 6: PANDAS INTRO === -->
+            <section>
+                <h3>Intro to Pandas 🐼</h3>
+                <p class="text-small">Library paling populer untuk Analisis Data.</p>
+                <pre><code class="python" data-trim>
+import pandas as pd
+
+# Membuat DataFrame (Tabel)
+data = {
+    'Nama': ['Budi', 'Siti', 'Andi'],
+    'Usia': [20, 19, 21],
+    'Kota': ['Lampung', 'Jakarta', 'Bandung']
+}
+
+df = pd.DataFrame(data)
+print(df)
+                    </code></pre>
+                <div class="code-output text-smaller">
+                    Nama Usia Kota
+                    0 Budi 20 Lampung
+                    1 Siti 19 Jakarta
+                    2 Andi 21 Bandung
+                </div>
+            </section>
+
+            <!-- === SLIDE 7: LATIHAN HANDS-ON === -->
+            <section>
+                <h3>Hands-On Practice</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4>1. Tebak Angka Pro</h4>
+                        <p class="text-smaller">Komputer pilih angka acak 1-100. User menebak. Beri hint "Lebih Besar"
+                            atau "Lebih Kecil".</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Rumus ABC</h4>
+                        <p class="text-smaller">Hitung akar persamaan kuadrat menggunakan <code>math.sqrt</code>.</p>
+                        <code class="text-smaller">x = (-b ± √(b²-4ac)) / 2a</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <table class="text-small">
+                    <tr>
+                        <td><code>import</code></td>
+                        <td>Memanggil library.</td>
+                    </tr>
+                    <tr>
+                        <td><code>math</code></td>
+                        <td>Fungsi matematika (sqrt, pow, sin, cos).</td>
+                    </tr>
+                    <tr>
+                        <td><code>random</code></td>
+                        <td>Angka acak (randint, choice).</td>
+                    </tr>
+                    <tr>
+                        <td><code>pandas</code></td>
+                        <td>Menenangani data tabular (row & column).</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- === SLIDE 9: TUGAS === -->
+            <section>
+                <h3>Tugas Pertemuan 11 📝</h3>
+                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                    <ul class="text-small">
+                        <li><strong>1. Simulasi Dadu:</strong>
+                            <br>Lempar dadu 100x. Hitung berapa kali muncul angka 6.
+                        </li>
+                        <li><strong>2. Kalkulator Hipotenusa:</strong>
+                            <br>Input alas dan tinggi segitiga siku-siku. Hitung sisi miring (c).
+                            <br><code>c = math.sqrt(a**2 + b**2)</code>
+                        </li>
+                    </ul>
+                    <hr>
+                    <p class="text-smaller"><strong>File:</strong> <code>Tugas11_NIM_Nama.py</code></p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: NEXT WEEK === -->
+            <section>
+                <h3>Pertemuan Berikutnya</h3>
+                <h4>Data Visualization 📊</h4>
+                <p class="text-small">Kita akan membuat grafik dari data menggunakan Matplotlib.</p>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                    <div class="card">Line Plot</div>
+                    <div class="card">Bar Chart</div>
+                    <div class="card">Pie Chart</div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: Q&A === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 8: Ujian Tengah Semester (UTS)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 8:                               ║
+║           Ujian Tengah Semester (UTS)                ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: INFORMASI UTS
+```
+╔══════════════════════════════════════════════════════╗
+║               INFORMASI UTS                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Tanggal: [Tanggal UTS]                            ║
+║  ▸ Waktu: 100 menit (1 jam 40 menit)                ║
+║  ▸ Tempat: [Ruang]                                   ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Format UTS:                                         ║
+║  ▸ Pilihan Ganda: 30 soal (30 poin)                 ║
+║  ▸ Benar/Salah: 10 soal (10 poin)                   ║
+║  ▸ Coding: 3 soal (60 poin)                         ║
+║  ▸ Total: 100 poin                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: MATERI UTS
+```
+╔══════════════════════════════════════════════════════╗
+║               MATERI UTS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Komprehensif Pertemuan 1-6:                         ║
+║                                                      ║
+║  1. Computational Thinking                           ║
+║  2. Variabel dan Tipe Data                          ║
+║  3. Operator (Aritmatika, Perbandingan, Logika)     ║
+║  4. Percabangan (if, if-else, if-elif-else)         ║
+║  5. Perulangan (for, while, range, break, continue) ║
+║  6. List (membuat, mengakses, memodifikasi)         ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Bobot:                                              ║
+║  ▸ Teori (PG + BS): 40 poin (40%)                   ║
+║  ▸ Praktik (Coding): 60 poin (60%)                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: CONTOH SOAL CODING
+```
+╔══════════════════════════════════════════════════════╗
+║            CONTOH SOAL CODING UTS                    ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  SOAL 1: Kalkulator (20 poin)                        ║
+║  ─────────────────────────────────────────────────   ║
+║  Buat kalkulator dengan operasi: +, -, *, /          ║
+║                                                      ║
+║  SOAL 2: List Processing (20 poin)                   ║
+║  ─────────────────────────────────────────────────   ║
+║  Hitung statistik dari list angka                   ║
+║  (rata-rata, max, min)                              ║
+║                                                      ║
+║  SOAL 3: Pola Bintang (20 poin)                      ║
+║  ─────────────────────────────────────────────────   ║
+║  Buat pola segitiga dengan nested loop              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: KETENTUAN UTS
+```
+╔══════════════════════════════════════════════════════╗
+║              KETENTUAN UTS                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Dilarang membuka catatan/books                   ║
+║  ✓ Dilarang menggunakan HP untuk browsing           ║
+║  ✓ Dilarang berkomunikasi dengan teman               ║
+║  ✓ Wajib membawa KTP/Kartu Mahasiswa                ║
+║  ✓ Laptop wajib dibawa (untuk coding)               ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Tools yang boleh digunakan:                         ║
+║  ▸ Google Colab / OnlineGDB                          ║
+║  ▸ Python shell                                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: TIPS PERSIAPAN UTS
+```
+╔══════════════════════════════════════════════════════╗
+║           TIPS PERSIAPAN UTS                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review RPS Pertemuan 1-6                         ║
+║                                                      ║
+║  2. latihan soal-soal sebelumnya                     ║
+║                                                      ║
+║  3. Praktik coding secara intensif                  ║
+║     ▸ Semua materi sudah harus dicoba               ║
+║                                                      ║
+║  4. Pahami konsep, bukan hafalan                    ║
+║                                                      ║
+║  5. Istirahat yang cukup sebelum ujian              ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Good luck untuk UTS!                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: REMINDER
+```
+╔══════════════════════════════════════════════════════╗
+║                  REMINDER                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah UTS, kita akan melanjutkan dengan          ║
+║  materi Python yang lebih lanjut:                   ║
+║                                                      ║
+║  ▸ Pertemuan 9: Fungsi/Methods                      ║
+║  ▸ Pertemuan 10: String Manipulation                ║
+║  ▸ Pertemuan 11: Library (Math, Random, Pandas)     ║
+║  ▸ Pertemuan 12: Data Visualization                 ║
+║  ▸ Pertemuan 13: CSV Files                          ║
+║  ▸ Pertemuan 14: Mini Project                       ║
+║  ▸ Pertemuan 15: Quiz 2 + Project                   ║
+║  ▸ Pertemuan 16: Project Presentation               ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: SELAMAT Ujian
+```
+╔══════════════════════════════════════════════════════╗
+║              SELAMAT MENGERJAKAN UTS                 ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║            GOOD LUCK!                                ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       Semangatttt!!!!                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

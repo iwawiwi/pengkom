@@ -1,0 +1,583 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 1: Computational Thinking & First Program
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 1:                               ║
+║           Computational Thinking                     ║
+║           & First Program                            ║
+║                                                      ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║           Tahun Akademik 2025/2026                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Pengantar Mata Kuliah                            ║
+║  2. Konsep Computational Thinking                    ║
+║  3. Empat Pilar Computational Thinking               ║
+║  4. Pengenalan Python                                ║
+║  5. Program Python Pertama                           ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Mendefinisikan computational thinking            ║
+║                                                    ║
+║  ✓ Menjelaskan 4 pilar computational thinking       ║
+║                                                    ║
+║  ✓ Menulis program Python sederhana                 ║
+║                                                    ║
+║  ✓ Menjalankan program di Google Colab              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: PENGANTAR MATA KULIAH
+```
+╔══════════════════════════════════════════════════════╗
+║            PENGANTAR MATA KULIAH                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Mata Kuliah: Pengenalan Komputasi                  ║
+║  Kode: PK001                                         ║
+║  SKS: 2 (1 Teori + 1 Praktik)                       ║
+║  Semester: 1                                         ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ Bahasa Pemrograman: Python                       ║
+║  ▸ Tools: Google Colab, OnlineGDB                   ║
+║  ▸ Pendekatan: Learning by Doing                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: STRUKTUR KURIKULUM
+```
+╔══════════════════════════════════════════════════════╗
+║             STRUKTUR KURIKULUM                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Minggu 1-6  : Dasar Python                          ║
+║               (Variabel, Percabangan, Loop, List)   ║
+║                                                      ║
+║  Minggu 7-8  : Quiz & UTS                            ║
+║                                                      ║
+║  Minggu 9-13 : Python Lanjutan                       ║
+║               (Fungsi, String, Library, CSV)         ║
+║                                                      ║
+║  Minggu 14-16: Visualisasi & Proyek                  ║
+║               (Matplotlib, Data Analysis, Proyek)    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: APA ITU COMPUTATIONAL THINKING?
+```
+╔══════════════════════════════════════════════════════╗
+║         APA ITU COMPUTATIONAL THINKING?              ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Computational Thinking adalah cara berpikir         ║
+║  untuk memecahkan masalah dengan menggunakan        ║
+║  konsep-konsep yang mendasari ilmu komputer.         ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  "Computational thinking is a way of solving         ║
+║   problems, designing systems, and understanding     ║
+║   human behavior that draws on concepts              ║
+║   fundamental to computing."                         ║
+║                           - Jeannette Wing           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: MENGAPA COMPUTATIONAL THINKING?
+```
+╔══════════════════════════════════════════════════════╗
+║        MENGAPA COMPUTATIONAL THINKING?               ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Universal - tidak hanya untuk programmer         ║
+║                                                    ║
+║  ✓ Problem-solving - solusi sistematis              ║
+║                                                    ║
+║  ✓ Kreativitas - berpikir di luar kotak             ║
+║                                                    ║
+║  ✓ Efisiensi - solusi optimal                       ║
+║                                                    ║
+║  ✓ Transferable - ke berbagai bidang                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: 4 PILAR COMPUTATIONAL THINKING
+```
+╔══════════════════════════════════════════════════════╗
+║        4 PILAR COMPUTATIONAL THINKING                ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌──────┐║
+║   │DECOM-   │   │PATTERN  │   │ AB-     │   │ALGO- │║
+║   │POSITION │   │RECOGNITION│ │ STRACTION│  │RITHM │║
+║   └─────────┘   └─────────┘   └─────────┘   └──────┘║
+║      (Memecah)   (Mengenali)   (Menarik)   (Membuat)║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: DECOMPOSITION
+```
+╔══════════════════════════════════════════════════════╗
+║                  DECOMPOSITION                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║           MEMECAH MASALAH BESAR                      ║
+║           MENJADI BAGIAN KECIL                       ║
+║                                                      ║
+║  Contoh: Memasak Rendang                             ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Siapkan bahan                                    ║
+║  2. Potong daging                                    ║
+║  3. Rebus santan                                     ║
+║  4. Masukkan bumbu                                   ║
+║  5. Masukkan daging                                  ║
+║  6. Aduk hingga matang                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: PATTERN RECOGNITION
+```
+╔══════════════════════════════════════════════════════╗
+║              PATTERN RECOGNITION                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║        MENGENALI POLA ATAU KESAMAAN                  ║
+║        DALAM MASALAH                                ║
+║                                                      ║
+║  Contoh: Cuaca                                       ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ Musim hujan: sering hujan, kelembaban tinggi      ║
+║  ▸ Musim kemarau: panas, sedikit hujan              ║
+║  ▸ Pola yang sama terjadi setiap tahun              ║
+║                                                      ║
+║  Dengan mengenali pola, kita bisa memprediksi       ║
+║  dan mempersiapkan diri                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: ABSTRACTION
+```
+╔══════════════════════════════════════════════════════╗
+║                 ABSTRACTION                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║      MENARIK INFORMASI PENTING,                      ║
+║      MENGABURKAN DETAIL YANG TIDAK RELEVAN           ║
+║                                                      ║
+║  Contoh: Peta Jalan                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ Yang ditampilkan: jalan utama, kota, interstate   ║
+║  ▸ Tidak ditampilkan: setiap batu di jalan,          ║
+║    nama setiap pohon                                 ║
+║                                                      ║
+║  Fokus pada yang penting untuk tujuan!              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: ALGORITHM DESIGN
+```
+╔══════════════════════════════════════════════════════╗
+║              ALGORITHM DESIGN                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║      MEMBUAT LANGKAH-LANGKAH                         ║
+║      SISTEMATIS UNTUK MENYELESAIKAN                  ║
+║      MASALAH                                        ║
+║                                                      ║
+║  Contoh: Resep Masakan                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Panaskan wajan                                   ║
+║  2. Masukkan minyak                                  ║
+║  3. Tunggu minyak panas                              ║
+║  4. Masukkan bawang yang diiris                      ║
+║  5. Aduk hingga harum                                ║
+║  ...                                                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: CONTOH PENERAPAN
+```
+╔══════════════════════════════════════════════════════╗
+║          CONTOH PENERAPAN CT                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Masalah: Mencari buku di perpustakaan              ║
+║                                                      ║
+║  1. DECOMPOSITION:                                   ║
+║     - Cari katalog                                   ║
+║     - Lihat lokasi rak                               ║
+║     - Pergi ke rak                                   ║
+║     - Cari buku                                      ║
+║                                                      ║
+║  2. PATTERN RECOGNITION:                             ║
+║     - Buku diurutkan berdasarkan abjad              ║
+║                                                      ║
+║  3. ABSTRACTION:                                     ║
+║     - Fokus pada huruf pertama buku                 ║
+║                                                      ║
+║  4. ALGORITHM:                                       ║
+║     - Ikuti arah rak                                 ║
+║     - Cari berdasarkan urutan abjad                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: PENGENALAN PYTHON
+```
+╔══════════════════════════════════════════════════════╗
+║                PENGENALAN PYTHON                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Bahasa pemrograman tingkat tinggi                 ║
+║  ▸ Dibuat oleh: Guido van Rossum (1991)              ║
+║  ▸ Filosofi: readability counts                      ║
+║  ▸ Salah satu bahasa paling populer di dunia        ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  KEUNGGULAN:                                         ║
+║  ▸ Sintaks yang sederhana dan mudah dibaca          ║
+║  ▸ Multi-paradigma (OOP, procedural, functional)     ║
+║  ▸ Komunitas besar, banyak library                  ║
+║  ▸ Digunakan oleh Google, Instagram, Netflix        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: MENYIAPKAN LINGKUNGAN
+```
+╔══════════════════════════════════════════════════════╗
+║           MENYIAPKAN LINGKUNGAN                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  PILIHAN TOOLS:                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Google Colab (REKOMENDASI)                       ║
+║     ▸ Tidak perlu instal                             ║
+║     ▸ Online, akses dari mana saja                   ║
+║     ▸ Gratis                                        ║
+║     ▸ colab.research.google.com                     ║
+║                                                      ║
+║  2. OnlineGDB                                        ║
+║     ▸ Online Python compiler                        ║
+║     ▸ onlinegdb.com                                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: PROGRAM PYTHON PERTAMA
+```
+╔══════════════════════════════════════════════════════╗
+║         PROGRAM PYTHON PERTAMA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  hello.py                                            ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  # Program Hello World                               ║
+║  # Ini adalah komentar                               ║
+║                                                      ║
+║  print("Hello, World!")                              ║
+║  print("Selamat datang di Python!")                  ║
+║  print("Nama saya adalah [nama Anda]")              ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Output:                                             ║
+║  Hello, World!                                       ║
+║  Selamat datang di Python!                           ║
+║  Nama saya adalah ...                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: MEMBUAT AKUN GOOGLE COLAB
+```
+╔══════════════════════════════════════════════════════╗
+║         CARA MENGGUNAKAN GOOGLE COLAB                ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LANGKAH 1:                                          ║
+║  Buka browser, akses colab.research.google.com      ║
+║                                                      ║
+║  LANGKAH 2:                                          ║
+║  Klik "New Notebook"                                 ║
+║                                                      ║
+║  LANGKAH 3:                                          ║
+║  Ketik kode di cell                                  ║
+║                                                      ║
+║  LANGKAH 4:                                          ║
+║  Klik tombol "Play" (segitiga) untuk run             ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ✓ Cell baru = New code block                        ║
+║  ✓ Shift+Enter = Run dan pindah ke cell berikutnya  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 18: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Hello World                              ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Ketik dan jalankan:                                 ║
+║                                                      ║
+║  print("Halo, Dunia!")                               ║
+║  print("Python adalah hebat!")                       ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 2: Perkenalan                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Buat program yang menampilkan:                      ║
+║  - Nama lengkap Anda                                 ║
+║  - NIM Anda                                          ║
+║  - Program studi                                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 19: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 3: Eksperimen dengan print()                ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  # coba variasi ini:                                 ║
+║                                                      ║
+║  print("Baris 1")                                    ║
+║  print("Baris 2")                                    ║
+║  print("Baris 1", "dan", "Baris 2")                 ║
+║  print("Hasil:", 5 + 3)                              ║
+║  print("10 + 5 =", 10 + 5)                           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 4: Komentar                                 ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  # Ini komentar, tidak akan dieksekusi               ║
+║  """                                               ║
+║  Ini komentar                                        ║
+║  multi-baris                                         ║
+║  """                                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 20: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ Computational Thinking:                           ║
+║    - Decomposition (Memecah masalah)                ║
+║    - Pattern Recognition (Mengenali pola)           ║
+║    - Abstraction (Abstraksi)                        ║
+║    - Algorithm Design (Desain algoritma)            ║
+║                                                      ║
+║  ✓ Pengenalan Python                                 ║
+║    - Mengapa Python populer                         ║
+║    - Cara menggunakan Google Colab                  ║
+║                                                      ║
+║  ✓ Program Pertama                                   ║
+║    - print() function                               ║
+║    - Komentar dalam Python                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 21: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 1:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Persiapan Lingkungan                             ║
+║     ✓ Buka Google Colab                              ║
+║     ✓ Buat notebook baru                             ║
+║     ✓ Simpan dengan nama "Pertemuan1_NIM"           ║
+║                                                      ║
+║  2. Eksperimen Kode                                  ║
+║     ✓ Tulis program perkenalan Anda                  ║
+║     ✓ Jalankan dan pastikan berhasil                ║
+║                                                      ║
+║  3. Refleksi                                         ║
+║     ✓ Tulis 3 hal yang dipelajari hari ini          ║
+║     ✓ Tulis kesulitan yang dialami                  ║
+║                                                      ║
+║  Deadline: Sebelum Pertemuan 2                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 22: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: VARIABEL DAN TIPE DATA                       ║
+║                                                      ║
+║  Yang akan dipelajari:                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ Variabel: wadah untuk menyimpan nilai            ║
+║                                                    ║
+║  ▸ Tipe Data:                                        ║
+║    - Integer (bilangan bulat)                        ║
+║    - Float (bilangan desimal)                        ║
+║    - String (teks)                                   ║
+║    - Boolean (True/False)                            ║
+║                                                      ║
+║  ▸ Operator Aritmatika                               ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Baca materi variabel di W3Schools                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 23: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 24: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

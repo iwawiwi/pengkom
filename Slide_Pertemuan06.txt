@@ -1,0 +1,426 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 6: List (Daftar)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 6:                               ║
+║           List (Daftar)                              ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review Pertemuan 5                               ║
+║  2. Konsep List                                      ║
+║  3. Membuat dan Mengakses List                      ║
+║  4. Modifikasi List                                 ║
+║  5. Method dan Fungsi List                          ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Menjelaskan konsep list dalam Python             ║
+║                                                    ║
+║  ✓ Membuat dan mengakses elemen list                ║
+║                                                    ║
+║  ✓ Memodifikasi list (tambah, hapus, ubah)         ║
+║                                                    ║
+║  ✓ Menggunakan method dan fungsi list              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: APA ITU LIST?
+```
+╔══════════════════════════════════════════════════════╗
+║              APA ITU LIST?                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  List adalah struktur data yang dapat               ║
+║  menyimpan multiple values dalam satu               ║
+║  variabel.                                           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Analogi: Rak Buku                                   ║
+║                                                      ║
+║  ┌─────┬─────┬─────┬─────┬─────┐                   ║
+║  │  A  │  B  │  C  │  D  │  E  │                   ║
+║  │ [0] │ [1] │ [2] │ [3] │ [4] │                   ║
+║  └─────┴─────┴─────┴─────┴─────┘                   ║
+║                                                      ║
+║  List dapat berisi tipe data yang berbeda!          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: MEMBUAT LIST
+```
+╔══════════════════════════════════════════════════════╗
+║              MEMBUAT LIST                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # List kosong                                       ║
+║  kosong = []                                         ║
+║                                                      ║
+║  # List dengan elemen                               ║
+║  buah = ["apel", "jeruk", "mangga"]                 ║
+║                                                      ║
+║  # List dengan tipe berbeda                         ║
+║  campur = [1, "dua", 3.0, True]                     ║
+║                                                      ║
+║  # List menggunakan range()                         ║
+║  angka = list(range(1, 6))  # [1, 2, 3, 4, 5]       ║
+║                                                      ║
+║  # List comprehension                               ║
+║  kuadrat = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: MENGASKES ELEMEN
+```
+╔══════════════════════════════════════════════════════╗
+║            MENGASKES ELEMEN                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  buah = ["apel", "jeruk", "mangga", "pisang"]       ║
+║                                                      ║
+║  # Index positif (dari kiri)                         ║
+║  print(buah[0])    # apel                            ║
+║  print(buah[1])    # jeruk                           ║
+║  print(buah[2])    # mangga                          ║
+║                                                      ║
+║  # Index negatif (dari kanan)                        ║
+║  print(buah[-1])   # pisang                          ║
+║  print(buah[-2])   # mangga                          ║
+║  print(buah[-3])   # jeruk                           ║
+║                                                      ║
+║  # Slicing (pengambilan sebagian)                   ║
+║  print(buah[0:2])   # ["apel", "jeruk"]             ║
+║  print(buah[1:])    # ["jeruk", "mangga", "pisang"] ║
+║  print(buah[:2])    # ["apel", "jeruk"]              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: MODIFIKASI LIST
+```
+╔══════════════════════════════════════════════════════║
+║              MODIFIKASI LIST                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  buah = ["apel", "jeruk", "mangga"]                 ║
+║                                                      ║
+║  # Mengubah elemen                                   ║
+║  buah[0] = "anggur"                                  ║
+║  # ["anggur", "jeruk", "mangga"]                    ║
+║                                                      ║
+║  # Menambah elemen                                   ║
+║  buah.append("pisang")                               ║
+║  # ["anggur", "jeruk", "mangga", "pisang"]          ║
+║                                                      ║
+║  # Menyisipkan elemen                                ║
+║  buah.insert(1, "nanas")                             ║
+║  # ["anggur", "nanas", "jeruk", "mangga", "pisang"]║
+║                                                      ║
+║  # Menghapus elemen                                  ║
+║  buah.remove("jeruk")                                ║
+║  # ["anggur", "nanas", "mangga", "pisang"]          ║
+║                                                      ║
+║  # Hapus dengan pop()                                ║
+║  buah.pop()         # ["anggur", "nanas", "mangga"] ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: METHOD LIST
+```
+╔══════════════════════════════════════════════════════╗
+║               METHOD LIST                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Method           Fungsi                             ║
+║  ─────────────────────────────────────────────────   ║
+║  append(x)    Tambah x di akhir                      ║
+║  insert(i,x)  Sisipkan x di index i                  ║
+║  remove(x)    Hapus x pertama                        ║
+║  pop()        Hapus dan kembalikan elemen terakhir   ║
+║  clear()      Hapus semua elemen                    ║
+║  index(x)     Cari index x                           ║
+║  count(x)     Hitung jumlah x                        ║
+║  sort()       Urutkan ascending                      ║
+║  reverse()    Urutkan descending                     ║
+║  copy()       Salin list                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: FUNGSI LIST
+```
+╔══════════════════════════════════════════════════════╗
+║               FUNGSI LIST                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Fungsi          Fungsi                              ║
+║  ─────────────────────────────────────────────────   ║
+║  len(list)       Jumlah elemen                       ║
+║  max(list)       Elemen terbesar                     ║
+║  min(list)       Elemen terkecil                     ║
+║  sum(list)       Jumlah semua elemen                 ║
+║  sorted(list)    List terurut (baru)                 ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  angka = [5, 2, 8, 1, 9]                             ║
+║  print(len(angka))    # 5                            ║
+║  print(max(angka))    # 9                            ║
+║  print(min(angka))    # 1                            ║
+║  print(sum(angka))    # 25                           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: ITERASI LIST
+```
+╔══════════════════════════════════════════════════════╗
+║              ITERASI LIST                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  buah = ["apel", "jeruk", "mangga"]                 ║
+║                                                      ║
+║  # Cara 1: langsung                                  ║
+║  for item in buah:                                   ║
+║      print(item)                                     ║
+║                                                      ║
+║  # Cara 2: dengan index                              ║
+║  for i in range(len(buah)):                          ║
+║      print(f"{i}: {buah[i]}")                        ║
+║                                                      ║
+║  # Cara 3: enumerate                                 ║
+║  for index, item in enumerate(buah):                 ║
+║      print(f"{index}: {item}")                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Statistik List                           ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: list angka                                  ║
+║  Output:                                             ║
+║  - Panjang list                                     ║
+║  - Total                                            ║
+║  - Rata-rata                                        ║
+║  - Max dan Min                                      ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 2: Filter Bilangan                         ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: list angka                                  ║
+║  Output:                                            ║
+║  - List bilangan genap                              ║
+║  - List bilangan ganjil                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 3: To-Do List App                           ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Menu:                                               ║
+║  1. Tambah tugas                                     ║
+║  2. Lihat tugas                                      ║
+║  3. Hapus tugas                                      ║
+║  4. Keluar                                           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 4: Penghitung Kata                          ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: list kata                                   ║
+║  Output:                                            ║
+║  - Setiap kata dengan jumlah kemunculan             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ List                                              ║
+║    - Container untuk multiple values                ║
+║    - Index dimulai dari 0                           ║
+║    - Mutable (bisa diubah)                          ║
+║                                                      ║
+║  ✓ Akses Elemen                                      ║
+║    - Index positif dan negatif                      ║
+║    - Slicing [start:end]                            ║
+║                                                      ║
+║  ✓ Modifikasi                                        ║
+║    - append(), insert(), remove(), pop()            ║
+║                                                      ║
+║  ✓ Fungsi dan Method                                 ║
+║    - len(), max(), min(), sum()                     ║
+║    - sort(), reverse(), count(), index()            ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 6:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. List Processing                                  ║
+║     - Sorting, statistik, filtering                  ║
+║                                                      ║
+║  2. Data Manager App                                 ║
+║     - CRUD (Create, Read, Update, Delete)           ║
+║                                                      ║
+║  3. Word Frequency Counter                           ║
+║     - Hitung frekuensi kata dalam list              ║
+║                                                      ║
+║  Simpan: Tugas6_NIM_Nama.py                          ║
+║  Deadline: Sebelum Pertemuan 7 (Quiz 1)              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: QUIZ 1                                       ║
+║                                                      ║
+║  Materi: Pertemuan 1-6                               ║
+║  ▸ Computational Thinking                            ║
+║  ▸ Variabel dan Tipe Data                           ║
+║  ▸ Percabangan (if-else, elif)                      ║
+║  ▸ Perulangan (for, while)                          ║
+║  ▸ List                                             ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Review semua materi pertemuan 1-6                ║
+║  ▸ latihan soal coding                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

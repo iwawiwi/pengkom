@@ -1,0 +1,169 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 11: Menggunakan Library
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 11:                              ║
+║           Menggunakan Library                        ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Apa itu Library?                                 ║
+║  2. Library Math                                    ║
+║  3. Library Random                                   ║
+║  4. Library Pandas (Pengenalan)                     ║
+║  5. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: APA ITU LIBRARY?
+```
+╔══════════════════════════════════════════════════════╗
+║            APA ITU LIBRARY?                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Library adalah kumpulan fungsi yang sudah          ║
+║  dibuat oleh orang lain dan dapat digunakan         ║
+║  kembali.                                            ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  import math                                         ║
+║  import random                                       ║
+║  import pandas as pd                                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: LIBRARY MATH
+```
+╔══════════════════════════════════════════════════════╗
+║               LIBRARY MATH                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  math.sqrt(x)    # Akar kuadrat                      ║
+║  math.pow(x, y)  # Pangkat                           ║
+║  math.factorial(x) # Faktorial                       ║
+║  math.pi         # Konstanta pi                      ║
+║  math.sin(x), math.cos(x), math.tan(x)              ║
+║  math.log(x), math.log10(x)                         ║
+║  math.degrees(x), math.radians(x)                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: LIBRARY RANDOM
+```
+╔══════════════════════════════════════════════════════╗
+║              LIBRARY RANDOM                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  random.random()       # 0.0 - 1.0                  ║
+║  random.randint(a, b)  # Integer acak a-b           ║
+║  random.choice(list)   # Pilihan acak dari list     ║
+║  random.shuffle(list)  # Acak urutan list           ║
+║  random.sample(list, k)# Sampling k elemen          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: PANDAS BASICS
+```
+╔══════════════════════════════════════════════════════╗
+║              PANDAS BASICS                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  import pandas as pd                                 ║
+║                                                      ║
+║  # Series                                           ║
+║  s = pd.Series([1, 2, 3, 4, 5])                     ║
+║                                                      ║
+║  # DataFrame                                        ║
+║  df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})║
+║                                                      ║
+║  # Baca CSV                                         ║
+║  df = pd.read_csv('data.csv')                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: LATIHAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  LATIHAN                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Kalkulator Scientific                    ║
+║  ▸ Gunakan library math                             ║
+║                                                      ║
+║  LATIHAN 2: Game Dadu                                ║
+║  ▸ Gunakan library random                           ║
+║                                                      ║
+║  LATIHAN 3: Data Analysis dengan Pandas             ║
+║  ▸ Baca CSV, hitung statistik                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Library = kumpulan fungsi siap pakai              ║
+║                                                    ║
+║  ✓ Math untuk operasi matematika                    ║
+║                                                    ║
+║  ✓ Random untuk bilangan acak                       ║
+║                                                    ║
+║  ✓ Pandas untuk manipulasi data                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Data Visualization                           ║
+║  ▸ Matplotlib                                       ║
+║  ▸ Seaborn                                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

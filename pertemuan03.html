@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 3 - Percabangan</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 3: Percabangan (Branching)</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: OUTLINE === -->
+            <section>
+                <h3>Outline Materi</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teori</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Review Pertemuan 2</li>
+                            <li>Konsep Percabangan</li>
+                            <li>Operator Perbandingan</li>
+                            <li>Struktur if</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Praktek</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Struktur if-else</li>
+                            <li>Struktur if-elif-else</li>
+                            <li><strong>Hands-on Practice</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: TUJUAN === -->
+            <section>
+                <h3>Tujuan Pembelajaran</h3>
+                <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
+                    <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="card" style="padding: 15px;">✅ Menjelaskan konsep percabangan</div>
+                        <div class="card" style="padding: 15px;">✅ Menggunakan operator perbandingan</div>
+                        <div class="card" style="padding: 15px;">✅ Menulis struktur if dan if-else</div>
+                        <div class="card" style="padding: 15px;">✅ Memecahkan masalah dengan logika</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: APA ITU PERCABANGAN === -->
+            <section>
+                <h3>Apa itu Percabangan?</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p><strong>Percabangan</strong> adalah struktur kontrol yang memungkinkan program membuat
+                            keputusan berdasarkan kondisi tertentu.</p>
+                        <br>
+                        <p>Program melakukan hal berbeda berdasarkan kondisi yang berbeda!</p>
+                    </div>
+                    <div class="flex-col card" style="background: #333; color: white;">
+                        <div style="text-align: center;">
+                            <h4>🚦 Lampu Lalu Lintas</h4>
+                            <hr style="border-color: #555;">
+                            <div style="text-align: left; padding-left: 20px;">
+                                <p style="color: #ff5f5f;">🔴 MERAH &rarr; BERHENTI</p>
+                                <p style="color: #f1c40f;">🟡 KUNING &rarr; PERSIAPAN</p>
+                                <p style="color: #2ecc71;">🟢 HIJAU &rarr; JALAN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 5: KAPAN BUTUH === -->
+            <section>
+                <h3>Kapan Membutuhkan Percabangan?</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col text-left">
+                        <ul class="text-small">
+                            <li>✅ Memvalidasi input user</li>
+                            <li>✅ Mengambil keputusan berdasarkan nilai</li>
+                            <li>✅ Menangani berbagai kasus</li>
+                            <li>✅ Mengontrol alur program</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>Contoh Real:</h4>
+                        <ul class="text-smaller">
+                            <li>Jika nilai >= 60, <strong>Lulus</strong></li>
+                            <li>Jika usia < 17, <strong>No KTP</strong></li>
+                            <li>Jika saldo cukup, <strong>Transaksi OK</strong></li>
+                            <li>Jika hujan, <strong>Bawa Payung</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 6: OPERATOR PERBANDINGAN === -->
+            <section>
+                <h3>Operator Perbandingan</h3>
+                <table class="text-small">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Arti</th>
+                            <th>Contoh</th>
+                            <th>Hasil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Sama dengan</td>
+                            <td><code>5 == 5</code></td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Tidak sama</td>
+                            <td><code>5 != 3</code></td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Lebih besar</td>
+                            <td><code>5 &gt; 3</code></td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Lebih kecil</td>
+                            <td><code>5 &lt; 3</code></td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Lebih besar sama dengan</td>
+                            <td><code>5 &gt;= 5</code></td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Lebih kecil sama dengan</td>
+                            <td><code>5 &lt;= 3</code></td>
+                            <td>False</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- === SLIDE 7: CONTOH PERBANDINGAN CODE === -->
+            <section>
+                <h3>Contoh Perbandingan</h3>
+                <pre><code class="python" data-trim>
+a = 10
+b = 5
+
+print("a == b:", a == b)    # False
+print("a != b:", a != b)    # True
+print("a > b:", a > b)      # True
+print("a < b:", a < b)      # False
+print("a >= b:", a >= b)    # True
+print("a <= b:", a <= b)    # False
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 8: STRUKTUR IF === -->
+            <section>
+                <h3>Struktur IF</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p>Blok kode hanya dijalankan jika kondisi bernilai <strong>TRUE</strong>.</p>
+                        <pre><code class="python">
+if kondisi:
+    # Kode dijalankan
+                            </code></pre>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python" data-trim>
+nilai = 75
+
+if nilai >= 60:
+    print("Lulus!")
+
+# Output: Lulus!
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: STRUKTUR IF-ELSE === -->
+            <section>
+                <h3>Struktur IF-ELSE</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p>Jika kondisi TRUE, jalankan blok IF.<br>Jika FALSE, jalankan blok ELSE.</p>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python" data-trim>
+angka = 7
+
+if angka % 2 == 0:
+    print("Genap")
+else:
+    print("Ganjil")
+                            </code></pre>
+                        <div class="code-output">
+                            Output:
+                            Ganjil
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: CONTOH GRADE === -->
+            <section>
+                <h3>Contoh: Grade Nilai (elif)</h3>
+                <pre><code class="python" data-trim data-noescape>
+nilai = 85
+
+if nilai >= 90:
+    grade = "A"
+elif nilai >= 80:
+    grade = "B"
+elif nilai >= 70:
+    grade = "C"
+elif nilai >= 60:
+    grade = "D"
+else:
+    grade = "E"
+
+print(f"Grade: {grade}")
+                    </code></pre>
+                <div class="code-output">
+                    Output:
+                    Grade: B
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: CONTOH KALKULATOR === -->
+            <section>
+                <h3>Contoh: Kalkulator Sederhana</h3>
+                <pre><code class="python" style="max-height: 400px; font-size: 0.8em;" data-trim>
+operasi = "+"
+a, b = 10, 5
+
+if operasi == "+":
+    hasil = a + b
+elif operasi == "-":
+    hasil = a - b
+elif operasi == "*":
+    hasil = a * b
+elif operasi == "/":
+    if b != 0:
+        hasil = a / b
+    else:
+        hasil = "Error"
+else:
+    hasil = "Tidak valid"
+
+print(f"Hasil: {hasil}")
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 12: WARNING INFINITE LOOP === -->
+            <section>
+                <h3>⚠️ Peringatan: Infinite Loop</h3>
+                <div class="flex-container">
+                    <div class="flex-col card" style="border-left: 5px solid #28a745;">
+                        <h4 style="color: #28a745; font-size: 0.8em;">✅ BENAR</h4>
+                        <pre><code class="python" style="font-size: 0.7em;">
+x = 0
+while x < 5:
+    print(x)
+    x = x + 1  # Update!
+                            </code></pre>
+                    </div>
+                    <div class="flex-col card" style="border-left: 5px solid #dc3545;">
+                        <h4 style="color: #dc3545; font-size: 0.8em;">❌ SALAH (BAHAYA)</h4>
+                        <pre><code class="python" style="font-size: 0.7em;">
+x = 0
+while x < 5:
+    print(x)
+    # x tidak pernah diupdate
+    # Loop selamanya!
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 13: HANDS ON 1 & 2 === -->
+            <section>
+                <h3>Hands-On Practice</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4>1. Positif / Negatif</h4>
+                        <hr>
+                        <p class="text-smaller">Input: Angka dari user.</p>
+                        <p class="text-smaller">Output: "Positif", "Negatif", atau "Nol".</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Kalkulator Diskon</h4>
+                        <hr>
+                        <p class="text-smaller">Input: Harga & Status Member (y/n).</p>
+                        <p class="text-smaller">Rule:</p>
+                        <ul class="text-smaller">
+                            <li>Member: Diskon 20%</li>
+                            <li>Non-member: Diskon 0%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 14: HANDS ON 3 & 4 === -->
+            <section>
+                <h3>Latihan Tambahan</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card" style="background: #f8f9fa;">
+                        <h4>3. Login Sederhana</h4>
+                        <p class="text-smaller">User: "admin", Pass: "12345"</p>
+                        <p class="text-smaller">Cek username & password input.</p>
+                    </div>
+                    <div class="flex-col card" style="background: #f8f9fa;">
+                        <h4>4. Kategori Usia</h4>
+                        <ul class="text-smaller">
+                            <li>&lt; 12: Anak-anak</li>
+                            <li>12-17: Remaja</li>
+                            <li>18-59: Dewasa</li>
+                            <li>&gt;= 60: Lansia</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 15: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <div class="card">
+                    <ul class="text-small" style="columns: 2;">
+                        <li>✅ <strong>Percabangan</strong>: `if`, `if-else`, `if-elif-else`.</li>
+                        <li>✅ <strong>Operator Perbandingan</strong>: `==`, `!=`, `<`, `>`, `<=`, `>=`.</li>
+                        <li>✅ <strong>Boolean</strong>: Hasil evaluasi `True` atau `False`.</li>
+                        <li>✅ <strong>Nested If</strong>: If di dalam if.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 16: TUGAS === -->
+            <section>
+                <h3>Tugas Pertemuan 3 📝</h3>
+                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                    <ol class="text-small">
+                        <li><strong>Kalkulator Suhu:</strong> Konversi lengkap (C ke F, F ke C).</li>
+                        <li><strong>Sistem Grade + Absensi:</strong> Input nilai & absensi. Jika absensi < 80%, otomatis
+                                <strong>E</strong>.</li>
+                        <li><strong>Game Suit:</strong> Batu, Gunting, Kertas (Lawan komputer/random).</li>
+                    </ol>
+                    <hr>
+                    <p class="text-smaller"><strong>File:</strong> <code>Tugas3_NIM_Nama.py</code> |
+                        <strong>Deadline:</strong> Sebelum Pertemuan 4</p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 17: NEXT WEEK === -->
+            <section>
+                <h3>Pertemuan Berikutnya</h3>
+                <h4>Kondisi Majemuk & Logika</h4>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul class="text-small">
+                            <li>Logical Operators (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+                            <li>Nested IF Lanjutan</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <div class="card text-center">
+                            <p class="text-smaller">Persiapan: Baca tentang Python Logical Operators</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 18: Q&A & CLOSING === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

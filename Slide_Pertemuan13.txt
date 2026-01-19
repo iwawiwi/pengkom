@@ -1,0 +1,156 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 13: File Eksternal (CSV)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 13:                              ║
+║           File Eksternal (CSV)                       ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Apa itu CSV?                                     ║
+║  2. Membaca CSV dengan Pandas                       ║
+║  3. Data Cleaning                                    ║
+║  4. Data Manipulation                                ║
+║  5. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: MEMBACA CSV
+```
+╔══════════════════════════════════════════════════════╗
+║              MEMBACA CSV                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  import pandas as pd                                 ║
+║                                                      ║
+║  # Membaca CSV                                       ║
+║  df = pd.read_csv('data.csv')                        ║
+║                                                      ║
+║  # Menampilkan data                                  ║
+║  print(df.head())      # 5 baris pertama            ║
+║  print(df.tail())      # 5 baris terakhir           ║
+║  print(df.info())      # Info DataFrame             ║
+║  print(df.describe())  # Statistik                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: DATA CLEANING
+```
+╔══════════════════════════════════════════════════════╗
+║              DATA CLEANING                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Missing values                                    ║
+║  df.isnull()          # Cek missing                  ║
+║  df.fillna(0)         # Isi dengan 0                 ║
+║  df.dropna()          # Hapus baris dengan missing   ║
+║                                                      ║
+║  # Mengubah tipe data                                ║
+║  df['kolom'] = df['kolom'].astype(int)              ║
+║                                                      ║
+║  # Menghapus duplikat                                ║
+║  df.drop_duplicates()                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: DATA MANIPULATION
+```
+╔══════════════════════════════════════════════════════╗
+║            DATA MANIPULATION                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Filtering                                         ║
+║  df[df['kolom'] > 50]                                ║
+║                                                      ║
+║  # Sorting                                           ║
+║  df.sort_values('kolom')                             ║
+║                                                      ║
+║  # Grouping                                          ║
+║  df.groupby('kategori')['nilai'].mean()             ║
+║                                                      ║
+║  # Membuat kolom baru                                ║
+║  df['total'] = df['a'] + df['b']                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: LATIHAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  LATIHAN                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Analisis Data Penjualan                 ║
+║  ▸ Baca CSV, hitung total penjualan                 ║
+║                                                      ║
+║  LATIHAN 2: Data Cleaning                            ║
+║  ▸ Handle missing values, duplicate                 ║
+║                                                      ║
+║  LATIHAN 3: Analisis Statistik                       ║
+║  ▸ Grouping, filtering, sorting                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ CSV = format file data tabular                   ║
+║                                                    ║
+║  ✓ Pandas untuk membaca dan memanipulasi            ║
+║                                                    ║
+║  ✓ Data cleaning = handle missing/duplikat          ║
+║                                                    ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Desain Algoritma & Mini Project              ║
+║  ▸ Pengumuman proyek mini                           ║
+║  ▸ Pembentukan kelompok                             ║
+║  ▸ Pemilihan topik                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

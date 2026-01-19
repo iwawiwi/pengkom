@@ -1,0 +1,168 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 14: Algoritma & Mini Project
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 14:                              ║
+║           Algoritma & Mini Project                   ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Pengumuman Mini Project                          ║
+║  2. Kriteria Penilaian                               ║
+║  3. Topik Project                                    ║
+║  4. Pembentukan Kelompok                            ║
+║  5. Workshop Algoritma                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: PENGUMUMAN PROJECT
+```
+╔══════════════════════════════════════════════════════╗
+║            PENGUMUMAN MINI PROJECT                   ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Kelompok: 4-5 mahasiswa                          ║
+║  ▸ Deadline: Pertemuan 16                           ║
+║  ▸ Presentasi: Pertemuan 16                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: TOPIK PROJECT
+```
+╔══════════════════════════════════════════════════════╗
+║               TOPIK PROJECT                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Analisis Data Penjualan                         ║
+║  2. Analisis Data Cuaca                             ║
+║  3. Analisis Data Akademik                          ║
+║  4. Analisis Kepuasan Pelanggan                     ║
+║  5. Analisis Data Karyawan                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: SPESIFIKASI TEKNIS
+```
+╔══════════════════════════════════════════════════════╗
+║           SPESIFIKASI TEKNIS                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  WAJIB:                                              ║
+║  ▸ CSV file input                                   ║
+║  ▸ Pandas untuk data processing                     ║
+║  ▸ Matplotlib/Seaborn untuk visualisasi             ║
+║  ▸ Minimal 3 fungsi                                 ║
+║  ▸ String manipulation                              ║
+║  ▸ Conditional dan loop                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: RUBRIK PENILAIAN
+```
+╔══════════════════════════════════════════════════════╗
+║             RUBRIK PENILAIAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Kode Program: 30%                                 ║
+║  ▸ Data Visualization: 20%                           ║
+║  ▸ Penggunaan Library: 15%                           ║
+║  ▸ Dokumentasi: 15%                                  ║
+║  ▸ Presentasi: 20%                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: PEMBENTUKAN KELOMPOK
+```
+╔══════════════════════════════════════════════════════╗
+║            PEMBENTUKAN KELOMPOK                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ 1 kelompok = 4-5 mahasiswa                       ║
+║  ▸ Daftar dengan format:                             ║
+║    - Nama kelompok                                   ║
+║    - Daftar anggota                                  ║
+║    - Topik yang dipilih                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: WORKSHOP ALGORITMA
+```
+╔══════════════════════════════════════════════════════╗
+║             WORKSHOP ALGORITMA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Pseudocode untuk proyek                          ║
+║  ▸ Flowchart sederhana                              ║
+║  ▸ Struktur kode                                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Mini project = aplikasi semua materi             ║
+║                                                    ║
+║  ✓ Kerja kelompok = kolaborasi                      ║
+║                                                    ║
+║  ✓ Persiapkan dari sekarang!                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Quiz 2 + Kerja Proyek                        ║
+║  ▸ Quiz materi 9-13                                 ║
+║  ▸ Remaining time untuk kerja proyek                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

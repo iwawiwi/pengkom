@@ -1,0 +1,129 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 12: Data Visualization
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 12:                              ║
+║           Data Visualization                         ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Mengapa Visualisasi Data?                        ║
+║  2. Library Matplotlib                               ║
+║  3. Library Seaborn                                  ║
+║  4. Jenis-jenis Chart                               ║
+║  5. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: JENIS CHART
+```
+╔══════════════════════════════════════════════════════╗
+║               JENIS CHART                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Line Plot     - Tren over time                    ║
+║  ▸ Bar Chart     - Perbandingan kategori            ║
+║  ▸ Histogram     - Distribusi data                  ║
+║  ▸ Scatter Plot  - Korelasi 2 variabel              ║
+║  ▸ Pie Chart     - Proporsi                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: MATPLOTLIB BASICS
+```
+╔══════════════════════════════════════════════════════╗
+║             MATPLOTLIB BASICS                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  import matplotlib.pyplot as plt                     ║
+║                                                      ║
+║  plt.figure()          # Buat figure                 ║
+║  plt.plot(x, y)        # Line plot                   ║
+║  plt.bar(x, y)         # Bar chart                   ║
+║  plt.scatter(x, y)     # Scatter plot                ║
+║  plt.hist(x)           # Histogram                   ║
+║  plt.title('Judul')     # Judul chart                 ║
+║  plt.xlabel('X')        # Label X                     ║
+║  plt.ylabel('Y')        # Label Y                     ║
+║  plt.show()             # Tampilkan chart             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: LATIHAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  LATIHAN                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Visualisasi Suhu 7 Hari                 ║
+║  ▸ Line plot suhu max dan min                       ║
+║                                                      ║
+║  LATIHAN 2: Distribusi Nilai                         ║
+║  ▸ Histogram nilai mahasiswa                        ║
+║                                                      ║
+║  LATIHAN 3: Perbandingan Penjualan                  ║
+║  ▸ Bar chart penjualan bulanan                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Visualisasi = komunikasi data yang efektif       ║
+║                                                    ║
+║  ✓ Matplotlib untuk semua jenis chart               ║
+║                                                    ║
+║  ✓ Seaborn untuk visualisasi statistik              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: File Eksternal (CSV)                         ║
+║  ▸ Membaca CSV dengan Pandas                        ║
+║  ▸ Data cleaning                                    ║
+║  ▸ Data manipulation                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

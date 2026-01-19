@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 7 - Quiz 1</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 7: Quiz 1</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: INFORMASI QUIZ === -->
+            <section>
+                <h3>Informasi Quiz 1</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <ul class="text-small">
+                            <li><strong>Tanggal:</strong> Hari ini</li>
+                            <li><strong>Waktu:</strong> 30 Menit</li>
+                            <li><strong>Total:</strong> 100 Poin</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>Format Soal</h4>
+                        <ul class="text-smaller">
+                            <li>Pilihan Ganda: 20 Soal</li>
+                            <li>Benar/Salah: 10 Soal</li>
+                            <li>Coding: 3 Soal</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: MATERI QUIZ === -->
+            <section>
+                <h3>Cakupan Materi</h3>
+                <div class="text-small text-left" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="card">
+                        <strong>Pertemuan 1-2</strong>
+                        <ul>
+                            <li>Computational Thinking</li>
+                            <li>Variabel & Tipe Data</li>
+                            <li>Operator Aritmatika</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Pertemuan 3-4</strong>
+                        <ul>
+                            <li>Percabangan (If-Else)</li>
+                            <li>Operator Logika (And, Or)</li>
+                            <li>Nested If</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Pertemuan 5</strong>
+                        <ul>
+                            <li>Perulangan (For, While)</li>
+                            <li>Range, Break, Continue</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Pertemuan 6</strong>
+                        <ul>
+                            <li>List Concepts</li>
+                            <li>List Methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: ATURAN QUIZ === -->
+            <section>
+                <h3>Aturan Quiz ⚠️</h3>
+                <div class="card text-left" style="background: #fff8e1; border-left: 5px solid #ffc107;">
+                    <ul class="text-small">
+                        <li>✅ <strong>Jujur:</strong> Dilarang membuka catatan atau browsing (kecuali open book).</li>
+                        <li>✅ <strong>Mandiri:</strong> Dilarang berkomunikasi dengan teman kiri/kanan.</li>
+                        <li>✅ <strong>Alat:</strong> Siapkan laptop untuk bagian coding.</li>
+                        <li>🚫 <strong>Pelanggaran:</strong> Nilai 0 dan sanksi akademik.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 5: CONTOH SOAL 1 === -->
+            <section>
+                <h3>Contoh Soal: Pilihan Ganda</h3>
+                <div class="card text-left">
+                    <p class="text-small">Manakah output dari kode berikut?</p>
+                    <pre><code class="python">
+x = 5
+y = 2
+print(x % y)
+                        </code></pre>
+                    <div class="text-smaller">
+                        A. 2.5<br>
+                        B. 1<br>
+                        C. 10<br>
+                        D. 2
+                    </div>
+                    <hr>
+                    <p class="text-smaller"><strong>Jawaban: B (1)</strong> karena % adalah modulus (sisa bagi).</p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 6: CONTOH SOAL 2 === -->
+            <section>
+                <h3>Contoh Soal: Benar/Salah</h3>
+                <table class="text-small">
+                    <thead>
+                        <tr>
+                            <th>Pernyataan</th>
+                            <th>Jawaban</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>List di Python bersifat <em>immutable</em>.</td>
+                            <td><span style="color: red;">SALAH</span> (Mutable)</td>
+                        </tr>
+                        <tr>
+                            <td><code>range(1, 5)</code> menghasilkan <code>[1, 2, 3, 4]</code>.</td>
+                            <td><span style="color: green;">BENAR</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>break</code> digunakan untuk skip satu iterasi.</td>
+                            <td><span style="color: red;">SALAH</span> (Itu continue)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- === SLIDE 7: CONTOH SOAL 3 === -->
+            <section>
+                <h3>Contoh Soal: Coding</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left">
+                        <p class="text-small"><strong>Soal:</strong> Buat program menentukan Ganjil/Genap.</p>
+                        <p class="text-smaller">Input: Angka<br>Output: "Ganjil" atau "Genap"</p>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python">
+a = int(input("Angka: "))
+
+if a % 2 == 0:
+    print("Genap")
+else:
+    print("Ganjil")
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: TIPS === -->
+            <section>
+                <h3>Tips Mengerjakan</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4>Strategi</h4>
+                        <p class="text-smaller">Kerjakan soal mudah dulu. Jangan terpaku pada satu soal susah.</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>Teliti</h4>
+                        <p class="text-smaller">Baca soal pelan-pelan. Perhatikan detail "Benar", "Salah", atau
+                            "Kecuali".</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: SESI REVIEW === -->
+            <section>
+                <h3>Rencana Sesi</h3>
+                <div class="card" style="display: flex; justify-content: space-around; text-align: center;">
+                    <div>
+                        <h1>30</h1>
+                        <p class="text-smaller">Menit Quiz</p>
+                    </div>
+                    <div>
+                        <h1>30</h1>
+                        <p class="text-smaller">Menit Review</p>
+                    </div>
+                    <div>
+                        <h1>40</h1>
+                        <p class="text-smaller">Menit Praktikum</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: COUNTDOWN === -->
+            <section>
+                <h1>Quiz Dimulai Dalam...</h1>
+                <div style="font-size: 3em; font-weight: bold; color: #d32f2f;">
+                    3... 2... 1...
+                </div>
+                <h3 style="margin-top: 50px;">GOOD LUCK! 🍀</h3>
+            </section>
+
+            <!-- === SLIDE 11: CLOSING === -->
+            <section>
+                <h1>Terima Kasih</h1>
+                <p>Semoga hasilnya memuaskan!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

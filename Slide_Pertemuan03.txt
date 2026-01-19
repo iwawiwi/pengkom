@@ -1,0 +1,463 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 3: Percabangan (Branching)
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 3:                               ║
+║           Percabangan (Branching)                    ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review Pertemuan 2                               ║
+║  2. Konsep Percabangan                               ║
+║  3. Operator Perbandingan                            ║
+║  4. Struktur if                                      ║
+║  5. Struktur if-else                                 ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Menjelaskan konsep percabangan                   ║
+║                                                    ║
+║  ✓ Menggunakan operator perbandingan                ║
+║                                                    ║
+║  ✓ Menulis struktur if dan if-else                  ║
+║                                                    ║
+║  ✓ Menerapkan percabangan untuk memecahkan masalah ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: APA ITU PERCABANGAN?
+```
+╔══════════════════════════════════════════════════════╗
+║            APA ITU PERCABANGAN?                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Percabangan adalah struktur kontrol yang           ║
+║  memungkinkan program membuat keputusan             ║
+║  berdasarkan kondisi tertentu.                      ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Analogi: Lampu Lalu Lintas                         ║
+║                                                      ║
+║         MERAH → BERHENTI                             ║
+║         KUNING → PERSIAPAN                           ║
+║         HIJAU → JALAN                                ║
+║                                                      ║
+║  Program melakukan hal berbeda berdasarkan          ║
+║  kondisi yang berbeda!                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: KAPAN MEMBUTUHKAN PERCABANGAN?
+```
+╔══════════════════════════════════════════════════════╗
+║         KAPAN MEMBUTUHKAN PERCABANGAN?               ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Memvalidasi input user                            ║
+║  ✓ Mengambil keputusan berdasarkan nilai            ║
+║  ✓ Menangani berbagai kasus                          ║
+║  ✓ Mengontrol alur program                          ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  • Jika nilai >= 60, lulus                           ║
+║  • Jika usia < 17, tidak boleh membuat KTP          ║
+║  • Jika saldo cukup, transaksi berhasil             ║
+║  • Jika hujan, bawa payung                           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: OPERATOR PERBANDINGAN
+```
+╔══════════════════════════════════════════════════════╗
+║            OPERATOR PERBANDINGAN                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Operator    Arti              Contoh        Hasil  ║
+║  ─────────────────────────────────────────────────   ║
+║     ==      Sama dengan        5 == 5      True    ║
+║     !=      Tidak sama         5 != 3      True    ║
+║      >      Lebih besar        5 > 3       True    ║
+║      <      Lebih kecil        5 < 3       False   ║
+║     >=      >=                 5 >= 5       True    ║
+║     <=      <=                 5 <= 3       False   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: CONTOH PERBANDINGAN
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH PERBANDINGAN                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  a = 10                                              ║
+║  b = 5                                               ║
+║                                                      ║
+║  print("a == b:", a == b)    # False                ║
+║  print("a != b:", a != b)    # True                 ║
+║  print("a > b:", a > b)      # True                 ║
+║  print("a < b:", a < b)      # False                ║
+║  print("a >= b:", a >= b)    # True                 ║
+║  print("a <= b:", a <= b)    # False                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: STRUKTUR IF
+```
+╔══════════════════════════════════════════════════════╗
+║                 STRUKTUR IF                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  IF kondisi:                                         ║
+║      # Kode yang dijalankan jika kondisi TRUE       ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  nilai = 75                                          ║
+║                                                      ║
+║  if nilai >= 60:                                     ║
+║      print("Lulus!")                                 ║
+║                                                      ║
+║  Output: Lulus!                                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: STRUKTUR IF-ELSE
+```
+╔══════════════════════════════════════════════════════╗
+║               STRUKTUR IF-ELSE                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  IF kondisi:                                         ║
+║      # Kode jika TRUE                                ║
+║  ELSE:                                               ║
+║      # Kode jika FALSE                               ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Contoh:                                             ║
+║                                                      ║
+║  angka = 7                                           ║
+║                                                      ║
+║  if angka % 2 == 0:                                  ║
+║      print("Genap")                                  ║
+║  else:                                               ║
+║      print("Ganjil")                                 ║
+║                                                      ║
+║  Output: Ganjil                                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: CONTOH 1: GRADE NILAI
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH 1: GRADE NILAI                   ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  nilai = 85                                          ║
+║                                                      ║
+║  if nilai >= 90:                                     ║
+║      grade = "A"                                     ║
+║  elif nilai >= 80:                                   ║
+║      grade = "B"                                     ║
+║  elif nilai >= 70:                                   ║
+║      grade = "C"                                     ║
+║  elif nilai >= 60:                                   ║
+║      grade = "D"                                     ║
+║  else:                                               ║
+║      grade = "E"                                     ║
+║                                                      ║
+║  print(f"Grade: {grade}")                            ║
+║                                                      ║
+║  Output: Grade: B                                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: CONTOH 2: KALKULATOR
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH 2: KALKULATOR                    ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  operasi = "+"                                       ║
+║  a, b = 10, 5                                        ║
+║                                                      ║
+║  if operasi == "+":                                  ║
+║      hasil = a + b                                   ║
+║  elif operasi == "-":                                ║
+║      hasil = a - b                                   ║
+║  elif operasi == "*":                                ║
+║      hasil = a * b                                   ║
+║  elif operasi == "/":                                ║
+║      if b != 0:                                      ║
+║          hasil = a / b                               ║
+║      else:                                           ║
+║          hasil = "Error"                             ║
+║  else:                                               ║
+║      hasil = "Tidak valid"                           ║
+║                                                      ║
+║  print(f"Hasil: {hasil}")                            ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: PERINGATAN - INFINITE LOOP
+```
+╔══════════════════════════════════════════════════════╗
+║           PERINGATAN - INFINITE LOOP                 ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  JANGAN LUPA MENGUPDATE KONDISI!                     ║
+║                                                      ║
+║  BENAR:                                              ║
+║  x = 0                                               ║
+║  while x < 5:                                        ║
+║      print(x)                                        ║
+║      x = x + 1   # PENTING!                          ║
+║                                                      ║
+║  SALAH (akan infinite loop!):                        ║
+║  x = 0                                               ║
+║  while x < 5:                                        ║
+║      print(x)                                        ║
+║      # x tidak pernah diupdate → loop tak terbatas  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Bilangan Positif/Negatif                 ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: angka dari user                              ║
+║  Output: "Positif", "Negatif", atau "Nol"           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 2: Kalkulator Diskon                        ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: harga, status member (y/n)                   ║
+║  Output: harga setelah diskon                        ║
+║  - Member: diskon 20%                                ║
+║  - Non-member: diskon 0%                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 3: Validasi Login Sederhana                 ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  username = "admin"                                  ║
+║  password = "12345"                                  ║
+║                                                      ║
+║  Input: username, password dari user                 ║
+║  Output: "Login berhasil" atau "Login gagal"         ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 4: Kategori Usia                            ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: usia                                         ║
+║  Output:                                             ║
+║  - < 12: Anak-anak                                   ║
+║  - 12-17: Remaja                                     ║
+║  - 18-59: Dewasa                                     ║
+║  - >= 60: Lansia                                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ Percabangan                                       ║
+║    - if: jalankan jika kondisi TRUE                 ║
+║    - if-else: pilih salah satu                      ║
+║    - if-elif-else: multiple kondisi                 ║
+║                                                      ║
+║  ✓ Operator Perbandingan                            ║
+║    - ==, !=, >, <, >=, <=                           ║
+║                                                      ║
+║  ✓ Boolean Expressions                              ║
+║    - Hasilnya True atau False                       ║
+║                                                      ║
+║  ✓ Nested Conditions                                 ║
+║    - if di dalam if                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 3:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Kalkulator Suhu                                  ║
+║     - Konversi C ke F dan F ke C                     ║
+║                                                      ║
+║  2. Sistem Grade with Absensi                        ║
+║     - Input: nilai, absensi                          ║
+║     - Jika absensi < 80%, grade E                    ║
+║                                                      ║
+║  3. Game Suit (Batu-Gunting-Kertas)                 ║
+║                                                      ║
+║  Simpan: Tugas3_NIM_Nama.py                          ║
+║  Deadline: Sebelum Pertemuan 4                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: KONDISI MAJEMUK                              ║
+║                                                      ║
+║  Yang akan dipelajari:                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ if-elif-else (lanjutan)                          ║
+║  ▸ Operator Logika (and, or, not)                   ║
+║  ▸ Nested if (if bersarang)                         ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Baca materi elif di W3Schools                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 18: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 19: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

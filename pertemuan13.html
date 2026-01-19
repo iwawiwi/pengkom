@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 13 - CSV File</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 13: File External (CSV)</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: OUTLINE === -->
+            <section>
+                <h3>Outline Materi</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teori</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Apa itu CSV?</li>
+                            <li>Intro to Data Cleaning</li>
+                            <li>Pandas <code>read_csv</code></li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Praktek</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Membaca File CSV</li>
+                            <li>Filtering & Sorting Data</li>
+                            <li>Menangani Missing Values</li>
+                            <li><strong>Hands-on Practice</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: APA ITU CSV === -->
+            <section>
+                <h3>Apa itu CSV?</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p><strong>CSV (Comma Separated Values)</strong> adalah format teks sederhana untuk menyimpan
+                            data tabular.</p>
+                        <p>Banyak digunakan untuk pertukaran data antara aplikasi (Excel &harr; Python &harr; Database).
+                        </p>
+                    </div>
+                    <div class="flex-col card">
+                        <p class="text-smaller">Contoh isi file <code>data.csv</code>:</p>
+                        <pre><code class="text">
+Nama,Umur,Kota
+Budi,20,Jakarta
+Siti,21,Bandung
+Andi,19,Surabaya
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: MEMBACA CSV === -->
+            <section>
+                <h3>Membaca CSV dengan Pandas</h3>
+                <pre><code class="python" data-trim>
+import pandas as pd
+
+# Load data
+df = pd.read_csv('mahasiswa.csv')
+
+# Inspeksi Data
+print(df.head())      # 5 baris pertama
+print(df.info())      # Tipe data & memory
+print(df.describe())  # Statistik dasar
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 5: DATA CLEANING (MISSING) === -->
+            <section>
+                <h3>Data Cleaning: Missing Values</h3>
+                <p class="text-small">Data di dunia nyata seringkali kotor/kosong.</p>
+                <pre><code class="python" data-trim>
+# Cek data kosong (True/False)
+print(df.isnull().sum())
+
+# Solusi 1: Hapus baris yang kosong
+df_bersih = df.dropna()
+
+# Solusi 2: Isi dengan nilai default (ex: 0)
+df_isi = df.fillna(0)
+
+# Solusi 3: Isi dengan Rata-rata
+mean_umur = df['Umur'].mean()
+df['Umur'] = df['Umur'].fillna(mean_umur)
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 6: DATA MANIPULATION === -->
+            <section>
+                <h3>Data Manipulation</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <h4>Filtering</h4>
+                        <pre><code class="python">
+# Filter Umur > 20
+senior = df[ df['Umur'] > 20 ]
+
+# Filter Kota Jakarta
+jkt = df[ df['Kota'] == 'Jakarta' ]
+                            </code></pre>
+                    </div>
+                    <div class="flex-col">
+                        <h4>Sorting</h4>
+                        <pre><code class="python">
+# Urutkan berdasarkan Umur
+df_urut = df.sort_values('Umur')
+
+# Descending (Besar ke Kecil)
+df_desc = df.sort_values('Umur', ascending=False)
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 7: LATIHAN HANDS-ON === -->
+            <section>
+                <h3>Hands-On: Analisis Penjualan</h3>
+                <div class="card text-left">
+                    <p class="text-small">Diberikan file <code>transaksi.csv</code> (Produk, Jumlah, Harga).</p>
+                    <ol class="text-small">
+                        <li>Load file menggunakan Pandas.</li>
+                        <li>Buat kolom baru <code>Total</code> = Limit * Harga.</li>
+                        <li>Hitung <strong>Total Omset</strong> (Sum dari kolom Total).</li>
+                        <li>Tampilkan transaksi dengan Jumlah > 10.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: DATA CLEANING (DUPLICATES) === -->
+            <section>
+                <h3>Membersihkan Duplikat</h3>
+                <pre><code class="python" data-trim>
+# Cek jumlah duplikat
+print(df.duplicated().sum())
+
+# Hapus duplikat
+df = df.drop_duplicates()
+                    </code></pre>
+                <p class="text-small">Penting agar analisis tidak bias karena data ganda.</p>
+            </section>
+
+            <!-- === SLIDE 9: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <table class="text-small">
+                    <tr>
+                        <td><code>read_csv()</code></td>
+                        <td>Membaca file CSV.</td>
+                    </tr>
+                    <tr>
+                        <td><code>to_csv()</code></td>
+                        <td>Menyimpan DataFrame ke CSV.</td>
+                    </tr>
+                    <tr>
+                        <td><code>dropna()</code></td>
+                        <td>Menghapus data kosong.</td>
+                    </tr>
+                    <tr>
+                        <td><code>fillna()</code></td>
+                        <td>Mengisi data kosong.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- === SLIDE 10: TUGAS === -->
+            <section>
+                <h3>Tugas Pertemuan 13 📝</h3>
+                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                    <ul class="text-small">
+                        <li><strong>Analisis Data Nilai:</strong>
+                            <br>- Baca <code>nilai_mhs.csv</code>.
+                            <br>- Bersihkan data kosong (Isi nilai kosong dengan 0).
+                            <br>- Tambahkan kolom <code>Status</code> ("Lulus" jika Nilai >= 60).
+                            <br>- Simpan hasil ke <code>nilai_bersih.csv</code>.
+                        </li>
+                    </ul>
+                    <hr>
+                    <p class="text-smaller"><strong>File:</strong> <code>Tugas13_NIM_Nama.py</code> + CSV hasil.</p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: NEXT WEEK === -->
+            <section>
+                <h3>Pertemuan Berikutnya</h3>
+                <h4>Final Mini Project & Algoritma 🚀</h4>
+                <p class="text-small">Persiapan tugas akhir kelompok.</p>
+                <ul class="text-small" style="columns: 2;">
+                    <li>Pembagian Kelompok</li>
+                    <li>Topik Project</li>
+                    <li>Rubrik Penilaian</li>
+                    <li>Design Algoritma</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 12: Q&A === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

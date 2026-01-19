@@ -1,0 +1,572 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 2: Variabel dan Tipe Data
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 2:                               ║
+║           Variabel dan Tipe Data                     ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: OUTLINE
+```
+╔══════════════════════════════════════════════════════╗
+║                   OUTLINE                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Review Pertemuan 1                               ║
+║  2. Konsep Variabel                                  ║
+║  3. Tipe Data dalam Python                           ║
+║  4. Operator Aritmatika                              ║
+║  5. Konversi Tipe Data                               ║
+║  6. Hands-on Practice                                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: TUJUAN PEMBELAJARAN
+```
+╔══════════════════════════════════════════════════════╗
+║            TUJUAN PEMBELAJARAN                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah mengikuti pertemuan ini, mahasiswa         ║
+║  diharapkan mampu:                                   ║
+║                                                      ║
+║  ✓ Mendefinisikan variabel dalam Python             ║
+║                                                    ║
+║  ✓ Mengidentifikasi berbagai tipe data              ║
+║                                                    ║
+║  ✓ Menggunakan operator aritmatika                  ║
+║                                                    ║
+║  ✓ Melakukan konversi tipe data                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: APA ITU VARIABEL?
+```
+╔══════════════════════════════════════════════════════╗
+║              APA ITU VARIABEL?                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Variabel adalah "wadah" atau "tempat" untuk        ║
+║  menyimpan nilai/data dalam program.                ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Analogi: Kotak Berlabel                             ║
+║                                                      ║
+║  ┌─────────────┐      ┌─────────────┐               ║
+║  │   "Budi"    │      │    20       │               ║
+║  │   nama      │      │    edad     │               ║
+║  └─────────────┘      └─────────────┘               ║
+║       Variable                 Variable              ║
+║   (tipe: string)           (tipe: integer)          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: MEMBUAT VARIABEL
+```
+╔══════════════════════════════════════════════════════╗
+║              MEMBUAT VARIABEL                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Di Python, variabel dibuat saat kita               ║
+║  memberikan nilai padanya.                           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  # Assignment (penugasan)                            ║
+║  nama = "Budi"                                       ║
+║  umur = 20                                           ║
+║  tinggi = 165.5                                      ║
+║  mahasiswa = True                                    ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  print(nama)     → output: Budi                      ║
+║  print(umur)     → output: 20                        ║
+║  print(tinggi)   → output: 165.5                     ║
+║  print(mahasiswa) → output: True                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: ATURAN PENAMAAN VARIABEL
+```
+╔══════════════════════════════════════════════════════╗
+║         ATURAN PENAMAAN VARIABEL                     ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Harus dimulai dengan huruf atau underscore (_)   ║
+║  ✓ Hanya boleh mengandung huruf, angka, underscore  ║
+║  ✓ Case sensitive (nama ≠ Nama)                      ║
+║  ✓ Tidak boleh menggunakan keyword Python           ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  BENAR:                                              ║
+║  nama, Nama, nama_lengkap, _variabel, nilai1        ║
+║                                                      ║
+║  SALAH:                                              ║
+║  1nama, nama-lengkap, class, if, while              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: TIPE DATA DASAR
+```
+╔══════════════════════════════════════════════════════╗
+║              TIPE DATA DASAR                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. INTEGER (int)                                    ║
+║     Bilangan bulat: 10, -5, 0, 100                  ║
+║                                                      ║
+║  2. FLOAT                                            ║
+║     Bilangan desimal: 3.14, -0.5, 2.0               ║
+║                                                      ║
+║  3. STRING (str)                                     ║
+║     Teks: "Halo", 'Python', "123"                   ║
+║                                                      ║
+║  4. BOOLEAN (bool)                                   ║
+║     Nilai logika: True, False                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: CONTOH TIPE DATA
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH TIPE DATA                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Integer                                           ║
+║  umur = 20                                           ║
+║  print(type(umur))  # <class 'int'>                  ║
+║                                                      ║
+║  # Float                                             ║
+║  tinggi = 165.5                                      ║
+║  print(type(tinggi))  # <class 'float'>              ║
+║                                                      ║
+║  # String                                            ║
+║  nama = "Budi"                                       ║
+║  print(type(nama))  # <class 'str'>                  ║
+║                                                      ║
+║  # Boolean                                           ║
+║  aktif = True                                        ║
+║  print(type(aktif))  # <class 'bool'>                ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: OPERATOR ARITMATIKA
+```
+╔══════════════════════════════════════════════════════╗
+║            OPERATOR ARITMATIKA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Operator    Contoh      Hasil                       ║
+║  ─────────────────────────────────────────────────   ║
+║     +        5 + 3       8       (Tambah)           ║
+║     -        5 - 3       2       (Kurang)           ║
+║     *        5 * 3       15      (Kali)             ║
+║     /        5 / 3       1.67    (Bagi)             ║
+║     //       5 // 3      1       (Floor Div)        ║
+║     %        5 % 3       2       (Modulus)          ║
+║     **       5 ** 3      125     (Pangkat)          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: CONTOH OPERATOR
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH OPERATOR                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  a = 10                                              ║
+║  b = 3                                               ║
+║                                                      ║
+║  print("a + b =", a + b)    # 13                    ║
+║  print("a - b =", a - b)    # 7                     ║
+║  print("a * b =", a * b)    # 30                    ║
+║  print("a / b =", a / b)    # 3.33                  ║
+║  print("a // b =", a // b)   # 3                    ║
+║  print("a % b =", a % b)    # 1                     ║
+║  print("a ** b =", a ** b)   # 1000                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: OPERATOR ASSIGNMENT
+```
+╔══════════════════════════════════════════════════════╗
+║            OPERATOR ASSIGNMENT                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Operator    Contoh      Ekuivalen                   ║
+║  ─────────────────────────────────────────────────   ║
+║     =        x = 5       x = 5                       ║
+║     +=       x += 3      x = x + 3                   ║
+║     -=       x -= 2      x = x - 2                   ║
+║     *=       x *= 4      x = x * 4                   ║
+║     /=       x /= 2      x = x / 2                   ║
+║     //=      x //= 3     x = x // 3                  ║
+║     %=       x %= 2      x = x % 2                   ║
+║     **=      x **= 2     x = x ** 2                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: CONtoh Assignment
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH ASSIGNMENT                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  x = 10                                              ║
+║  print("x =", x)      # 10                           ║
+║                                                      ║
+║  x += 5                      # x = x + 5             ║
+║  print("x += 5 →", x)  # 15                          ║
+║                                                      ║
+║  x -= 3                      # x = x - 3             ║
+║  print("x -= 3 →", x)  # 12                          ║
+║                                                      ║
+║  x *= 2                      # x = x * 2             ║
+║  print("x *= 2 →", x)   # 24                         ║
+║                                                      ║
+║  x /= 4                      # x = x / 4             ║
+║  print("x /= 4 →", x)   # 6.0                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 13: KONVERSI TIPE DATA
+```
+╔══════════════════════════════════════════════════════╗
+║            KONVERSI TIPE DATA                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Kadang kita perlu mengubah satu tipe data          ║
+║  ke tipe data yang lain.                             ║
+║                                                      ║
+║  Fungsi Konversi:                                    ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  int()     → ubah ke integer                         ║
+║  float()   → ubah ke float                           ║
+║  str()     → ubah ke string                          ║
+║  bool()    → ubah ke boolean                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 14: CONTOH KONVERSI
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH KONVERSI                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # String ke Integer                                 ║
+║  angka_str = "100"                                   ║
+║  angka_int = int(angka_str)                          ║
+║  print(angka_int + 5)    # 105                       ║
+║                                                      ║
+║  # Integer ke Float                                  ║
+║  angka = 50                                          ║
+║  print(float(angka))    # 50.0                       ║
+║                                                      ║
+║  # Float ke Integer (pembulatan ke bawah)            ║
+║  nilai = 88.9                                        ║
+║  print(int(nilai))     # 88                          ║
+║                                                      ║
+║  # Number ke String                                  ║
+║  harga = 25000                                       ║
+║  print("Rp " + str(harga))  # Rp 25000               ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 15: INPUT DARI USER
+```
+╔══════════════════════════════════════════════════════╗
+║            INPUT DARI USER                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Fungsi input() untuk menerima input dari user.     ║
+║  Hasilnya SELALU berupa string!                      ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  nama = input("Masukkan nama Anda: ")               ║
+║  print("Halo,", nama)                                ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  OUTPUT:                                             ║
+║  Masukkan nama Anda: Budi                            ║
+║  Halo, Budi                                          ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  IMPORTANT: Hasil input() adalah STRING!            ║
+║  Kalau mau angka, harus dikonversi!                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 16: CONTOH INPUT
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH INPUT                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  # Kalkulator sederhana                              ║
+║  angka1 = float(input("Angka 1: "))                 ║
+║  angka2 = float(input("Angka 2: "))                 ║
+║                                                      ║
+║  hasil = angka1 + angka2                             ║
+║  print("Hasil:", hasil)                              ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  OUTPUT:                                             ║
+║  Angka 1: 10                                         ║
+║  Angka 2: 5                                          ║
+║  Hasil: 15.0                                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 17: HANDS-ON PRACTICE
+```
+╔══════════════════════════════════════════════════════╗
+║             HANDS-ON PRACTICE                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 1: Variabel Dasar                           ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Buat program dengan variabel:                       ║
+║  - nama                                               ║
+║  - nim                                                ║
+║  - program_studi                                      ║
+║  - semester                                           ║
+║  - ipk                                                ║
+║                                                      ║
+║  Tampilkan semua data!                               ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 2: Konversi Suhu                            ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: Celsius                                      ║
+║  Output: Fahrenheit                                  ║
+║  Rumus: F = (C * 9/5) + 32                           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 18: LATIHAN TAMBAHAN
+```
+╔══════════════════════════════════════════════════════╗
+║             LATIHAN TAMBAHAN                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  LATIHAN 3: Kalkulator Sederhana                     ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input:                                              ║
+║  - Angka 1                                           ║
+║  - Angka 2                                           ║
+║                                                      ║
+║  Output:                                             ║
+║  - Penjumlahan                                      ║
+║  - Pengurangan                                      ║
+║  - Perkalian                                        ║
+║  - Pembagian                                        ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  LATIHAN 4: Kalkulator BMI                           ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Input: berat(kg), tinggi(m)                         ║
+║  Output: BMI                                         ║
+║  Rumus: BMI = berat / (tinggi²)                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 19: RINGKASAN
+```
+╔══════════════════════════════════════════════════════╗
+║                  RINGKASAN                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Hari ini kita telah mempelajari:                   ║
+║                                                      ║
+║  ✓ Variabel                                          ║
+║    - Container untuk menyimpan nilai                ║
+║    - Aturan penamaan                                ║
+║                                                      ║
+║  ✓ Tipe Data                                         ║
+║    - Integer, Float, String, Boolean                 ║
+║    - Fungsi type() untuk cek tipe                   ║
+║                                                      ║
+║  ✓ Operator                                          ║
+║    - Aritmatika: +, -, *, /, //, %, **              ║
+║    - Assignment: =, +=, -=, *=, /=                  ║
+║                                                      ║
+║  ✓ Konversi Tipe                                     ║
+║    - int(), float(), str()                           ║
+║                                                      ║
+║  ✓ Input User                                        ║
+║    - input() menghasilkan string                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 20: TUGAS
+```
+╔══════════════════════════════════════════════════════╗
+║                    TUGAS                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  TUGAS PERTEMUAN 2:                                  ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  1. Kalkulator Suhu                                  ║
+║     - Konversi Celsius ke Fahrenheit                 ║
+║     - Konversi Fahrenheit ke Celsius                 ║
+║                                                      ║
+║  2. Kalkulator BMI                                   ║
+║     - Input: berat(kg), tinggi(m)                   ║
+║     - Output: BMI dan kategori                       ║
+║                                                      ║
+║  3. Kalkulator Tagihan                               ║
+║     - Input: harga, diskon(%)                       ║
+║     - Output: harga setelah diskon                  ║
+║                                                      ║
+║  Simpan: Tugas2_NIM_Nama.py                          ║
+║  Deadline: Sebelum Pertemuan 3                       ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 21: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: PERCABANGAN (BRANCHING)                      ║
+║                                                      ║
+║  Yang akan dipelajari:                               ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  ▸ if statement                                      ║
+║  ▸ if-else statement                                 ║
+║  ▸ Operator perbandingan                            ║
+║  ▸ Operator logika (and, or, not)                   ║
+║                                                      ║
+║  Persiapan:                                          ║
+║  ▸ Baca materi if-else di W3Schools                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 22: Q&A
+```
+╔══════════════════════════════════════════════════════╗
+║                      Q&A                             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║              ADA PERTANYAN?                          ║
+║                                                      ║
+║     Silakan ajukan pertanyaan Anda...                ║
+║                                                      ║
+║                                                      ║
+║  ▸ Email: [email@dosen]                             ║
+║  ▸ Office Hour: [jadwal]                            ║
+║  ▸ LMS: [link LMS]                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 23: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you in the next class!                 ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 10 - String</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 10: Manipulasi String</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: OUTLINE === -->
+            <section>
+                <h3>Outline Materi</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teori</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>Review Fungsi</li>
+                            <li>String sebagai Array</li>
+                            <li>String Methods</li>
+                            <li>Slicing & Indexing</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card">
+                        <h4 style="font-size: 0.9em; border-bottom: 2px solid #eee; padding-bottom: 10px;">Praktek</h4>
+                        <ul style="font-size: 0.7em;">
+                            <li>String Formatting (f-string)</li>
+                            <li>Studi Kasus: Validasi</li>
+                            <li><strong>Hands-on Practice</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: TUJUAN === -->
+            <section>
+                <h3>Tujuan Pembelajaran</h3>
+                <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
+                    <p>Setelah pertemuan ini, Anda diharapkan mampu:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div class="card" style="padding: 15px;">✅ Menggunakan Method String</div>
+                        <div class="card" style="padding: 15px;">✅ Melakukan Slicing Teks</div>
+                        <div class="card" style="padding: 15px;">✅ Format tampilan output</div>
+                        <div class="card" style="padding: 15px;">✅ Membuat validasi input sederhana</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: STRING METHODS === -->
+            <section>
+                <h3>String Methods</h3>
+                <p class="text-small">Python memiliki banyak fungsi bawaan untuk memanipulasi teks.</p>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <table class="text-smaller">
+                            <tr>
+                                <td><code>upper()</code></td>
+                                <td>Kapital semua</td>
+                            </tr>
+                            <tr>
+                                <td><code>lower()</code></td>
+                                <td>Kecil semua</td>
+                            </tr>
+                            <tr>
+                                <td><code>title()</code></td>
+                                <td>Kapital Tiap Kata</td>
+                            </tr>
+                            <tr>
+                                <td><code>strip()</code></td>
+                                <td>Hapus spasi di ujung</td>
+                            </tr>
+                            <tr>
+                                <td><code>replace(a, b)</code></td>
+                                <td>Ganti a dengan b</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python" data-trim>
+s = "  Hello Python  "
+
+print(s.upper())      # "  HELLO PYTHON  "
+print(s.strip())      # "Hello Python"
+print(s.replace("o", "a")) 
+# "  Hella Pythan  "
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 5: FIND & COUNT === -->
+            <section>
+                <h3>Mencari dalam String</h3>
+                <pre><code class="python" data-trim>
+text = "Belajar Python itu seru"
+
+# Mencari posisi (index) substring
+posisi = text.find("Python")
+print(posisi)  # 8
+
+# Menghitung jumlah 'a'
+jumlah_a = text.count("a")
+print(jumlah_a) # 1
+
+# Cek awalan/akhiran
+print(text.startswith("Belajar")) # True
+print(text.endswith("susah"))     # False
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 6: SLICING === -->
+            <section>
+                <h3>String Slicing</h3>
+                <p class="text-small">Sama seperti List, String bisa dipotong.</p>
+                <pre><code class="python" data-trim>
+kode = "PKOM-2026-A"
+
+matkul = kode[0:4]   # "PKOM"
+tahun = kode[5:9]    # "2026"
+kelas = kode[-1]     # "A"
+
+print(f"Matkul: {matkul}, Tahun: {tahun}")
+                    </code></pre>
+            </section>
+
+            <!-- === SLIDE 7: FORMATTING === -->
+            <section>
+                <h3>String Formatting (f-string)</h3>
+                <p class="text-small">Cara modern menyisipkan variabel ke string.</p>
+                <div class="card" style="background: #e8f5e9;">
+                    <pre><code class="python">
+nama = "Budi"
+nilai = 95.5678
+
+# Dasar
+print(f"Halo {nama}, selamat!")
+
+# Angka Desimal (2 digit belakang koma)
+print(f"Nilai Anda: {nilai:.2f}")  # 95.57
+
+# Pemisah Ribuan
+uang = 5000000
+print(f"Rp {uang:,}")  # Rp 5,000,000
+                        </code></pre>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: LATIHAN === -->
+            <section>
+                <h3>Latihan Hands-On</h3>
+                <div class="flex-container">
+                    <div class="flex-col card">
+                        <h4>1. Email Cleaner</h4>
+                        <p class="text-smaller">Input: " User@Example.COM "</p>
+                        <p class="text-smaller">Output: "user@example.com" (tanpa spasi, huruf kecil)</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Password Generator</h4>
+                        <p class="text-smaller">Input: Nama & Tahun Lahir</p>
+                        <p class="text-smaller">Output: Gabungan 3 huruf pertama nama (Huruf Besar) + Tahun.</p>
+                        <p class="text-smaller">Ex: BUD + 2005 = "BUD2005"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <ul class="text-small">
+                    <li>✅ <strong>Methods:</strong> <code>upper</code>, <code>lower</code>, <code>strip</code>,
+                        <code>replace</code>.</li>
+                    <li>✅ <strong>Search:</strong> <code>find</code>, <code>count</code>, <code>startswith</code>.</li>
+                    <li>✅ <strong>Slicing:</strong> <code>text[start:end]</code>.</li>
+                    <li>✅ <strong>Formatting:</strong> <code>f"Teks {variabel}"</code>.</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 10: TUGAS === -->
+            <section>
+                <h3>Tugas Pertemuan 10 📝</h3>
+                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                    <ol class="text-small">
+                        <li><strong>Analisis Teks:</strong>
+                            <br>Input sebuah paragraf. Hitung jumlah huruf vokal, konsonan, dan jumlah kata.
+                        </li>
+                        <li><strong>Validasi Password Kuat:</strong>
+                            <br>Buat fungsi <code>is_strong(password)</code>.
+                            <br>Syarat: Min 8 karakter, ada angka, ada huruf besar.
+                        </li>
+                    </ol>
+                    <hr>
+                    <p class="text-smaller"><strong>File:</strong> <code>Tugas10_NIM_Nama.py</code></p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: NEXT WEEK === -->
+            <section>
+                <h3>Pertemuan Berikutnya</h3>
+                <h4>Libraries & Modules 📚</h4>
+                <p class="text-small">Menggunakan kode orang lain untuk mempercepat pekerjaan kita.</p>
+                <ul class="text-small" style="columns: 2;">
+                    <li>Math Library</li>
+                    <li>Random Library</li>
+                    <li>Pandas (Data)</li>
+                    <li>Matplotlib (Grafik)</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 12: CLOSING === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

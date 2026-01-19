@@ -1,0 +1,286 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 7: Quiz 1
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 7:                               ║
+║           Quiz 1                                     ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: INFORMASI QUIZ
+```
+╔══════════════════════════════════════════════════════╗
+║             INFORMASI QUIZ 1                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Tanggal: [Tanggal Quiz]                           ║
+║  ▸ Waktu: 30 menit                                   ║
+║  ▸ Tempat: [Ruang]                                   ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Format Quiz:                                        ║
+║  ▸ Pilihan Ganda: 20 soal                           ║
+║  ▸ Benar/Salah: 10 soal                             ║
+║  ▸ Coding: 3 soal                                   ║
+║  ▸ Total: 100 poin                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: MATERI QUIZ
+```
+╔══════════════════════════════════════════════════════╗
+║              MATERI QUIZ 1                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Pertemuan 1: Computational Thinking                 ║
+║  ▸ 4 pilar CT                                        ║
+║  ▸ Syntax dasar Python                               ║
+║                                                      ║
+║  Pertemuan 2: Variabel dan Tipe Data                ║
+║  ▸ Tipe data (int, float, str, bool)                ║
+║  ▸ Operator aritmatika                               ║
+║  ▸ Konversi tipe                                     ║
+║                                                      ║
+║  Pertemuan 3-4: Percabangan                          ║
+║  ▸ if, if-else, if-elif-else                        ║
+║  ▸ Operator perbandingan dan logika                  ║
+║                                                      ║
+║  Pertemuan 5: Perulangan                             ║
+║  ▸ for, while, range()                              ║
+║  ▸ break, continue                                   ║
+║                                                      ║
+║  Pertemuan 6: List                                   ║
+║  ▸ Membuat, mengakses, memodifikasi list            ║
+║  ▸ Method dan fungsi list                           ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: ATURAN QUIZ
+```
+╔══════════════════════════════════════════════════════╗
+║                ATURAN QUIZ                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Dilarang membuka catatan/books                   ║
+║  ✓ Dilarang berkomunikasi dengan teman               ║
+║  ✓ Wajib membawa alat tulis                         ║
+║  ✓ Laptop untuk coding (jika diperlukan)            ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Konsekuensi Pelanggaran:                            ║
+║  ▸ Quiz dianggap tidak jadi (NOL)                    ║
+║  ▸ Sanksi administratif sesuai peraturan kampus     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: CONTOH SOAL 1
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH SOAL - PILIHAN GANDA             ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Manakah output dari kode berikut?                  ║
+║                                                      ║
+║  x = 5                                               ║
+║  y = 2                                               ║
+║  print(x % y)                                        ║
+║                                                      ║
+║  A. 2.5                                              ║
+║  B. 1                                                 ║
+║  C. 10                                                ║
+║  D. 2                                                 ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Jawaban: B (1)                                      ║
+║  Operator % adalah modulus (sisa bagi)              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: CONTOH SOAL 2
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH SOAL - BENAR/SALAH               ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Benar atau Salah?                                   ║
+║                                                      ║
+║  1. List di Python bersifat immutable.       (   )  ║
+║                                                      ║
+║  2. range(1, 5) menghasilkan [1, 2, 3, 4]. (   )   ║
+║                                                      ║
+║  3. break digunakan untuk skip iterasi.      (   )  ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Jawaban:                                            ║
+║  1. Salah (list mutable, bisa diubah)               ║
+║  2. Benar                                           ║
+║  3. Salah (continue untuk skip, break untuk keluar)║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: CONTOH SOAL 3
+```
+╔══════════════════════════════════════════════════════╗
+║              CONTOH SOAL - CODING                    ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Buat program untuk menentukan bilangan ganjil      ║
+║  atau genap:                                         ║
+║                                                      ║
+║  Input: angka dari user                              ║
+║  Output: "Ganjil" atau "Genap"                      ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Kriteria Penilaian:                                 ║
+║  ▸ Input handling (5 poin)                           ║
+║  ▸ Logika percabangan (5 poin)                       ║
+║  ▸ Output benar (5 poin)                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 8: JAWABAN CONTOH SOAL 3
+```
+╔══════════════════════════════════════════════════════╗
+║           JAWABAN CONTOH SOAL 3                      ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  angka = int(input("Masukkan angka: "))             ║
+║                                                      ║
+║  if angka % 2 == 0:                                  ║
+║      print("Genap")                                  ║
+║  else:                                               ║
+║      print("Ganjil")                                 ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Output contoh:                                      ║
+║  Masukkan angka: 7                                   ║
+║  Ganjil                                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 9: TIPS QUIZ
+```
+╔══════════════════════════════════════════════════════╗
+║                 TIPS QUIZ                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ✓ Baca soal dengan teliti                           ║
+║  ▸ Perhatikan kata kunci (BENAR/SALAH, OUTPUT, dll) ║
+║                                                      ║
+║  ✓ Kerjakan yang mudah terlebih dahulu               ║
+║  ▸ Jangan terjebak soal yang sulit                   ║
+║                                                      ║
+║  ✓ Untuk coding, pahami masalahnya                  ║
+║  ▸ Tulis pseudocode sebelum coding                   ║
+║                                                      ║
+║  ✓ Test program dengan beberapa kasus               ║
+║  ▸ Include edge cases (0, negatif, dll)             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 10: SESI REVIEW
+```
+╔══════════════════════════════════════════════════════╗
+║                SESI REVIEW                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Setelah quiz, kita akan melakukan review           ║
+║  pembahasan soal yang sulit.                         ║
+║                                                      ║
+║  ▸ Review materi yang sering salah                  ║
+║  ▸ Pembahasan soal quiz                             ║
+║  ▸ Diskusi dan tanya jawab                          ║
+║                                                      ║
+║  ─────────────────────────────────────────────────   ║
+║                                                      ║
+║  Remaining time:                                     ║
+║  ▸ Quiz: 30 menit                                   ║
+║  ▸ Review: 30 menit                                 ║
+║  ▸ Praktikum: 40 menit                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 11: QUIZ START
+```
+╔══════════════════════════════════════════════════════╗
+║               QUIZ MULAI!                            ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║         Quiz akan dimulai dalam...                   ║
+║                                                      ║
+║                                                      ║
+║              3... 2... 1...                          ║
+║                                                      ║
+║                                                      ║
+║         GOOD LUCK!                                   ║
+║                                                      ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 12: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           See you after the quiz!                    ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

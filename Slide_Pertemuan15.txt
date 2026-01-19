@@ -1,0 +1,81 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 15: Quiz 2 + Kerja Proyek
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 15:                              ║
+║           Quiz 2 + Kerja Proyek                      ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: INFORMASI QUIZ 2
+```
+╔══════════════════════════════════════════════════════╗
+║              INFORMASI QUIZ 2                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Waktu: 30 menit                                   ║
+║  ▸ Materi: Pertemuan 9-13                            ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: MATERI QUIZ 2
+```
+╔══════════════════════════════════════════════════════╗
+║              MATERI QUIZ 2                           ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Pertemuan 9: Fungsi                                 ║
+║  Pertemuan 10: String Manipulation                  ║
+║  Pertemuan 11: Library (Math, Random, Pandas)       ║
+║  Pertemuan 12: Data Visualization                   ║
+║  Pertemuan 13: CSV Files                             ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: SESI KERJA PROYEK
+```
+╔══════════════════════════════════════════════════════╗
+║             SESI KERJA PROYEK                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Remaining time: 60 menit                         ║
+║  ▸ Bimbingan dari dosen                             ║
+║  ▸ Kerja kelompok                                   ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: PERTEMUAN BERIKUTNYA
+```
+╔══════════════════════════════════════════════════════╗
+║           PERTEMUAN BERIKUTNYA                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Topic: Presentasi Proyek Mini                       ║
+║  ▸ Setiap kelompok presentasi                       ║
+║  ▸ Demo program                                     ║
+║  ▸ Q&A                                              ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

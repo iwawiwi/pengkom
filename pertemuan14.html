@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Pertemuan 14 - Mini Project</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+
+        <div class="slides">
+            <!-- === SLIDE 1: JUDUL === -->
+            <section>
+                <div class="title-box">
+                    <h1>Pengenalan Komputasi</h1>
+                    <h3 style="color: #666;">Pertemuan 14: Algoritma & Mini Project</h3>
+                </div>
+            </section>
+
+            <!-- === SLIDE 2: OUTLINE === -->
+            <section>
+                <h3>Agenda Hari Ini</h3>
+                <div class="flex-container">
+                    <div class="flex-col card">
+                        <h4>1. Briefing Project</h4>
+                        <p class="text-smaller">Penjelasan tugas besar, aturan main, dan pembentukan kelompok.</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Workshop Algoritma</h4>
+                        <p class="text-smaller">Merancang alur program (Flowchart/Pseudocode) sebelum coding.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: MINI PROJECT INFO === -->
+            <section>
+                <h3>Pengumuman Final Mini Project</h3>
+                <div class="card" style="background: #e3f2fd;">
+                    <ul class="text-small text-left">
+                        <li><strong>Tujuan:</strong> Membuat aplikasi analisis data sederhana menggunakan Python.</li>
+                        <li><strong>Tim:</strong> 4-5 Orang per kelompok.</li>
+                        <li><strong>Deadline:</strong> Pertemuan 16 (Presentasi).</li>
+                        <li><strong>Output:</strong> Kode Program, Slide Presentasi, Laporan Singkat.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: TOPIK PROJECT === -->
+            <section>
+                <h3>Pilihan Topik Project</h3>
+                <div class="flex-container" style="flex-wrap: wrap;">
+                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
+                        <h4>1. Data Akademik</h4>
+                        <p class="text-smaller">Analisis nilai mahasiswa, kelulusan, statistik IPK.</p>
+                    </div>
+                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
+                        <h4>2. Data Penjualan</h4>
+                        <p class="text-smaller">Analisis transaksi toko, produk terlaris, omset bulanan.</p>
+                    </div>
+                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
+                        <h4>3. Data Kesehatan</h4>
+                        <p class="text-smaller">Analisis BMI, detak jantung, riwayat pasien (Dummy Data).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 5: SPESIFIKASI TEKNIS === -->
+            <section>
+                <h3>Wajib Ada (Requirements)</h3>
+                <div class="text-left text-small">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="card" style="border-left: 5px solid #4CAF50;">
+                            <strong>Input Process</strong>
+                            <ul>
+                                <li>Membaca File CSV</li>
+                                <li>Validasi Input / Data Cleaning</li>
+                            </ul>
+                        </div>
+                        <div class="card" style="border-left: 5px solid #2196F3;">
+                            <strong>Analitis</strong>
+                            <ul>
+                                <li>Minimal 3 Fungsi Analisis (Statistik, Filtering, dll)</li>
+                                <li>Penggunaan Library (Pandas/Math)</li>
+                            </ul>
+                        </div>
+                        <div class="card" style="border-left: 5px solid #FFC107;">
+                            <strong>Output</strong>
+                            <ul>
+                                <li>Minimal 1 Grafik (Matplotlib/Seaborn)</li>
+                                <li>Export hasil ke CSV baru</li>
+                            </ul>
+                        </div>
+                        <div class="card" style="border-left: 5px solid #9C27B0;">
+                            <strong>Code Quality</strong>
+                            <ul>
+                                <li>Variabel deskriptif</li>
+                                <li>Ada komentar penjelas</li>
+                                <li>Modular (menggunakan Fungsi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 6: RUBRIK PENILAIAN === -->
+            <section>
+                <h3>Rubrik Penilaian</h3>
+                <table class="text-small">
+                    <thead>
+                        <tr>
+                            <th>Komponen</th>
+                            <th>Bobot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kode Program (Fungsionalitas)</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>Visualisasi Data & Kreativitas</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Penerapan Materi (Loop, If, List, dll)</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Kerjasama Tim & Dokumentasi</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Presentasi Akhir</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>100%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- === SLIDE 7: WORKSHOP ALGORITMA === -->
+            <section>
+                <h3>Workshop: Merancang Algoritma</h3>
+                <div class="flex-container">
+                    <div class="flex-col text-left text-small">
+                        <p>Sebelum coding, WAJIB membuat rancangan dulu!</p>
+                        <p><strong>Contoh Flow (Pseudocode):</strong></p>
+                        <pre><code class="text">
+MULAI
+  Baca file "data.csv"
+  JIKA file tidak ada -> Tampilkan Error
+  LAIN ->
+     Bersihkan data kosong
+     Hitung rata-rata
+     Buat Grafik Bar
+     Simpan "hasil.csv"
+SELESAI
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: PEMBAGIAN KELOMPOK === -->
+            <section>
+                <h3>Pembentukan Kelompok</h3>
+                <div class="card">
+                    <h2>Sesi Diskusi (15 Menit)</h2>
+                    <hr>
+                    <ol class="text-small text-left" style="display: inline-block;">
+                        <li>Bentuk kelompok 4-5 orang.</li>
+                        <li>Tentukan Ketua Kelompok.</li>
+                        <li>Pilih Topik Project.</li>
+                        <li>Submit Nama Tim & Topik ke Dosen.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: RINGKASAN === -->
+            <section>
+                <h3>Timeline Project</h3>
+                <ul class="text-small">
+                    <li><strong>Pertemuan 14 (Hari Ini):</strong> Briefing & Design.</li>
+                    <li><strong>Pertemuan 15 (Minggu Depan):</strong> Quiz 2 + Progress Check (Asistensi).</li>
+                    <li><strong>Pertemuan 16 (Final):</strong> Presentasi & Demo.</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 10: TUGAS === -->
+            <section>
+                <h3>Tugas Pertemuan 14 📝</h3>
+                <div class="card text-left" style="background: #e1f5fe; border: 1px solid #b3e5fc;">
+                    <p class="text-small"><strong>Output Kelompok (Submit di GC/E-learning):</strong></p>
+                    <ol class="text-small">
+                        <li>Nama Kelompok & Anggota.</li>
+                        <li>Topik yang dipilih.</li>
+                        <li>Rancangan Awal (Flowchart/Pseudocode) 1 halaman PDF.</li>
+                        <li>Deskripsi singkat dataset yang akan dipakai.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: CLOSING === -->
+            <section>
+                <h1>Selamat Berkarya! 🚀</h1>
+                <p>Manfaatkan waktu praktikum untuk diskusi kelompok.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

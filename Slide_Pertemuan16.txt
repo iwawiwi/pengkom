@@ -1,0 +1,130 @@
+# PENGENALAN KOMPUTASI
+## Pertemuan 16: Presentasi Proyek Mini
+
+---
+
+## SLIDE 1: JUDUL
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║           PENGENALAN KOMPUTASI                       ║
+║                                                      ║
+║           Pertemuan 16:                              ║
+║           Presentasi Proyek Mini                     ║
+║                                                      ║
+║           Dosen: [Nama Dosen]                        ║
+║           [Nama Universitas]                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 2: JADWAL PRESENTASI
+```
+╔══════════════════════════════════════════════════════╗
+║              JADWAL PRESENTASI                       ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ 10 menit per kelompok                            ║
+║  ▸ 5-6 menit presentasi                             ║
+║  ▸ 3-4 menit demo                                   ║
+║  ▸ 2-3 menit Q&A                                     ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 3: STRUKTUR PRESENTASI
+```
+╔══════════════════════════════════════════════════════╗
+║           STRUKTUR PRESENTASI                        ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  1. Perkenalan Kelompok (30 detik)                  ║
+║  2. Deskripsi Proyek (1 menit)                       ║
+║  3. Metodologi (1 menit)                             ║
+║  4. Demo Program (3-4 menit)                         ║
+║  5. Kesimpulan (30 detik)                            ║
+║  6. Q&A (2-3 menit)                                  ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 4: TIPS PRESENTASI
+```
+╔══════════════════════════════════════════════════════╗
+║              TIPS PRESENTASI                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Mulai dan akhiri tepat waktu                      ║
+║  ▸ Jelaskan dengan jelas dan sederhana              ║
+║  ▸ Demo harus berjalan lancar                       ║
+║  ▸ Jawab pertanyaan dengan sopan                    ║
+║  ▸ Gunakan slide sebagai panduan                    ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 5: SUBMIT MATERIAL
+```
+╔══════════════════════════════════════════════════════╗
+║              SUBMIT MATERIAL                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  Sebelum presentasi, submit:                         ║
+║  ▸ Kode program (.py/.ipynb)                        ║
+║  ▸ Dataset (.csv)                                   ║
+║  ▸ README.md                                        ║
+║  ▸ Slide presentasi (.pdf)                          ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 6: RINGKASAN KURSUS
+```
+╔══════════════════════════════════════════════════════╗
+║            RINGKASAN KURSUS                          ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  ▸ Computational Thinking                            ║
+║  ▸ Python Basics (Variabel, Tipe Data)              ║
+║  ▸ Percabangan (if-else)                            ║
+║  ▸ Perulangan (for, while)                          ║
+║  ▸ List                                             ║
+║  ▸ Fungsi                                           ║
+║  ▸ String Manipulation                              ║
+║  ▸ Library (Math, Random, Pandas)                   ║
+║  ▸ Data Visualization (Matplotlib, Seaborn)         ║
+║  ▸ File CSV                                         ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+## SLIDE 7: TERIMA KASIH
+```
+╔══════════════════════════════════════════════════════╗
+║                 TERIMA KASIH                         ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║                                                      ║
+║           Selamat untuk kelulusan!                  ║
+║                                                      ║
+║                                                      ║
+║           See you in the next course!               ║
+║                                                      ║
+║                                                      ║
+║       [Nama Dosen]                                   ║
+║       [Email]                                        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```

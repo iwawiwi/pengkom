@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>TEMPLATE - Pengenalan Komputasi</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/simple.css">
+    <!-- Custom PKOM Theme (Shared Style) -->
+    <link rel="stylesheet" href="css/pkom-theme.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Persistent Footer -->
+        <div class="footer-branding">
+            <div class="footer-logos">
+                <img src="logo/logo_itera.png" alt="Logo ITERA">
+                <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Institut Teknologi Sumatera
+            </div>
+        </div>
+        <div class="slides">
+            <!-- === COVER SLIDE === -->
+            <section>
+                <div class="title-box">
+                    <h1>JUDUL MATERI</h1>
+                    <h3 style="color: #666;">Pertemuan X: Sub Judul</h3>
+                </div>
+            </section>
+
+            <!-- === STANDARD TEXT SLIDE === -->
+            <section>
+                <h3>Judul Slide Standard</h3>
+                <div class="text-left text-small">
+                    <p>Ini adalah contoh paragraf standar. Gunakan class <code>text-left</code> dan
+                        <code>text-small</code> agar teks rapi dan tidak terlalu besar.
+                    </p>
+                    <ul>
+                        <li>Poin satu</li>
+                        <li>Poin dua</li>
+                        <li>Poin tiga</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SPLIT COLUMN SLIDE (Text + Image/Card) === -->
+            <section>
+                <h3>Judul Split Column</h3>
+                <div class="flex-container">
+                    <!-- Kiri -->
+                    <div class="flex-col text-left text-small">
+                        <p>Gunakan layout ini untuk membandingkan teks dengan gambar atau code.</p>
+                    </div>
+                    <!-- Kanan -->
+                    <div class="flex-col card">
+                        <h4>Contoh Card</h4>
+                        <p class="text-smaller">Isi konten di dalam card agar lebih fokus.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === CODE SLIDE === -->
+            <section>
+                <h3>Contoh Code</h3>
+                <pre><code class="python" data-trim data-noescape>
+# Contoh Code Python
+def hello():
+    print("Hello World")
+                    </code></pre>
+            </section>
+
+            <!-- === Q&A === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
