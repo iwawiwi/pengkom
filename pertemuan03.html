@@ -184,7 +184,10 @@
             <!-- === SLIDE 7: CONTOH PERBANDINGAN CODE === -->
             <section>
                 <h3>Contoh Perbandingan</h3>
-                <pre><code class="python" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim>
 a = 10
 b = 5
 
@@ -194,61 +197,143 @@ print("a > b:", a > b)      # True
 print("a < b:", a < b)      # False
 print("a >= b:", a >= b)    # True
 print("a <= b:", a <= b)    # False
-                    </code></pre>
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+a == b: False
+a != b: True
+a > b: True
+a < b: False
+a >= b: True
+a <= b: False
+                        </pre>
+                    </div>
+                </div>
             </section>
 
             <!-- === SLIDE 8: STRUKTUR IF === -->
             <section>
                 <h3>Struktur IF</h3>
-                <div class="flex-container">
-                    <div class="flex-col text-left text-small">
-                        <p>Blok kode hanya dijalankan jika kondisi bernilai <strong>TRUE</strong>.</p>
-                        <pre><code class="python">
+                <div class="grid-2">
+                    <div class="card text-left">
+                        <h4>Penjelasan & Format</h4>
+                        <p class="text-small">Blok kode hanya dijalankan jika kondisi bernilai <strong>TRUE</strong>.</p>
+                        <hr style="margin: 15px 0;">
+                        <h5>Format IF:</h5>
+                        <pre><code class="python" style="font-size: 0.9em;">
 if kondisi:
-    # Kode dijalankan
-                            </code></pre>
+    # Blok kode yang dijalankan
+    # jika kondisi TRUE
+                        </code></pre>
                     </div>
-                    <div class="flex-col">
-                        <pre><code class="python" data-trim>
+                    <div class="card">
+                        <h4>Contoh Implementasi</h4>
+                        <pre><code class="python" style="font-size: 0.9em;" data-trim>
 nilai = 75
 
 if nilai >= 60:
     print("Lulus!")
-
-# Output: Lulus!
-                            </code></pre>
+                        </code></pre>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0; margin-top: 10px;">
+Output: Lulus!
+                        </pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 9: STRUKTUR IF-ELSE === -->
+            <!-- === SLIDE 9: PENTING - INDENTASI DI PYTHON === -->
+            <section>
+                <h3><i class="bi bi-exclamation-triangle"></i> Penting: Indentasi di Python</h3>
+                <div class="card card-highlight text-left">
+                    <p class="text-small"><strong>Python menggunakan indentasi</strong> (spasi atau tab) untuk menentukan blok kode, bukan kurung kurawal <code>{ }</code> seperti bahasa lain.</p>
+                    <div class="grid-2" style="margin-top: 10px;">
+                        <div class="card">
+                            <h4><i class="bi bi-check-circle" style="color: green;"></i> BENAR</h4>
+                            <pre><code class="python" style="font-size: 0.8em;">
+if kondisi:
+    print("Ini blok IF")
+    print("Baris kedua")
+else:
+    print("Ini blok ELSE")
+                            </code></pre>
+                        </div>
+                        <div class="card">
+                            <h4><i class="bi bi-x-circle" style="color: red;"></i> SALAH</h4>
+                            <pre><code class="python" style="font-size: 0.8em;">
+if kondisi:
+print("Indentasi salah!")  # Error!
+else:
+    print("OK")
+                            </code></pre>
+                        </div>
+                    </div>
+                    <p class="text-smaller" style="margin-top: 10px; color: #666;"><strong>Catatan:</strong> Gunakan 4 spasi atau tab untuk indentasi standar.</p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: STRUKTUR IF-ELSE === -->
             <section>
                 <h3>Struktur IF-ELSE</h3>
-                <div class="flex-container">
-                    <div class="flex-col text-left text-small">
-                        <p>Jika kondisi TRUE, jalankan blok IF.<br>Jika FALSE, jalankan blok ELSE.</p>
+                <div class="grid-2">
+                    <div class="card text-left">
+                        <h4>Penjelasan & Format</h4>
+                        <p class="text-small">Jika kondisi TRUE, jalankan blok IF.<br>Jika FALSE, jalankan blok ELSE.</p>
+                        <hr style="margin: 15px 0;">
+                        <h5>Format IF-ELSE:</h5>
+                        <pre><code class="python" style="font-size: 0.9em;">
+if kondisi:
+    # blok kode jika kondisi TRUE
+else:
+    # blok kode jika kondisi FALSE
+                        </code></pre>
                     </div>
-                    <div class="flex-col">
-                        <pre><code class="python" data-trim>
+                    <div class="card">
+                        <h4>Contoh Implementasi</h4>
+                        <pre><code class="python" style="font-size: 0.9em;" data-trim>
 angka = 7
 
 if angka % 2 == 0:
     print("Genap")
 else:
     print("Ganjil")
-                            </code></pre>
-                        <div class="code-output">
-                            Output:
-                            Ganjil
-                        </div>
+                        </code></pre>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0; margin-top: 10px;">
+Output: Ganjil
+                        </pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 10: CONTOH GRADE === -->
+            <!-- === SLIDE 11: STRUKTUR IF-ELIF-ELSE === -->
             <section>
-                <h3>Contoh: Grade Nilai (elif)</h3>
-                <pre><code class="python" data-trim data-noescape>
+                <h3>Struktur IF-ELIF-ELSE</h3>
+                <div class="card text-left">
+                    <h4>Penjelasan & Format</h4>
+                    <p class="text-small">Digunakan ketika ada <strong>lebih dari dua kondisi</strong> yang perlu diperiksa secara berurutan.</p>
+                    <hr style="margin: 15px 0;">
+                    <h5>Format IF-ELIF-ELSE:</h5>
+                    <pre><code class="python" style="font-size: 0.9em;">
+if kondisi1:
+    # blok kode jika kondisi1 TRUE
+elif kondisi2:
+    # blok kode jika kondisi2 TRUE tapi kondisi1 FALSE
+elif kondisi3:
+    # blok kode jika kondisi3 TRUE tapi kondisi1 & kondisi2 FALSE
+else:
+    # blok kode jika semua kondisi FALSE
+                    </code></pre>
+                </div>
+            </section>
+
+            <!-- === SLIDE 12: CONTOH GRADE === -->
+            <section>
+                <h3>Contoh: Grade Nilai</h3>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim data-noescape style="font-size: 0.9em;">
 nilai = 85
 
 if nilai >= 90:
@@ -263,17 +348,29 @@ else:
     grade = "E"
 
 print(f"Grade: {grade}")
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    Grade: B
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Grade: B
+                        </pre>
+                        <div class="card card-highlight text-left" style="margin-top: 20px;">
+                    <p class="text-small"><i class="bi bi-lightbulb"></i> <strong>Pikirkan:</strong> Jika kondisi dibalik (mulai dari <code>if nilai >= 60</code> untuk D, lalu <code>elif >=70</code> untuk C, dst.), apakah hasil sama untuk nilai 85?</p>
+                    </div>
+                    </div>
+                    
                 </div>
+                
             </section>
 
-            <!-- === SLIDE 11: CONTOH KALKULATOR === -->
+            <!-- === SLIDE 13: CONTOH KALKULATOR === -->
             <section>
                 <h3>Contoh: Kalkulator Sederhana</h3>
-                <pre><code class="python" style="max-height: 400px; font-size: 0.8em;" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim>
 operasi = "+"
 a, b = 10, 5
 
@@ -283,55 +380,32 @@ elif operasi == "-":
     hasil = a - b
 elif operasi == "*":
     hasil = a * b
-elif operasi == "/":
-    if b != 0:
-        hasil = a / b
-    else:
-        hasil = "Error"
 else:
     hasil = "Tidak valid"
 
 print(f"Hasil: {hasil}")
-                    </code></pre>
-            </section>
-
-            <!-- === SLIDE 12: WARNING INFINITE LOOP === -->
-            <section>
-                <h3><i class="bi bi-exclamation-triangle"></i> Peringatan: Infinite Loop</h3>
-                <div class="flex-container">
-                    <div class="flex-col card" style="border-left: 5px solid #28a745;">
-                        <h4 style="color: #28a745; font-size: 0.8em;"><i class="bi bi-check-circle"></i> BENAR</h4>
-                        <pre><code class="python" style="font-size: 0.7em;">
-x = 0
-while x < 5:
-    print(x)
-    x = x + 1  # Update!
-                            </code></pre>
+                        </code></pre>
                     </div>
-                    <div class="flex-col card" style="border-left: 5px solid #dc3545;">
-                        <h4 style="color: #dc3545; font-size: 0.8em;"><i class="bi bi-x-circle"></i> SALAH (BAHAYA)</h4>
-                        <pre><code class="python" style="font-size: 0.7em;">
-x = 0
-while x < 5:
-    print(x)
-    # x tidak pernah diupdate
-    # Loop selamanya!
-                            </code></pre>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Hasil: 15
+                        </pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 13: HANDS ON 1 & 2 === -->
+            <!-- === SLIDE 14: HANDS ON 1 & 2 === -->
             <section>
                 <h3>Hands-On Practice</h3>
-                <div class="flex-container" style="align-items: flex-start;">
-                    <div class="flex-col card">
+                <div class="grid-2">
+                    <div class="card">
                         <h4>1. Positif / Negatif</h4>
                         <hr>
                         <p class="text-smaller">Input: Angka dari user.</p>
                         <p class="text-smaller">Output: "Positif", "Negatif", atau "Nol".</p>
                     </div>
-                    <div class="flex-col card">
+                    <div class="card">
                         <h4>2. Kalkulator Diskon</h4>
                         <hr>
                         <p class="text-smaller">Input: Harga & Status Member (y/n).</p>
@@ -344,16 +418,16 @@ while x < 5:
                 </div>
             </section>
 
-            <!-- === SLIDE 14: HANDS ON 3 & 4 === -->
+            <!-- === SLIDE 15: HANDS ON 3 & 4 === -->
             <section>
                 <h3>Latihan Tambahan</h3>
-                <div class="flex-container" style="align-items: flex-start;">
-                    <div class="flex-col card" style="background: #f8f9fa;">
+                <div class="grid-2">
+                    <div class="card">
                         <h4>3. Login Sederhana</h4>
                         <p class="text-smaller">User: "admin", Pass: "12345"</p>
                         <p class="text-smaller">Cek username & password input.</p>
                     </div>
-                    <div class="flex-col card" style="background: #f8f9fa;">
+                    <div class="card">
                         <h4>4. Kategori Usia</h4>
                         <ul class="text-smaller">
                             <li>&lt; 12: Anak-anak</li>
@@ -365,36 +439,82 @@ while x < 5:
                 </div>
             </section>
 
-            <!-- === SLIDE 15: RINGKASAN === -->
+            <!-- === SLIDE 16: RINGKASAN === -->
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <div class="card">
                     <ul class="text-small" style="columns: 2;">
-                        <li><i class="bi bi-check-circle"></i> <strong>Percabangan</strong>: `if`, `if-else`, `if-elif-else`.</li>
-                        <li><i class="bi bi-check-circle"></i> <strong>Operator Perbandingan</strong>: `==`, `!=`, `<`, `>`, `<=`, `>=`.</li>
-                        <li><i class="bi bi-check-circle"></i> <strong>Boolean</strong>: Hasil evaluasi `True` atau `False`.</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Percabangan</strong>: <code>if</code>, <code>if-else</code>, <code>if-elif-else</code>.</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Operator Perbandingan</strong>: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Boolean</strong>: Hasil evaluasi <code>True</code> atau <code>False</code>.</li>
                         <li><i class="bi bi-check-circle"></i> <strong>Nested If</strong>: If di dalam if.</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- === SLIDE 16: TUGAS === -->
+            <!-- === SLIDE 17: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 3 <i class="bi bi-list-check"></i></h3>
-                <div class="card card-warning text-left">
-                    <ol class="text-small">
-                        <li><strong>Kalkulator Suhu:</strong> Konversi lengkap (C ke F, F ke C).</li>
-                        <li><strong>Sistem Grade + Absensi:</strong> Input nilai & absensi. Jika absensi < 80%, otomatis
-                                <strong>E</strong>.</li>
-                        <li><strong>Game Suit:</strong> Batu, Gunting, Kertas (Lawan komputer/random).</li>
-                    </ol>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas3_NIM_Nama.py</code> |
-                        <strong>Deadline:</strong> Sebelum Pertemuan 4</p>
+                <div class="grid-2">
+                    <div class="card card-warning">
+                        <h4>1. Kalkulator Suhu <i class="bi bi-thermometer-half"></i></h4>
+                        <p class="text-smaller"><strong>Rumus:</strong> C ke F: (C * 9/5) + 32, F ke C: (F - 32) * 5/9</p>
+                        <ol class="text-smaller">
+                            <li>Input suhu dan jenis konversi (C/F).</li>
+                            <li>Hitung konversi menggunakan rumus.</li>
+                            <li>Tampilkan hasil dengan format yang jelas.</li>
+                        </ol>
+                    </div>
+                    <div class="card card-warning">
+                        <h4>2. Sistem Grade + Absensi <i class="bi bi-clipboard-check"></i></h4>
+                        <p class="text-smaller"><strong>Rule:</strong> Jika absensi < 80%, grade otomatis E</p>
+                        <ol class="text-smaller">
+                            <li>Input nilai ujian dan persen absensi.</li>
+                            <li>Jika absensi >= 80%, hitung grade berdasarkan nilai.</li>
+                            <li>Jika absensi < 80%, grade = E.</li>
+                        </ol>
+                    </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 17: NEXT WEEK === -->
+            <!-- === SLIDE 18: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman mendalam tentang percabangan, ikuti langkah-langkah berikut:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Analisis Kondisi:</strong> Identifikasi kondisi yang perlu diperiksa dan hasil yang diharapkan.</li>
+                        <li><strong>Desain Alur:</strong> Buat flowchart atau pseudocode untuk logika if-elif-else.</li>
+                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas di setiap baris.</li>
+                        <li><strong>Testing:</strong> Jalankan kode dengan berbagai input untuk memastikan semua kondisi bekerja.</li>
+                        <li><strong>Refleksi:</strong> Tambahkan cell teks untuk refleksi pengalaman menggunakan percabangan.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan logika kode dan hasil di komentar.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 19: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas3_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di notebook.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>Sebelum Pertemuan 4</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 20: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>Kondisi Majemuk & Logika</h4>
@@ -413,10 +533,13 @@ while x < 5:
                 </div>
             </section>
 
-            <!-- === SLIDE 18: Q&A & CLOSING === -->
+            <!-- === SLIDE 21: Q&A & CLOSING === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
