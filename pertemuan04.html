@@ -80,9 +80,9 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 4: STRUKTUR IF-ELIF-ELSE === -->
+            <!-- === SLIDE 4: REVIEW IF-ELIF-ELSE === -->
             <section>
-                <h3>Struktur if-elif-else</h3>
+                <h3>Review: Struktur if-elif-else</h3>
                 <div class="flex-container">
                     <div class="flex-col text-left text-small">
                         <p>Digunakan ketika ada <strong>lebih dari dua</strong> kemungkinan kondisi.</p>
@@ -110,7 +110,10 @@ else:
             <!-- === SLIDE 5: CONTOH IF-ELIF-ELSE === -->
             <section>
                 <h3>Contoh: Nama Hari</h3>
-                <pre><code class="python" data-trim style="max-height: 450px;">
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim style="font-size: 0.9em;">
 hari = 3
 
 if hari == 1:
@@ -121,18 +124,16 @@ elif hari == 3:
     print("Rabu")
 elif hari == 4:
     print("Kamis")
-elif hari == 5:
-    print("Jumat")
-elif hari == 6:
-    print("Sabtu")
-elif hari == 7:
-    print("Minggu")
 else:
-    print("Tidak valid")
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    Rabu
+    print("Hari tidak valid")
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Rabu
+                        </pre>
+                    </div>
                 </div>
             </section>
 
@@ -167,14 +168,25 @@ else:
                 </table>
                 <div class="text-smaller text-left" style="margin-top: 20px;">
                     <strong>Truth Table (Tabel Kebenaran):</strong>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 10px;">
                         <div class="card" style="padding: 10px; background: #f8f9fa;">
+                            <strong>AND</strong><br>
                             <code>T and T = T</code><br>
-                            <code>T and F = F</code>
+                            <code>T and F = F</code><br>
+                            <code>F and T = F</code><br>
+                            <code>F and F = F</code>
                         </div>
                         <div class="card" style="padding: 10px; background: #f8f9fa;">
+                            <strong>OR</strong><br>
+                            <code>T or T = T</code><br>
                             <code>T or F = T</code><br>
+                            <code>F or T = T</code><br>
                             <code>F or F = F</code>
+                        </div>
+                        <div class="card" style="padding: 10px; background: #f8f9fa;">
+                            <strong>NOT</strong><br>
+                            <code>not T = F</code><br>
+                            <code>not F = T</code>
                         </div>
                     </div>
                 </div>
@@ -203,21 +215,25 @@ print(not(x < 5))         # True
             <!-- === SLIDE 8: NESTED IF === -->
             <section>
                 <h3>Nested IF (IF Bersarang)</h3>
-                <div class="flex-container">
-                    <div class="flex-col text-left text-small">
-                        <p>Kita bisa memasukkan blok IF di dalam blok IF lainnya.</p>
-                        <p>Digunakan untuk mengecek kondisi bertingkat atau spesifik.</p>
+                <div class="grid-2">
+                    <div class="card text-left">
+                        <h4>Penjelasan</h4>
+                        <p class="text-small">Kita bisa memasukkan blok IF di dalam blok IF lainnya.</p>
+                        <p class="text-small">Digunakan untuk mengecek kondisi bertingkat atau spesifik.</p>
                     </div>
-                    <div class="flex-col">
-                        <pre><code class="python" data-trim>
+                    <div class="card">
+                        <h4>Format Kode</h4>
+                        <pre><code class="python" style="font-size: 0.9em;" data-trim>
 if kondisi1:
     if kondisi2:
-        # Kode jika kondisi1 DAN kondisi2 TRUE
+        # Kode jika kondisi1
+        # DAN kondisi2 TRUE
     else:
-        # Kode jika kondisi1 TRUE tapi kondisi2 FALSE
+        # Kode jika kondisi1 TRUE
+        # tapi kondisi2 FALSE
 else:
     # Kode jika kondisi1 FALSE
-                            </code></pre>
+                        </code></pre>
                     </div>
                 </div>
             </section>
@@ -225,7 +241,10 @@ else:
             <!-- === SLIDE 9: CONTOH NESTED IF === -->
             <section>
                 <h3>Contoh Nested IF</h3>
-                <pre><code class="python" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim style="font-size: 0.9em;">
 nilai = 85
 absensi = 90
 
@@ -239,31 +258,40 @@ if nilai >= 70:
         print("Grade: C")
 else:
     print("Tidak Lulus")
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    Grade: B
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Grade: A
+                        </pre>
+                    </div>
                 </div>
             </section>
 
             <!-- === SLIDE 10: COMBINED EXAMPLE === -->
             <section>
                 <h3>Kombinasi Logika</h3>
-                <p class="text-small text-left">Validasi Kelayakan Pemilih Pemilu:</p>
-                <pre><code class="python" data-trim>
-usia = 17
-warga_negara = "WNI"
+                <p class="text-small text-left">Validasi Kelayakan Pemilih Pemilu: Usia >=17 atau Sudah Menikah</p>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim style="font-size: 0.9em;">
+usia = 16
+menikah = True
 
-if usia >= 17 and warga_negara == "WNI":
-    print("Bisa membuat KTP dan MEMILIH")
-elif usia >= 17:
-    print("Bisa memilih, tapi bukan WNI")
+if usia >= 17 or menikah:
+    print("Bisa MEMILIH")
 else:
     print("Belum memenuhi syarat")
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    Bisa membuat KTP dan MEMILIH
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Bisa MEMILIH
+                        </pre>
+                    </div>
                 </div>
             </section>
 
@@ -287,17 +315,15 @@ else:
             <section>
                 <h3>Hands-On Practice 1</h3>
                 <div class="card text-left">
-                    <h4>Sistem Penilaian Lengkap</h4>
+                    <h4>Penentuan Status Kelulusan Siswa</h4>
                     <hr>
-                    <p class="text-small">Buat program dengan input <strong>Nilai (0-100)</strong> dan <strong>Kehadiran
-                            (%)</strong>.</p>
+                    <p class="text-small">Buat program dengan input <strong>Nilai Matematika (0-100)</strong> dan <strong>Nilai Bahasa (0-100)</strong>.</p>
                     <p class="text-small">Aturan Output:</p>
                     <ul class="text-smaller">
-                        <li>Nilai >= 90 dan Hadir >= 80% &rarr; <strong>A</strong></li>
-                        <li>Nilai >= 80 dan Hadir >= 70% &rarr; <strong>B</strong></li>
-                        <li>Nilai >= 70 dan Hadir >= 60% &rarr; <strong>C</strong></li>
-                        <li>Nilai >= 60 dan Hadir >= 50% &rarr; <strong>D</strong></li>
-                        <li>Selain itu &rarr; <strong>E</strong></li>
+                        <li>Mat >= 80 dan Bahasa >= 80 &rarr; <strong>Lulus dengan Pujian</strong></li>
+                        <li>Mat >= 70 dan Bahasa >= 70 &rarr; <strong>Lulus</strong></li>
+                        <li>Mat >= 60 atau Bahasa >= 60 &rarr; <strong>Remedial</strong></li>
+                        <li>Selain itu &rarr; <strong>Tidak Lulus</strong></li>
                     </ul>
                 </div>
             </section>
@@ -343,7 +369,7 @@ else:
                 </ul>
             </section>
 
-            <!-- === SLIDE 15: TUGAS === -->
+            <!-- === SLIDE 15: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 4 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
@@ -358,37 +384,66 @@ else:
                             <br>Komputer pilih angka 1-100. User menebak + diberi hint (terlalu besar/kecil).
                         </li>
                     </ol>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas4_NIM_Nama.py</code> |
-                        <strong>Deadline:</strong> Sebelum Pertemuan 5</p>
                 </div>
             </section>
 
-            <!-- === SLIDE 16: NEXT WEEK === -->
+            <!-- === SLIDE 16: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman kondisi majemuk, ikuti langkah-langkah berikut:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Analisis Kondisi:</strong> Identifikasi kondisi yang menggunakan and/or, dan urutan if-elif-else.</li>
+                        <li><strong>Desain Alur:</strong> Buat pseudocode dengan nested if jika diperlukan.</li>
+                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas, gunakan operator logika dengan benar.</li>
+                        <li><strong>Testing:</strong> Jalankan dengan berbagai input untuk memastikan semua kondisi bekerja.</li>
+                        <li><strong>Refleksi:</strong> Tambahkan cell teks untuk refleksi penggunaan kondisi majemuk.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan logika kode dan hasil di komentar.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 17: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas4_NIM_Nama.py</code></li>
+                                <li>Sertakan komentar dan output contoh di notebook.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 18: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>Perulangan (Loops) <i class="bi bi-arrow-repeat"></i></h4>
-                <div class="flex-container">
-                    <div class="flex-col">
-                        <ul class="text-small">
-                            <li>for loop</li>
-                            <li>while loop</li>
-                            <li>break & continue</li>
-                        </ul>
-                    </div>
-                    <div class="flex-col">
-                        <pre><code class="python">
+                <h4>Perulangan (Loops)</h4>
+                <div class="card text-center">
+                    <pre><code class="python" style="font-size: 1.2em;">
 for i in range(5):
-    print("Saya tidak akan telat lagi")
-                            </code></pre>
-                    </div>
+    print("Hello World!")
+                    </code></pre>
                 </div>
+                <p class="text-small">Persiapkan diri membaca materi <strong>for & while loop</strong>.</p>
             </section>
 
-            <!-- === SLIDE 17: Q&A === -->
+            <!-- === SLIDE 19: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
