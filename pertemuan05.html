@@ -115,7 +115,10 @@ for i in range(5):
                 <h3>for Loop</h3>
                 <p class="text-small">Digunakan untuk mengulang kode sejumlah kali yang <strong>sudah diketahui</strong>
                     atau mengiterasi item dalam sequence.</p>
-                <pre><code class="python" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Syntax & Contoh</h4>
+                        <pre><code class="python" data-trim>
 # Syntax
 for item in iterable:
     # Kode yang diulang
@@ -123,43 +126,59 @@ for item in iterable:
 # Contoh
 for i in range(5):
     print(i)
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    0
-                    1
-                    2
-                    3
-                    4
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+0
+1
+2
+3
+4
+                        </pre>
+                    </div>
                 </div>
             </section>
 
             <!-- === SLIDE 6: RANGE === -->
             <section>
                 <h3>Fungsi range()</h3>
-                <table class="text-small">
+                <p class="text-small">Fungsi <code>range()</code> menghasilkan urutan angka yang bisa digunakan dalam loop. 
+                Urutan ini <strong>tidak menyimpan semua angka</strong> di memori (efisien untuk angka besar).</p>
+                <table class="text-smaller" style="font-size: 0.8em; line-height: 1.1;">
                     <thead>
                         <tr>
                             <th>Syntax</th>
-                            <th>Deskripsi</th>
-                            <th>Contoh Hasil</th>
+                            <th>Penjelasan</th>
+                            <th>Contoh</th>
+                            <th>Hasil</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><code>range(n)</code></td>
-                            <td>0 sampai n-1</td>
-                            <td><code>[0, 1, 2, 3, 4]</code> (n=5)</td>
+                            <td>Dari 0 sampai n-1</td>
+                            <td><code>range(5)</code></td>
+                            <td><code>0, 1, 2, 3, 4</code></td>
                         </tr>
                         <tr>
                             <td><code>range(start, end)</code></td>
-                            <td>start sampai end-1</td>
-                            <td><code>[2, 3, 4, 5]</code> (2, 6)</td>
+                            <td>Dari start sampai end-1</td>
+                            <td><code>range(2, 6)</code></td>
+                            <td><code>2, 3, 4, 5</code></td>
                         </tr>
                         <tr>
-                            <td><code>range(s, e, step)</code></td>
+                            <td><code>range(start, end, step)</code></td>
                             <td>Dengan loncatan step</td>
-                            <td><code>[0, 2, 4, 6]</code> (0, 8, 2)</td>
+                            <td><code>range(0, 8, 2)</code></td>
+                            <td><code>0, 2, 4, 6</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>range(start, end, -step)</code></td>
+                            <td>Hitung mundur</td>
+                            <td><code>range(10, 0, -2)</code></td>
+                            <td><code>10, 8, 6, 4, 2</code></td>
                         </tr>
                     </tbody>
                 </table>
@@ -168,24 +187,30 @@ for i in range(5):
             <!-- === SLIDE 7: CONTOH FOR LOOP === -->
             <section>
                 <h3>Variasi for Loop</h3>
-                <div class="flex-container" style="align-items: flex-start;">
-                    <div class="flex-col">
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Hitung Mundur</h4>
                         <pre><code class="python" data-trim>
-# Hitung Mundur
 for i in range(5, 0, -1):
     print(i)
-                            </code></pre>
-                        <div class="code-output">5, 4, 3, 2, 1</div>
+                        </code></pre>
+                        <h5>Output Terminal</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.6em;">
+5<br>4<br>3<br>2<br>1
+                        </div>
                     </div>
-                    <div class="flex-col">
+                    <div class="card">
+                        <h4>Total Penjumlahan</h4>
                         <pre><code class="python" data-trim>
-# Total Penjumlahan
 total = 0
 for i in range(1, 101):
     total += i
 print(total)
-                            </code></pre>
-                        <div class="code-output">5050</div>
+                        </code></pre>
+                        <h5>Output Terminal</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.6em;">
+5050
+                        </div>
                     </div>
                 </div>
             </section>
@@ -219,8 +244,8 @@ while i < 5:
             <section>
                 <h3><i class="bi bi-exclamation-triangle"></i> Peringatan: Infinite Loop</h3>
                 <div class="flex-container">
-                    <div class="flex-col card" style="border-left: 5px solid #28a745;">
-                        <h4 style="color: #28a745;"><i class="bi bi-check-circle"></i> BENAR</h4>
+                    <div class="flex-col card card-success">
+                        <h4><i class="bi bi-check-circle"></i> BENAR</h4>
                         <pre><code class="python">
 i = 0
 while i < 5:
@@ -228,8 +253,8 @@ while i < 5:
     i += 1  # Ada update
                             </code></pre>
                     </div>
-                    <div class="flex-col card" style="border-left: 5px solid #dc3545;">
-                        <h4 style="color: #dc3545;"><i class="bi bi-x-circle"></i> SALAH (BAHAYA)</h4>
+                    <div class="flex-col card card-danger">
+                        <h4><i class="bi bi-x-circle"></i> SALAH (BAHAYA)</h4>
                         <pre><code class="python">
 i = 0
 while i < 5:
@@ -294,15 +319,22 @@ while True:
             <!-- === SLIDE 12: HANDS ON === -->
             <section>
                 <h3>Hands-On Practice</h3>
-                <div class="flex-container" style="align-items: flex-start;">
-                    <div class="flex-col card">
+                <div class="grid-2">
+                    <div class="card">
                         <h4>1. Faktorial</h4>
-                        <p class="text-smaller">Input: n<br>Output: n! (1 x 2 x ... x n)</p>
-                        <code>5! = 120</code>
+                        <p class="text-smaller">Input: n<br>Output: n! (1 × 2 × ... × n)</p>
+                        <h5>Output Terminal (contoh)</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.5em;">
+5! = 120
+                        </div>
                     </div>
-                    <div class="flex-col card">
-                        <h4>2. Cek Prima</h4>
-                        <p class="text-smaller">Input: n<br>Output: "Prima" atau "Bukan"</p>
+                    <div class="card">
+                        <h4>2. Cek Bilangan Prima</h4>
+                        <p class="text-smaller">Input: n<br>Output: "Prima" atau "Bukan Prima"</p>
+                        <h5>Output Terminal (contoh)</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.5em;">
+7 → "Prima"
+                        </div>
                     </div>
                 </div>
             </section>
@@ -310,21 +342,22 @@ while True:
             <!-- === SLIDE 13: LATIHAN TAMBAHAN === -->
             <section>
                 <h3>Latihan Tambahan</h3>
-                <div class="flex-container">
-                    <div class="flex-col card">
+                <div class="grid-2">
+                    <div class="card">
                         <h4>3. Pola Bintang</h4>
-                        <pre><code class="text-smaller">
-*
-**
-***
-****
-*****
-                            </code></pre>
+                        <p class="text-smaller">Input: n (tinggi segitiga)</p>
+                        <h5>Output Terminal (contoh)</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.5em; line-height: 1.2;">
+*<br>**<br>***<br>****<br>*****
+                        </div>
                     </div>
-                    <div class="flex-col card">
-                        <h4>4. Fibonacci</h4>
+                    <div class="card">
+                        <h4>4. Deret Fibonacci</h4>
                         <p class="text-smaller">Input: n (jumlah bilangan)</p>
-                        <p class="text-smaller">Output: 0, 1, 1, 2, 3, 5, ...</p>
+                        <h5>Output Terminal (contoh)</h5>
+                        <div class="code-output" style="margin-top: 10px; font-size: 0.5em;">
+0, 1, 1, 2, 3, 5, ...
+                        </div>
                     </div>
                 </div>
             </section>
@@ -341,29 +374,62 @@ while True:
                 </ul>
             </section>
 
-            <!-- === SLIDE 15: TUGAS === -->
+            <!-- === SLIDE 15: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 5 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
                     <ol class="text-small">
                         <li><strong>Hitung Rata-rata:</strong>
-                            <br>Input n angka loop, jumlahkan dan bagi n.
+                            <br>Input n angka menggunakan loop, jumlahkan dan bagi n.
                         </li>
                         <li><strong>Tabel Perkalian:</strong>
-                            <br>Cetak tabel perkalian 1 sampai n.
+                            <br>Cetak tabel perkalian 1 sampai n menggunakan nested loop.
                         </li>
                         <li><strong>Game Tebak Angka (Limit):</strong>
-                            <br>Sama seperti minggu lalu, tapi maksimal <strong>5x percobaan</strong>. Jika habis, Game
-                            Over.
+                            <br>Sama seperti minggu lalu, tapi maksimal <strong>5x percobaan</strong>. Jika habis, Game Over.
                         </li>
                     </ol>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas5_NIM_Nama.py</code> |
-                        <strong>Deadline:</strong> Sebelum Pertemuan 6</p>
                 </div>
             </section>
 
-            <!-- === SLIDE 16: NEXT WEEK === -->
+            <!-- === SLIDE 16: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman perulangan, ikuti langkah-langkah berikut:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Analisis Loop:</strong> Tentukan jenis loop (for/while) dan kondisi yang tepat.</li>
+                        <li><strong>Desain Alur:</strong> Buat pseudocode dengan loop counter dan kondisi berhenti.</li>
+                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas, gunakan range() dan kontrol loop.</li>
+                        <li><strong>Testing:</strong> Jalankan dengan berbagai input untuk memastikan loop bekerja benar.</li>
+                        <li><strong>Refleksi:</strong> Tambahkan cell teks untuk refleksi penggunaan perulangan.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan logika loop dan hasil di komentar.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 17: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas5_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di notebook.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 18: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>List (Daftar) <i class="bi bi-list"></i></h4>
@@ -375,10 +441,13 @@ print(buah[1])  # jeruk
                     </code></pre>
             </section>
 
-            <!-- === SLIDE 17: Q&A === -->
+            <!-- === SLIDE 19: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
