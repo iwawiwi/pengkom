@@ -69,11 +69,14 @@
 
             <!-- === SLIDE 3: QUIZ COUNTDOWN === -->
             <section>
-                <h1>Persiapan Quiz...</h1>
-                <div style="font-size: 2em; color: #d32f2f; margin: 20px;">
-                    Siapkan Laptop & Kertas Coretran
+                <h3>Siap Mengerjakan Quiz?</h3>
+                <div id="timer" class="timer" style="margin-top: 30px; font-size: 3em; font-weight: bold; color: #e74c3c; text-align: center;">Timer 30:00</div>
+                <div style="margin-top: 50px; text-align: center;">
+                    <button id="startBtn" style="padding: 15px 30px; font-size: 1.2em; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Quiz</button>
                 </div>
-                <p>Kode akses akan diberikan oleh Dosen.</p>
+                <div style="margin-top: 30px; text-align: center;">
+                    <p class="text-small">Klik tombol Start untuk memulai timer</p>
+                </div>
             </section>
 
             <!-- === SLIDE 4: SESI KERJA PROYEK === -->
@@ -131,6 +134,30 @@
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
     <script>
+        // Quiz Timer
+        var timerElement = document.getElementById('timer');
+        var countdown;
+        var timeLeft = 30 * 60; // 30 minutes in seconds
+
+        document.getElementById('startBtn').addEventListener('click', function() {
+            startTimer();
+        });
+
+        function startTimer() {
+            countdown = setInterval(function() {
+                var minutes = Math.floor(timeLeft / 60);
+                var seconds = timeLeft % 60;
+                timerElement.innerHTML = 'Timer ' + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                timeLeft--;
+
+                if (timeLeft < 0) {
+                    clearInterval(countdown);
+                    timerElement.innerHTML = 'Waktu Habis!';
+                    timerElement.style.color = '#e74c3c';
+                }
+            }, 1000);
+        }
+
         Reveal.initialize({
             hash: true,
             progress: true,

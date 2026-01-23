@@ -84,6 +84,9 @@ Budi,20,Jakarta
 Siti,21,Bandung
 Andi,19,Surabaya
                             </code></pre>
+                        <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                            <strong>Penjelasan:</strong> Baris pertama adalah header/kolom. Setiap baris berikutnya adalah satu record data mahasiswa dengan 3 atribut: nama, umur, dan kota asal.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -91,17 +94,22 @@ Andi,19,Surabaya
             <!-- === SLIDE 4: MEMBACA CSV === -->
             <section>
                 <h3>Membaca CSV dengan Pandas</h3>
-                <pre><code class="python" data-trim>
+                <p class="text-small"><code>pd.read_csv()</code> adalah fungsi utama untuk membaca file CSV ke dalam DataFrame pandas.</p>
+                <div class="card" style="max-width: 650px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
 import pandas as pd
 
-# Load data
 df = pd.read_csv('mahasiswa.csv')
 
-# Inspeksi Data
-print(df.head())      # 5 baris pertama
-print(df.info())      # Tipe data & memory
-print(df.describe())  # Statistik dasar
-                    </code></pre>
+# Inspeksi data
+print(df.head())      # Preview 5 baris
+print(df.info())      # Struktur & tipe data  
+print(df.describe())  # Statistik deskriptif
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 6px; color: #666;">
+                        Otomatis deteksi header & tipe data. <code>head()</code> preview, <code>info()</code> struktur, <code>describe()</code> statistik.
+                    </p>
+                </div>
             </section>
 
             <!-- === SLIDE 5: DATA CLEANING (MISSING) === -->
@@ -124,44 +132,51 @@ df['Umur'] = df['Umur'].fillna(mean_umur)
                     </code></pre>
             </section>
 
-            <!-- === SLIDE 6: DATA MANIPULATION === -->
+            <!-- === SLIDE 6: DATA MANIPULATION - FILTERING === -->
             <section>
-                <h3>Data Manipulation</h3>
-                <div class="flex-container">
-                    <div class="flex-col">
-                        <h4>Filtering</h4>
-                        <pre><code class="python">
-# Filter Umur > 20
-senior = df[ df['Umur'] > 20 ]
+                <h3>Data Manipulation: Filtering</h3>
+                <p class="text-small">Mengambil baris data yang memenuhi kondisi tertentu.</p>
+                <div class="card" style="max-width: 700px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+import pandas as pd
+df = pd.read_csv('mahasiswa.csv')
 
-# Filter Kota Jakarta
-jkt = df[ df['Kota'] == 'Jakarta' ]
-                            </code></pre>
-                    </div>
-                    <div class="flex-col">
-                        <h4>Sorting</h4>
-                        <pre><code class="python">
-# Urutkan berdasarkan Umur
-df_urut = df.sort_values('Umur')
+# Filter berdasarkan kondisi tunggal
+senior = df[df['Umur'] > 20]
+jkt = df[df['Kota'] == 'Jakarta']
 
-# Descending (Besar ke Kecil)
-df_desc = df.sort_values('Umur', ascending=False)
+# Filter dengan multiple conditions
+muda_jkt = df[(df['Umur'] < 21) & 
+              (df['Kota'] == 'Jakarta')]
+
+# Filter dengan string methods
+nama_a = df[df['Nama'].str.startswith('A')]
                             </code></pre>
-                    </div>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Gunakan operator <code>&</code> (AND), <code>|</code> (OR), dan <code>~</code> (NOT) untuk kombinasi kondisi.
+                    </p>
                 </div>
             </section>
 
-            <!-- === SLIDE 7: LATIHAN HANDS-ON === -->
+            <!-- === SLIDE 7: DATA MANIPULATION - SORTING === -->
             <section>
-                <h3>Hands-On: Analisis Penjualan</h3>
-                <div class="card text-left">
-                    <p class="text-small">Diberikan file <code>transaksi.csv</code> (Produk, Jumlah, Harga).</p>
-                    <ol class="text-small">
-                        <li>Load file menggunakan Pandas.</li>
-                        <li>Buat kolom baru <code>Total</code> = Limit * Harga.</li>
-                        <li>Hitung <strong>Total Omset</strong> (Sum dari kolom Total).</li>
-                        <li>Tampilkan transaksi dengan Jumlah > 10.</li>
-                    </ol>
+                <h3>Data Manipulation: Sorting</h3>
+                <p class="text-small">Mengurutkan data berdasarkan kolom tertentu.</p>
+                <div class="card" style="max-width: 700px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+# Urutkan ascending (kecil ke besar)
+df_urut_umur = df.sort_values('Umur')
+
+# Urutkan descending (besar ke kecil)
+df_desc = df.sort_values('Umur', ascending=False)
+
+# Urutkan berdasarkan multiple columns
+df_multi = df.sort_values(['Kota', 'Umur'])
+
+                    </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Parameter <code>ascending=False</code> untuk descending.
+                    </p>
                 </div>
             </section>
 
@@ -178,30 +193,35 @@ df = df.drop_duplicates()
                 <p class="text-small">Penting agar analisis tidak bias karena data ganda.</p>
             </section>
 
-            <!-- === SLIDE 9: RINGKASAN === -->
+            <!-- === SLIDE 9: LATIHAN HANDS-ON === -->
             <section>
-                <h3>Ringkasan Hari Ini</h3>
-                <table class="text-small">
-                    <tr>
-                        <td><code>read_csv()</code></td>
-                        <td>Membaca file CSV.</td>
-                    </tr>
-                    <tr>
-                        <td><code>to_csv()</code></td>
-                        <td>Menyimpan DataFrame ke CSV.</td>
-                    </tr>
-                    <tr>
-                        <td><code>dropna()</code></td>
-                        <td>Menghapus data kosong.</td>
-                    </tr>
-                    <tr>
-                        <td><code>fillna()</code></td>
-                        <td>Mengisi data kosong.</td>
-                    </tr>
-                </table>
+                <h3>Hands-On: Analisis Penjualan</h3>
+                <div class="card text-left">
+                    <p class="text-small">Diberikan file <code>transaksi.csv</code> (Produk, Jumlah, Harga).</p>
+                    <ol class="text-small">
+                        <li>Load file menggunakan Pandas.</li>
+                        <li>Buat kolom baru <code>Total</code> = Jumlah * Harga.</li>
+                        <li>Hitung <strong>Total Omset</strong> (Sum dari kolom Total).</li>
+                        <li>Tampilkan transaksi dengan Jumlah > 10.</li>
+                        <li>Urutkan data berdasarkan Total (descending) dan tampilkan 5 transaksi teratas.</li>
+                        <li>Hapus duplikat jika ada.</li>
+                    </ol>
+                </div>
             </section>
 
-            <!-- === SLIDE 10: TUGAS === -->
+            <!-- === SLIDE 10: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <ul class="text-small">
+                    <li><i class="bi bi-check-circle"></i> <strong><code>read_csv()</code></strong>: Membaca file CSV.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong><code>to_csv()</code></strong>: Menyimpan DataFrame ke CSV.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong><code>dropna()</code></strong>: Menghapus data kosong.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong><code>fillna()</code></strong>: Mengisi data kosong.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong><code>drop_duplicates()</code></strong>: Menghapus data duplikat.</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 11: TUGAS === -->
             <section>
                 <h3>Tugas Pertemuan 13 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
@@ -212,13 +232,52 @@ df = df.drop_duplicates()
                             <br>- Tambahkan kolom <code>Status</code> ("Lulus" jika Nilai >= 60).
                             <br>- Simpan hasil ke <code>nilai_bersih.csv</code>.
                         </li>
+                        <li><strong>Visualisasi Distribusi Nilai:</strong>
+                            <br>- Buat histogram distribusi nilai mahasiswa.
+                            <br>- Tambahkan bar chart jumlah mahasiswa lulus vs tidak lulus.
+                            <br>- Simpan visualisasi sebagai file gambar (<code>distribusi_nilai.png</code>).
+                        </li>
                     </ul>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas13_NIM_Nama.py</code> + CSV hasil.</p>
                 </div>
             </section>
 
-            <!-- === SLIDE 11: NEXT WEEK === -->
+            <!-- === SLIDE 12: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Langkah penting untuk menyelesaikan tugas:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Data Processing:</strong> Baca CSV → Bersihkan missing values → Manipulasi DataFrame → Simpan hasil.</li>
+                        <li><strong>Visualization:</strong> Buat histogram distribusi nilai dan bar chart status kelulusan dengan matplotlib.</li>
+                        <li><strong>Code Quality:</strong> Gunakan komentar jelas dan pastikan kode dapat dijalankan tanpa error.</li>
+                        <li><strong>File Output:</strong> Pastikan semua file (CSV & PNG) tersimpan dengan benar sebelum upload.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 13: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas13_NIM_Nama.py</code></li>
+                                <li>Sertakan file CSV hasil (<code>nilai_bersih.csv</code>).</li>
+                                <li>Sertakan file gambar visualisasi (<code>distribusi_nilai.png</code>).</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 14: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>Final Mini Project & Algoritma <i class="bi bi-rocket"></i></h4>
@@ -231,10 +290,13 @@ df = df.drop_duplicates()
                 </ul>
             </section>
 
-            <!-- === SLIDE 12: Q&A === -->
+            <!-- === SLIDE 15: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>

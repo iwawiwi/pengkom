@@ -93,7 +93,7 @@
                         <p class="text-smaller">Membandingkan kategori/jumlah.</p>
                     </div>
                     <div class="card" style="flex: 1; min-width: 200px; margin: 5px;">
-                        <h4>Scatter Plot ∴</h4>
+                        <h4>Scatter Plot <i class="bi bi-circle-fill"></i></h4>
                         <p class="text-smaller">Melihat korelasi antar 2 variabel.</p>
                     </div>
                 </div>
@@ -102,100 +102,197 @@
             <!-- === SLIDE 5: MATPLOTLIB BASIC === -->
             <section>
                 <h3>Dasar Matplotlib</h3>
-                <pre><code class="python" data-trim>
-import matplotlib.pyplot as plt
-
-# Data
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 25, 30, 50]
-
-# Plotting
-plt.plot(x, y)
-
-# Aksesoris
-plt.title("Contoh Grafik Kenaikan")
-plt.xlabel("Bulan ke-")
-plt.ylabel("Penjualan (Juta)")
-
-# Tampilkan
-plt.show()
-                    </code></pre>
-            </section>
-
-            <!-- === SLIDE 6: BAR CHART === -->
-            <section>
-                <h3>Bar Chart (Diagram Batang)</h3>
-                <pre><code class="python" data-trim>
-kategori = ['A', 'B', 'C', 'D']
-nilai = [85, 90, 75, 60]
-
-plt.bar(kategori, nilai, color='teal')
-
-plt.title("Nilai Rata-rata Kelas")
-plt.show()
-                    </code></pre>
-                <p class="text-small">Gunakan <code>plt.barh()</code> untuk horizontal bar.</p>
-            </section>
-
-            <!-- === SLIDE 7: SCATTER & PIE === -->
-            <section>
-                <h3>Scatter & Pie Chart</h3>
-                <div class="flex-container">
-                    <div class="flex-col">
-                        <h4>Scatter Plot</h4>
-                        <pre><code class="python">
-plt.scatter(tinggi, berat)
-plt.show()
-                            </code></pre>
+                <p class="text-small">Komponen utama untuk membuat visualisasi data.</p>
+                <div class="grid-2">
+                    <div class="card card-warning">
+                        <h4>Struktur Dasar</h4>
+                        <ul class="text-smaller">
+                            <li><code>import matplotlib.pyplot as plt</code></li>
+                            <li>Siapkan data (list/array)</li>
+                            <li>Pilih jenis plot (<code>plt.plot()</code>, <code>plt.bar()</code>, dll)</li>
+                            <li>Tambahkan label dan judul</li>
+                            <li><code>plt.show()</code> untuk menampilkan</li>
+                        </ul>
                     </div>
-                    <div class="flex-col">
-                        <h4>Pie Chart</h4>
-                        <pre><code class="python">
-size = [30, 20, 50]
-label = ['X', 'Y', 'Z']
-plt.pie(size, labels=label)
-plt.show()
-                            </code></pre>
+                    <div class="card">
+                        <h4>Fungsi Aksesoris</h4>
+                        <ul class="text-smaller">
+                            <li><code>plt.title()</code> - Judul grafik</li>
+                            <li><code>plt.xlabel()</code> - Label sumbu X</li>
+                            <li><code>plt.ylabel()</code> - Label sumbu Y</li>
+                            <li><code>plt.legend()</code> - Legenda</li>
+                            <li><code>plt.grid()</code> - Garis grid</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 8: SEABORN === -->
+            <!-- === SLIDE 6: CONTOH LINE PLOT === -->
+            <section>
+                <h3>Contoh: Line Plot</h3>
+                <p class="text-small">Grafik garis untuk menampilkan tren data seiring waktu.</p>
+                <div class="card" style="max-width: 700px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+import matplotlib.pyplot as plt
+
+# Data penjualan bulanan
+bulan = [1, 2, 3, 4, 5, 6]
+penjualan = [10, 20, 25, 30, 50, 45]
+
+# Line plot dengan marker
+plt.plot(bulan, penjualan, marker='o')
+plt.title("Grafik Penjualan Bulanan")
+plt.xlabel("Bulan")
+plt.ylabel("Penjualan (Juta)")
+plt.show()
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Membuat grafik garis dengan titik marker untuk setiap data point.
+                    </p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 7: BAR CHART === -->
+            <section>
+                <h3>Bar Chart (Diagram Batang)</h3>
+                <p class="text-small">Membandingkan nilai antar kategori dengan batang vertikal.</p>
+                <div class="card" style="max-width: 600px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+import matplotlib.pyplot as plt
+
+# Data kategori dan nilai
+grade = ['A', 'B', 'C', 'D']
+jumlah = [8, 25, 10, 2]
+
+# Buat bar chart dengan warna
+plt.bar(grade, jumlah, color='skyblue')
+# Tambahkan judul
+plt.title("Distribusi Nilai Mahasiswa")
+plt.show()
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Parameter <code>color</code> bisa menggunakan nama warna atau kode hex. Gunakan <code>plt.barh()</code> untuk horizontal.
+                    </p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: SCATTER PLOT === -->
+            <section>
+                <h3>Scatter Plot</h3>
+                <p class="text-small">Melihat hubungan/korelasi antara dua variabel numerik.</p>
+                <div class="card" style="max-width: 600px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+import matplotlib.pyplot as plt
+
+# Data tinggi dan berat badan
+tinggi = [150, 160, 165, 170, 175, 180]
+berat = [45, 55, 60, 65, 70, 75]
+
+# Scatter plot
+plt.scatter(tinggi, berat, color='coral', 
+            alpha=0.7)
+# Label dan judul
+plt.xlabel("Tinggi Badan (cm)")
+plt.ylabel("Berat Badan (kg)")
+plt.title("Hubungan Tinggi vs Berat Badan")
+plt.show()
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Parameter <code>alpha</code> mengatur transparansi titik (0-1). Berguna untuk data yang overlap.
+                    </p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: PIE CHART === -->
+            <section>
+                <h3>Pie Chart</h3>
+                <p class="text-small">Menampilkan proporsi atau persentase dari keseluruhan data.</p>
+                <div class="card" style="max-width: 600px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
+import matplotlib.pyplot as plt
+
+# Data distribusi nilai
+grade = ['A', 'B', 'C', 'D']
+jumlah = [8, 25, 10, 2]
+
+# Pie chart dengan persentase
+plt.pie(jumlah, labels=grade, 
+        autopct='%1.1f%%', 
+        colors=['gold', 'lightblue', 
+                'lightgreen', 'coral'])
+# Judul grafik
+plt.title("Distribusi Nilai Mahasiswa")
+plt.show()
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Parameter <code>autopct</code> menampilkan persentase otomatis. Gunakan <code>explode</code> untuk memisahkan slice.
+                    </p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: SEABORN === -->
             <section>
                 <h3>Intro to Seaborn <i class="bi bi-water"></i></h3>
-                <p class="text-small">Library di atas Matplotlib yang lebih cantik & mudah untuk statistik.</p>
-                <pre><code class="python" data-trim>
+                <p class="text-small">Library statistik di atas Matplotlib dengan style yang lebih menarik.</p>
+                <div class="card" style="max-width: 650px; margin: 0 auto;">
+                    <pre><code class="python" data-trim>
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Contoh Histogram dengan garis distribusi
-data = [1, 2, 2, 3, 3, 3, 4, 4, 5]
-sns.histplot(data, kde=True)
+# Data nilai mahasiswa
+nilai = [75, 80, 85, 78, 92, 88, 90, 85, 82, 87]
 
+# Histogram + KDE (Kernel Density Estimation)
+sns.histplot(nilai, kde=True, color='skyblue', 
+             alpha=0.7)
+
+plt.title("Distribusi Nilai Mahasiswa")
+plt.xlabel("Nilai")
+plt.ylabel("Frekuensi")
 plt.show()
-                    </code></pre>
-            </section>
-
-            <!-- === SLIDE 9: LATIHAN === -->
-            <section>
-                <h3>Latihan Hands-On</h3>
-                <div class="card text-left">
-                    <h4>Visualisasi Suhu Mingguan</h4>
-                    <p class="text-small">Buatlah 2 list:</p>
-                    <ul class="text-small">
-                        <li>Hari: Senin - Minggu</li>
-                        <li>Suhu: [30, 31, 29, 32, 33, 31, 30]</li>
-                    </ul>
-                    <p class="text-small">Tugas:</p>
-                    <ol class="text-small">
-                        <li>Buat Line Plot.</li>
-                        <li>Beri warna garis merah.</li>
-                        <li>Beri Judul "Ramalan Cuaca".</li>
-                    </ol>
+                        </code></pre>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;">
+                        Parameter <code>kde=True</code> menambahkan garis kurva distribusi dengan style yang otomatis.
+                    </p>
                 </div>
             </section>
 
-            <!-- === SLIDE 10: RINGKASAN === -->
+            <!-- === SLIDE 11: LATIHAN === -->
+            <section>
+                <h3>Latihan Hands-On</h3>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="flex-col card">
+                        <h4>1. Suhu Mingguan</h4>
+                        <p class="text-small">Buatlah 2 list:</p>
+                        <ul class="text-smaller">
+                            <li>Hari: Senin - Minggu</li>
+                            <li>Suhu: [30, 31, 29, 32, 33, 31, 30]</li>
+                        </ul>
+                        <p class="text-small">Tugas:</p>
+                        <ol class="text-smaller">
+                            <li>Buat Line Plot.</li>
+                            <li>Beri warna garis merah.</li>
+                            <li>Beri Judul "Ramalan Cuaca".</li>
+                        </ol>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Nilai Mahasiswa</h4>
+                        <p class="text-small">Gunakan data berikut:</p>
+                        <ul class="text-smaller">
+                            <li>Mata Kuliah: ['Biologi', 'Kimia', 'Matematika', 'Fisika']</li>
+                            <li>Rata-rata: [85, 78, 92, 88]</li>
+                        </ul>
+                        <p class="text-small">Tugas:</p>
+                        <ol class="text-smaller">
+                            <li>Buat Bar Chart vertikal.</li>
+                            <li>Beri warna berbeda untuk setiap bar.</li>
+                            <li>Beri Judul "Performa Akademik".</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 12: RINGKASAN === -->
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <ul class="text-small">
@@ -206,23 +303,64 @@ plt.show()
                 </ul>
             </section>
 
-            <!-- === SLIDE 11: TUGAS === -->
+            <!-- === SLIDE 13: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 12 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
-                    <ul class="text-small">
-                        <li><strong>Dashboard Sederhana:</strong>
-                            <br>Buat program yang menampilkan 2 grafik dalam 1 figure (Subplot).
-                            <br>- Grafik 1: Bar Chart Data Nilai.
-                            <br>- Grafik 2: Pie Chart Persentase Kehadiran.
+                    <p class="text-smaller"><strong>Sumber Data:</strong> Buat data sendiri atau gunakan data contoh yang realistis.</p>
+                    <ol class="text-small">
+                        <li><strong>Dashboard Akademik:</strong>
+                            <br>Buat visualisasi data akademik dengan subplot (2 grafik dalam 1 figure).
+                            <br>- Bar Chart: Nilai rata-rata per mata kuliah (minimal 4 mata kuliah).
+                            <br>- Pie Chart: Distribusi indeks prestasi mahasiswa (A, B, C, D, E).
                         </li>
-                    </ul>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas12_NIM_Nama.py</code></p>
+                        <li><strong>Analisis Tren Penjualan:</strong>
+                            <br>Buat line plot dan scatter plot untuk menganalisis hubungan antara waktu dan penjualan produk.
+                            <br>- Line Plot: Tren penjualan per bulan (minimal 6 bulan data).
+                            <br>- Scatter Plot: Hubungan antara harga produk dan jumlah terjual.
+                        </li>
+                    </ol>
                 </div>
             </section>
 
-            <!-- === SLIDE 12: NEXT WEEK === -->
+            <!-- === SLIDE 14: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman visualisasi data:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Subplot Layout:</strong> Gunakan <code>plt.subplot()</code> atau <code>plt.subplots()</code> untuk multiple charts.</li>
+                        <li><strong>Data Preparation:</strong> Siapkan data dalam format yang sesuai untuk setiap jenis chart.</li>
+                        <li><strong>Chart Customization:</strong> Tambahkan title, label, dan legend untuk setiap subplot.</li>
+                        <li><strong>Figure Management:</strong> Atur ukuran figure dan spacing antar subplot.</li>
+                        <li><strong>Testing:</strong> Jalankan kode dan pastikan semua chart terlihat dengan baik.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan setiap langkah visualisasi di komentar kode.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 15: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas12_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di kode.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 16: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>File Handling (CSV) <i class="bi bi-folder"></i></h4>
@@ -233,10 +371,13 @@ print(df.head())
                     </code></pre>
             </section>
 
-            <!-- === SLIDE 13: Q&A === -->
+            <!-- === SLIDE 17: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
