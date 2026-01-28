@@ -133,6 +133,9 @@
 
   const handleAutoPrint = () => {
     if (window.location.search.includes("print-pdf")) {
+      // Force light mode for printing
+      document.documentElement.dataset.theme = "light";
+      
       window.addEventListener("load", () => {
         setTimeout(() => {
           window.print();
