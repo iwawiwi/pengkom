@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="lms-url" content="https://lms.itera.ac.id">
 
-    <title>Pertemuan 15 - Quiz 2</title>
+    <title>Pertemuan 15 - Quiz Pra-UAS</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
@@ -38,20 +38,20 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 class="subtitle">Pertemuan 15: Quiz 2 + Kerja Proyek</h3>
+                    <h3 class="subtitle">Pertemuan 15: Quiz Pra-UAS</h3>
                 </div>
             </section>
 
-            <!-- === SLIDE 2: INFORMASI QUIZ 2 === -->
+            <!-- === SLIDE 2: INFORMASI QUIZ PRA-UAS === -->
             <section>
-                <h3>Informasi Quiz 2</h3>
+                <h3>Informasi Quiz Pra-UAS</h3>
                 <div class="flex-container">
                     <div class="flex-col card">
                         <h4>Detail Pelaksanaan</h4>
                         <ul class="text-small">
-                            <li><strong>Waktu:</strong> 30 Menit</li>
+                            <li><strong>Waktu:</strong> 45 Menit</li>
                             <li><strong>Sifat:</strong> Closed Book</li>
-                            <li><strong>Materi:</strong> Pertemuan 9 - 13</li>
+                            <li><strong>Materi:</strong> Pertemuan 9 - 14</li>
                         </ul>
                     </div>
                     <div class="flex-col text-left">
@@ -59,18 +59,32 @@
                         <ul class="text-smaller">
                             <li>Pertemuan 9: Fungsi (def, return)</li>
                             <li>Pertemuan 10: String Manipulation</li>
-                            <li>Pertemuan 11: Libraries (Math, Random)</li>
-                            <li>Pertemuan 12: Data Viz (Matplotlib)</li>
-                            <li>Pertemuan 13: CSV Processing</li>
+                            <li>Pertemuan 11: Libraries (Math, Random, Pandas)</li>
+                            <li>Pertemuan 12: Visualisasi Data (Matplotlib)</li>
+                            <li>Pertemuan 13: File CSV &amp; Pandas</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 3: QUIZ COUNTDOWN === -->
+            <!-- === SLIDE 3: TATA TERTIB === -->
+            <section>
+                <h3>Tata Tertib Quiz <i class="bi bi-clipboard-check"></i></h3>
+                <div class="card card-info text-left">
+                    <ol class="text-small">
+                        <li>Tutup semua tab browser selain lembar jawaban.</li>
+                        <li>Dilarang membuka catatan, buku, atau kode referensi.</li>
+                        <li>Tidak diperkenankan berdiskusi selama quiz berlangsung.</li>
+                        <li>Kumpulkan jawaban sebelum waktu habis.</li>
+                        <li>Angkat tangan jika ada pertanyaan teknis.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- === SLIDE 4: QUIZ COUNTDOWN === -->
             <section>
                 <h3>Siap Mengerjakan Quiz?</h3>
-                <div id="timer" class="timer" style="margin-top: 30px; font-size: 3em; font-weight: bold; color: #e74c3c; text-align: center;">Timer 30:00</div>
+                <div id="timer" class="timer" style="margin-top: 30px; font-size: 3em; font-weight: bold; color: #e74c3c; text-align: center;">Timer 45:00</div>
                 <div style="margin-top: 50px; text-align: center;">
                     <button id="startBtn" style="padding: 15px 30px; font-size: 1.2em; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Quiz</button>
                 </div>
@@ -79,50 +93,31 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 4: SESI KERJA PROYEK === -->
+            <!-- === SLIDE 5: PENGUMUMAN UAS === -->
             <section>
-                <h3>Sesi Kerja Proyek (Asistensi)</h3>
-                <div class="card" style="background: #e0f7fa;">
-                    <h4><i class="bi bi-bullseye"></i> Target Hari Ini</h4>
+                <h3>Informasi UAS <i class="bi bi-megaphone"></i></h3>
+                <div class="card card-info">
                     <ul class="text-small text-left">
-                        <li><i class="bi bi-check-circle"></i> Finalisasi Algoritma & Flowchart.</li>
-                        <li><i class="bi bi-check-circle"></i> Coding 70% selesai.</li>
-                        <li><i class="bi bi-check-circle"></i> Integrasi Data (CSV) ke Program.</li>
+                        <li><strong>Pertemuan 16:</strong> Ujian Akhir Semester (UAS)</li>
+                        <li><strong>Format:</strong> Computer Based Test (CBT)</li>
+                        <li><strong>Materi:</strong> Seluruh materi perkuliahan (P1–P14)</li>
+                        <li><strong>Durasi:</strong> Sesuai jadwal UAS resmi</li>
+                        <li><strong>Tempat:</strong> Ruang Laboratorium Komputer</li>
                     </ul>
                 </div>
-                <br>
-                <div class="text-smaller">
-                    <p>Dosen & Asisten akan berkeliling untuk mengecek progress tiap kelompok.</p>
-                </div>
-            </section>
-
-            <!-- === SLIDE 5: REMINDER FINAL === -->
-            <section>
-                <h3>Reminder: Final Presentation <i class="bi bi-megaphone"></i></h3>
-                <p class="text-small">Minggu depan (Pertemuan 16) adalah Deadline!</p>
-                <div class="flex-container">
-                    <div class="flex-col card" style="border-top: 5px solid #ff9800;">
-                        <h4>Yang Harus Disiapkan</h4>
-                        <ul class="text-smaller text-left">
-                            <li>Slide Presentasi (PDF/PPT).</li>
-                            <li>Demo Program (Live).</li>
-                            <li>Source Code (Clean & Commented).</li>
-                        </ul>
-                    </div>
-                    <div class="flex-col card" style="border-top: 5px solid #f44336;">
-                        <h4>Jangan Lupa</h4>
-                        <ul class="text-smaller text-left">
-                            <li>Latihan presentasi (waktu terbatas).</li>
-                            <li>Pastikan program jalan di laptop presentasi.</li>
-                        </ul>
-                    </div>
+                <div class="card" style="margin-top: 12px; border-left: 5px solid #FF9800;">
+                    <p class="text-small"><i class="bi bi-lightbulb"></i> Pelajari kembali semua materi dari awal. Quiz hari ini adalah simulasi soal UAS.</p>
                 </div>
             </section>
 
             <!-- === SLIDE 6: CLOSING === -->
             <section>
-                <h1>Selamat Bekerja!</h1>
-                <p>Manfaatkan waktu yang ada.</p>
+                <h3>Semangat! <i class="bi bi-stars"></i></h3>
+                <p>Hasil quiz ini menjadi bahan evaluasi terakhir sebelum UAS.</p>
+                <div class="card" style="margin-top: 20px;">
+                    <p class="text-small"><em>"The secret of getting ahead is getting started."</em></p>
+                    <p class="text-smaller">— Mark Twain</p>
+                </div>
             </section>
 
         </div>
@@ -137,7 +132,7 @@
         // Quiz Timer
         var timerElement = document.getElementById('timer');
         var countdown;
-        var timeLeft = 30 * 60; // 30 minutes in seconds
+        var timeLeft = 45 * 60; // 45 minutes in seconds
 
         document.getElementById('startBtn').addEventListener('click', function() {
             startTimer();

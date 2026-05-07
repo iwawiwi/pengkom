@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="lms-url" content="https://lms.itera.ac.id">
 
-    <title>Pertemuan 14 - Mini Project</title>
+    <title>Pertemuan 14 - Review Pasca UTS</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
@@ -17,6 +17,22 @@
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        .reveal .slides section pre {
+            font-size: 0.54em;
+            line-height: 1.25;
+        }
+
+        .reveal .slides section pre code {
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        .reveal .slides section table {
+            font-size: 0.86em;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,199 +54,523 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 class="subtitle">Pertemuan 14: Mini Project</h3>
+                    <h3 class="subtitle">Pertemuan 14: Review Materi Pasca UTS</h3>
                 </div>
             </section>
 
             <!-- === SLIDE 2: OUTLINE === -->
             <section>
-                <h3>Agenda Hari Ini</h3>
-                <div class="flex-container">
-                    <div class="flex-col card">
-                        <h4>1. Briefing Project</h4>
-                        <p class="text-smaller">Penjelasan tugas besar, aturan main, dan pembentukan kelompok.</p>
+                <h3>Materi yang Direview</h3>
+                <div class="flex-container" style="flex-wrap: wrap;">
+                    <div class="card" style="flex: 1; min-width: 200px; margin: 5px; border-top: 4px solid #4CAF50;">
+                        <h4><i class="bi bi-9-circle"></i> P9</h4>
+                        <p class="text-smaller">Fungsi (Functions)</p>
                     </div>
-                    <div class="flex-col card">
-                        <h4>2. Workshop Algoritma</h4>
-                        <p class="text-smaller">Merancang alur program (Flowchart/Pseudocode) sebelum coding.</p>
+                    <div class="card" style="flex: 1; min-width: 200px; margin: 5px; border-top: 4px solid #2196F3;">
+                        <h4><i class="bi bi-1-circle"></i><i class="bi bi-0-circle"></i> P10</h4>
+                        <p class="text-smaller">Manipulasi String</p>
+                    </div>
+                    <div class="card" style="flex: 1; min-width: 200px; margin: 5px; border-top: 4px solid #FF9800;">
+                        <h4><i class="bi bi-1-circle"></i><i class="bi bi-1-circle"></i> P11</h4>
+                        <p class="text-smaller">Menggunakan Library</p>
+                    </div>
+                    <div class="card" style="flex: 1; min-width: 200px; margin: 5px; border-top: 4px solid #9C27B0;">
+                        <h4><i class="bi bi-1-circle"></i><i class="bi bi-2-circle"></i> P12</h4>
+                        <p class="text-smaller">Visualisasi Data</p>
+                    </div>
+                    <div class="card" style="flex: 1; min-width: 200px; margin: 5px; border-top: 4px solid #F44336;">
+                        <h4><i class="bi bi-1-circle"></i><i class="bi bi-3-circle"></i> P13</h4>
+                        <p class="text-smaller">File CSV & Pandas</p>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 3: MINI PROJECT INFO === -->
+            <!-- === SLIDE 3: P9 FUNGSI — KONSEP KUNCI === -->
             <section>
-                <h3>Pengumuman Final Mini Project</h3>
-                <div class="card card-info">
-                    <ul class="text-small text-left">
-                        <li><strong>Tujuan:</strong> Membuat aplikasi analisis data sederhana menggunakan Python.</li>
-                        <li><strong>Tim:</strong> 4-5 Orang per kelompok.</li>
-                        <li><strong>Deadline:</strong> Pertemuan 16 (Presentasi).</li>
-                        <li><strong>Output:</strong> Kode Program, Slide Presentasi, Laporan Singkat.</li>
+                <h3><i class="bi bi-braces"></i> P9 — Fungsi: Konsep Kunci</h3>
+                <div class="card" style="border-top: 4px solid #4CAF50; max-width: 700px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li>Didefinisikan dengan <code>def nama(param):</code></li>
+                        <li>Dapat menerima satu atau lebih <strong>parameter</strong></li>
+                        <li>Mengembalikan nilai dengan <code>return</code></li>
+                        <li>Dapat dipanggil berulang kali tanpa menulis ulang kode</li>
+                        <li>Membantu memecah masalah besar menjadi bagian kecil (<em>modularisasi</em>)</li>
                     </ul>
                 </div>
+                <!-- <pre style="max-width: 700px; margin: 0 auto;"><code class="python">def sapa(nama):
+    return f"Halo, {nama}!"
+
+print(sapa("Budi"))   # Halo, Budi!
+print(sapa("Siti"))   # Halo, Siti!</code></pre> -->
             </section>
 
-            <!-- === SLIDE 4: TOPIK PROJECT === -->
+            <!-- === SLIDE 4: P9 FUNGSI — SCOPE === -->
             <section>
-                <h3>Pilihan Topik Project</h3>
-                <div class="flex-container" style="flex-wrap: wrap;">
-                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
-                        <h4>1. Data Akademik</h4>
-                        <p class="text-smaller">Analisis nilai mahasiswa, kelulusan, statistik IPK.</p>
+                <h3><i class="bi bi-braces"></i> P9 — Fungsi: Scope Variabel</h3>
+                <div class="card" style="border-top: 4px solid #4CAF50; max-width: 700px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li><strong>Lokal:</strong> variabel yang dibuat di dalam fungsi, hanya ada di sana</li>
+                        <li><strong>Global:</strong> variabel di luar fungsi, bisa dibaca dari dalam fungsi</li>
+                        <li>Untuk <em>mengubah</em> variabel global dari dalam fungsi, gunakan kata kunci <code>global</code></li>
+                        <li>Hindari penggunaan <code>global</code> berlebihan — lebih baik gunakan <code>return</code></li>
+                    </ul>
+                </div>
+                <!-- <pre style="max-width: 700px; margin: 0 auto;"><code class="python">x = 10                  # Global
+
+def tambah(y):
+    hasil = x + y       # Bisa baca global
+    return hasil        # Kembalikan via return
+
+print(tambah(5))        # 15</code></pre> -->
+            </section>
+
+            <!-- === SLIDE 5: P9 FUNGSI — KODE === -->
+            <section>
+                <h3><i class="bi bi-code-slash"></i> P9 — Fungsi: Contoh Kode</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">
+def hitung_luas(panjang, lebar):
+    luas = panjang * lebar
+    return luas
+
+hasil = hitung_luas(5, 3)
+print(f"L: {hasil}")  # L: 15
+
+def konversi_suhu(celsius):
+    hasil = (celsius * 9/5) + 32
+    return hasil
+
+print(konversi_suhu(100))  # 212.0
+                        </code></pre>
                     </div>
-                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
-                        <h4>2. Data Penjualan</h4>
-                        <p class="text-smaller">Analisis transaksi toko, produk terlaris, omset bulanan.</p>
-                    </div>
-                    <div class="card" style="flex: 1; min-width: 250px; margin: 5px;">
-                        <h4>3. Data Kesehatan</h4>
-                        <p class="text-smaller">Analisis BMI, detak jantung, riwayat pasien (Dummy Data).</p>
+                    <div class="flex-col">
+                        <pre><code class="python">
+x = 10  # Variabel Global
+
+def tambah(y):
+    hasil = x + y
+    return hasil
+
+print(tambah(5))   # 15
+
+def reset():
+    global x
+    x = 0
+
+reset()
+print(x)  # 0
+                        </code></pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 5: SPESIFIKASI TEKNIS === -->
+            <!-- === SLIDE 6: P10 STRING — METHOD === -->
             <section>
-                <h3>Wajib Ada (Requirements)</h3>
-                <div class="text-left text-small">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="card" style="border-left: 5px solid #4CAF50;">
-                            <strong>Input Process</strong>
-                            <ul>
-                                <li>Membaca File CSV</li>
-                                <li>Validasi Input / Data Cleaning</li>
-                            </ul>
-                        </div>
-                        <div class="card" style="border-left: 5px solid #2196F3;">
-                            <strong>Analitis</strong>
-                            <ul>
-                                <li>Minimal 3 Fungsi Analisis (Statistik, Filtering, dll)</li>
-                                <li>Penggunaan Library (Pandas/Math)</li>
-                            </ul>
-                        </div>
-                        <div class="card" style="border-left: 5px solid #FFC107;">
-                            <strong>Output</strong>
-                            <ul>
-                                <li>Minimal 1 Grafik (Matplotlib/Seaborn)</li>
-                                <li>Export hasil ke CSV baru</li>
-                            </ul>
-                        </div>
-                        <div class="card" style="border-left: 5px solid #9C27B0;">
-                            <strong>Code Quality</strong>
-                            <ul>
-                                <li>Variabel deskriptif</li>
-                                <li>Ada komentar penjelas</li>
-                                <li>Modular (menggunakan Fungsi)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- === SLIDE 6: RUBRIK PENILAIAN === -->
-            <section>
-                <h3>Rubrik Penilaian</h3>
-                <table class="text-small">
-                    <thead>
-                        <tr>
-                            <th>Komponen</th>
-                            <th>Bobot</th>
-                        </tr>
-                    </thead>
+                <h3><i class="bi bi-fonts"></i> P10 — String: Method Penting</h3>
+                <table class="text-small" style="max-width: 1000px; margin: 20px auto;">
+                    <thead><tr><th>Method</th><th>Fungsi</th><th>Contoh</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Kode Program (Fungsionalitas)</td>
-                            <td>30%</td>
-                        </tr>
-                        <tr>
-                            <td>Visualisasi Data & Kreativitas</td>
-                            <td>20%</td>
-                        </tr>
-                        <tr>
-                            <td>Penerapan Materi (Loop, If, List, dll)</td>
-                            <td>15%</td>
-                        </tr>
-                        <tr>
-                            <td>Kerjasama Tim & Dokumentasi</td>
-                            <td>15%</td>
-                        </tr>
-                        <tr>
-                            <td>Presentasi Akhir</td>
-                            <td>20%</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TOTAL</strong></td>
-                            <td><strong>100%</strong></td>
-                        </tr>
+                        <tr><td><code>.upper()</code></td><td>Ubah ke huruf kapital</td><td><code>"halo".upper()</code> → <code>"HALO"</code></td></tr>
+                        <tr><td><code>.lower()</code></td><td>Ubah ke huruf kecil</td><td><code>"HALO".lower()</code> → <code>"halo"</code></td></tr>
+                        <tr><td><code>.strip()</code></td><td>Hapus spasi di tepi</td><td><code>" halo ".strip()</code> → <code>"halo"</code></td></tr>
+                        <tr><td><code>.replace(a,b)</code></td><td>Ganti substring</td><td><code>"ab".replace("a","x")</code> → <code>"xb"</code></td></tr>
+                        <tr><td><code>.find(s)</code></td><td>Cari posisi substring</td><td><code>"abc".find("b")</code> → <code>1</code></td></tr>
+                        <!-- <tr><td><code>.title()</code></td><td>Kapital setiap kata</td><td><code>"halo dunia".title()</code> → <code>"Halo Dunia"</code></td></tr> -->
                     </tbody>
                 </table>
             </section>
 
-            <!-- === SLIDE 7: WORKSHOP ALGORITMA === -->
+            <!-- === SLIDE 7: P10 STRING — SLICING & FORMATTING === -->
             <section>
-                <h3>Workshop: Merancang Algoritma</h3>
+                <h3><i class="bi bi-fonts"></i> P10 — String: Slicing &amp; F-String</h3>
+                <div class="card" style="border-top: 4px solid #2196F3; max-width: 700px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li>Index dimulai dari <strong>0</strong> — karakter pertama ada di index 0</li>
+                        <li>Slicing: <code>teks[start:end]</code> — karakter ke-<code>end</code> <em>tidak ikut</em></li>
+                        <li>Index negatif: <code>teks[-1]</code> = karakter terakhir</li>
+                        <li>F-string: <code>f"Nilai: {x:.2f}"</code> — format angka desimal</li>
+                        <li><code>.startswith(s)</code> / <code>.endswith(s)</code> → kembalikan <code>True/False</code></li>
+                    </ul>
+                </div>
+                <!-- <pre style="max-width: 700px; margin: 0 auto;"><code class="python">kode = "PKOM-2026-A"
+print(kode[0:4])    # "PKOM"
+print(kode[5:9])    # "2026"
+print(kode[-1])     # "A"
+
+nama = "Budi"
+print(f"Nama : {nama}")
+print(f"Nilai: {87.654:.2f}")  # 87.65</code></pre> -->
+            </section>
+
+            <!-- === SLIDE 8: P10 STRING — KODE === -->
+            <section>
+                <h3><i class="bi bi-code-slash"></i> P10 — String: Contoh Kode</h3>
                 <div class="flex-container">
-                    <div class="flex-col text-left text-small">
-                        <p>Sebelum coding, WAJIB membuat rancangan dulu!</p>
-                        <p><strong>Contoh Flow (Pseudocode):</strong></p>
-                        <pre><code class="text">
-MULAI
-  Baca file "data.csv"
-  JIKA file tidak ada -> Tampilkan Error
-  LAIN ->
-     Bersihkan data kosong
-     Hitung rata-rata
-     Buat Grafik Bar
-     Simpan "hasil.csv"
-SELESAI
-                            </code></pre>
+                    <div class="flex-col">
+                        <pre><code class="python">
+teks = "  Halo, Python!  "
+print(teks.strip())
+# "Halo, Python!"
+print(teks.upper())
+# "  HALO, PYTHON!  "
+print(teks.replace("Python", "Dunia"))
+# "  Halo, Dunia!  "
+
+email = "mahasiswa@itera.ac.id"
+print(email.find("@"))   # 10
+                        </code></pre>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python">
+kode = "PKOM-A"
+matkul = kode[:4]    # "PKOM"
+kelas  = kode[-1]    # "A"
+
+nama  = "Budi"
+nilai = 87.654
+nim = "12345678"
+print(f"Nama : {nama}") 
+# Nama: Budi
+print(f"Nilai: {nilai:.2f}")  
+# Nilai: 87.65
+print(nim.startswith("123"))  
+# True
+                        </code></pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 8: PEMBAGIAN KELOMPOK === -->
+            <!-- === SLIDE 9: P11 LIBRARY — INTI MATERI === -->
             <section>
-                <h3>Pembentukan Kelompok</h3>
-                <div class="card">
-                    <h2>Sesi Diskusi (15 Menit)</h2>
-                    <hr>
-                    <ol class="text-small text-left" style="display: inline-block;">
-                        <li>Bentuk kelompok 4-5 orang.</li>
-                        <li>Tentukan Ketua Kelompok.</li>
-                        <li>Pilih Topik Project.</li>
-                        <li>Submit Nama Tim & Topik ke Dosen.</li>
-                    </ol>
+                <h3><i class="bi bi-box-seam"></i> P11 — Ringkasan Library</h3>
+                <div class="card" style="border-top: 4px solid #FF9800; max-width: 720px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li><strong>Konsep:</strong> library = kumpulan fungsi siap pakai (<em>don't reinvent the wheel</em>)</li>
+                        <li><strong>Import:</strong> <code>import x</code> (pemanggilan sesuai nama library), <code>import x as y</code> (alias), <code>from x import z</code> (import spesifik)</li>
+                        <li><strong>Standard library:</strong> <code>math</code>, <code>random</code></li>
+                        <li><strong>External library:</strong> <code>pandas</code> untuk data tabular</li>
+                    </ul>
+                </div>
+                <!-- <pre style="max-width: 720px; margin: 0 auto;"><code class="python">import math
+import random as rnd
+from math import sqrt
+
+print(sqrt(25))
+print(rnd.randint(1, 6))</code></pre> -->
+            </section>
+
+            <!-- === SLIDE 10: P11 LIBRARY — MATH/RANDOM/PANDAS === -->
+            <section>
+                <h3><i class="bi bi-box-seam"></i> P11 — Cakupan Utama</h3>
+                <div class="flex-container">
+                    <div class="flex-col card" style="border-top: 4px solid #FF9800;">
+                        <h4><code>math</code> &amp; <code>random</code></h4>
+                        <ul class="text-smaller text-left">
+                            <li><code>sqrt</code>, <code>pow</code>, <code>pi</code>, <code>ceil/floor</code></li>
+                            <li>Trigonometri: <code>sin</code>, <code>cos</code>, <code>radians</code></li>
+                            <li>Acak: <code>randint</code>, <code>choice</code></li>
+                            <li><code>seed()</code> untuk hasil acak konsisten</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card" style="border-top: 4px solid #FF9800;">
+                        <h4><code>pandas</code> (Intro)</h4>
+                        <ul class="text-smaller text-left">
+                            <li><code>pd.DataFrame(data)</code> membuat tabel</li>
+                            <li>Struktur: baris, kolom, index</li>
+                            <li>Cek awal: <code>head()</code>, <code>shape</code></li>
+                            <li>Akses data: <code>df['Nama']</code></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 9: RINGKASAN === -->
+            <!-- === SLIDE 11: P11 LIBRARY — KODE === -->
             <section>
-                <h3>Timeline Project</h3>
-                <ul class="text-small">
-                    <li><strong>Pertemuan 14 (Hari Ini):</strong> Briefing & Design.</li>
-                    <li><strong>Pertemuan 15 (Minggu Depan):</strong> Quiz 2 + Progress Check (Asistensi).</li>
-                    <li><strong>Pertemuan 16 (Final):</strong> Presentasi & Demo.</li>
-                </ul>
+                <h3><i class="bi bi-code-slash"></i> P11 — Contoh Singkat</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">import math
+import random
+
+print(math.sqrt(25)) 
+# akar kuadrat positif dari 25
+print(math.sin(math.radians(90))) 
+# nilai sin 90 derajat
+print(random.randint(1, 6)) 
+# angka acak antara 1 dan 6
+
+buah = ["Apel", "Jeruk", "Mangga"]
+print(random.choice(buah))
+# pilihan acak dari list buah</code></pre>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python">import pandas as pd
+
+data = {
+    'Nama': ['Abi', 'Ari', 'Ani'],
+    'Usia': [20, 19, 21]
+}
+df = pd.DataFrame(data)
+
+print(df.head())
+# manampilkan 5 baris pertama
+print(df['Nama'])
+# menampilkan data kolom 'Nama'</code></pre>
+                    </div>
+                </div>
             </section>
 
-            <!-- === SLIDE 10: TUGAS === -->
+            <!-- === SLIDE 12: P12 MATPLOTLIB — JENIS PLOT === -->
             <section>
-                <h3>Tugas Pertemuan 14 <i class="bi bi-list-check"></i></h3>
+                <h3><i class="bi bi-bar-chart-line"></i> P12 — Jenis Plot Utama</h3>
+                <table class="text-small" style="max-width: 700px; margin: 20px auto;">
+                    <thead><tr><th>Plot</th><th>Kegunaan</th><th>Fungsi</th></tr></thead>
+                    <tbody>
+                        <tr><td>Line</td><td>Tren waktu</td><td><code>plt.plot()</code></td></tr>
+                        <tr><td>Bar</td><td>Bandingkan kategori</td><td><code>plt.bar()</code></td></tr>
+                        <tr><td>Scatter</td><td>Hubungan 2 variabel</td><td><code>plt.scatter()</code></td></tr>
+                        <tr><td>Pie</td><td>Proporsi persentase</td><td><code>plt.pie()</code></td></tr>
+                    </tbody>
+                </table>
+                <p class="text-smaller" style="color: #888; margin-top: 10px;">
+                    Materi tambahan: Seaborn <code>histplot(..., kde=True)</code> untuk distribusi data.
+                </p>
+            </section>
+
+            <!-- === SLIDE 13: P12 MATPLOTLIB — ALUR & AKSESORIS === -->
+            <section>
+                <h3><i class="bi bi-bar-chart-line"></i> P12 — Alur Matplotlib</h3>
+                <div class="card" style="border-top: 4px solid #9C27B0; max-width: 720px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li>1) Import <code>matplotlib.pyplot as plt</code></li>
+                        <li>2) Siapkan data</li>
+                        <li>3) Pilih plot (<code>plot/bar/scatter/pie</code>)</li>
+                        <li>4) Tambahkan <code>title</code>, <code>xlabel</code>, <code>ylabel</code>, <code>legend/grid</code></li>
+                        <li>5) Tampilkan <code>plt.show()</code> atau simpan <code>plt.savefig()</code></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 14: P12 MATPLOTLIB — KODE === -->
+            <section>
+                <h3><i class="bi bi-code-slash"></i> P12 — Contoh Ringkas</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">import matplotlib.pyplot as plt
+
+# Persiapan data
+bulan = [1, 2, 3, 4, 5, 6]
+penjualan = [10, 20, 25, 30, 50, 45]
+
+plt.plot(bulan, penjualan, marker='o')
+# Beri judul dan label sumbu
+plt.title("Grafik Penjualan")
+plt.xlabel("Bulan")
+plt.ylabel("Penjualan")
+# Tambahkan grid
+plt.grid(True)
+# Tampilkan plot
+plt.show()</code></pre>
+                    </div>
+                    <!-- <div class="flex-col">
+                        <pre><code class="python">import seaborn as sns
+import matplotlib.pyplot as plt
+
+nilai = [75, 80, 85, 78, 92, 88]
+sns.histplot(nilai, kde=True, color='skyblue')
+
+plt.title("Distribusi Nilai")
+plt.tight_layout()
+plt.savefig("distribusi_nilai.png")
+plt.show()</code></pre>
+                    </div>
+                </div> -->
+            </section>
+
+            <!-- === SLIDE 15: P13 CSV — ALUR INTI === -->
+            <section>
+                <h3><i class="bi bi-filetype-csv"></i> P13 — Alur Kerja CSV</h3>
+                <div class="card" style="border-top: 4px solid #F44336; max-width: 720px; margin: 20px auto;">
+                    <ul class="text-small text-left" style="margin: 0;">
+                        <li>Baca file: <code>pd.read_csv()</code></li>
+                        <li>Inspeksi awal: <code>head()</code>, <code>info()</code>, <code>describe()</code></li>
+                        <li>Cleaning: <code>isnull()</code>, <code>dropna()</code>, <code>fillna()</code>, <code>drop_duplicates()</code></li>
+                        <li>Manipulasi: filtering &amp; sorting</li>
+                        <li>Simpan kembali hasil: <code>to_csv()</code></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 16: P13 CSV — FILTER & SORT === -->
+            <section>
+                <h3><i class="bi bi-filetype-csv"></i> P13 — Filtering &amp; Sorting</h3>
+                <div class="flex-container">
+                    <div class="flex-col card" style="border-top: 4px solid #F44336;">
+                        <h4>Filtering</h4>
+                        <ul class="text-smaller text-left">
+                            <li><code>df[df['Umur'] &gt; 20]</code></li>
+                            <li><code>df[df['Kota'] == 'Jakarta']</code></li>
+                            <li><code>(kondisi1) &amp; (kondisi2)</code> untuk AND</li>
+                            <li><code>(kondisi1) | (kondisi2)</code> untuk OR</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card" style="border-top: 4px solid #F44336;">
+                        <h4>Sorting &amp; Output</h4>
+                        <ul class="text-smaller text-left">
+                            <li><code>sort_values('Umur')</code> (ascending)</li>
+                            <li><code>sort_values('Umur', ascending=False)</code></li>
+                            <li><code>sort_values(['Kota', 'Umur'])</code></li>
+                            <li><code>to_csv('hasil.csv', index=False)</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 17: P13 CSV — KODE === -->
+            <section>
+                <h3><i class="bi bi-code-slash"></i> P13 — Contoh Ringkas</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <pre><code class="python">import pandas as pd
+
+# Baca data dari CSV
+df = pd.read_csv('mahasiswa.csv')
+print(df.head())
+# Cek data yang kosong
+print(df.isnull().sum())
+
+# Hapus baris dengan nilai kosong
+df = df.dropna()
+# Hapus duplikat
+df = df.drop_duplicates()</code></pre>
+                    </div>
+                    <div class="flex-col">
+                        <pre><code class="python"># filter umur diatas 20
+senior = df[df['Umur'] &gt; 20]
+# Urutkan dari yang tertua
+df_desc = df.sort_values('Umur', ascending=False)
+# Tampilkan 5 data pertama setelah diurutkan
+print(df_desc.head())</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: INTEGRASI SEMUA TOPIK === -->
+            <section>
+                <h3>Contoh Program Lengkap</h3>
+                <pre><code class="python" style="font-size: 0.55em;">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Baca CSV (P13)
+df = pd.read_csv('nilai_mhs.csv')
+df = df.dropna()                           # Data Cleaning
+
+# 2. Hitung rata-rata nilai (P9)
+def hitung_rata_rata(kolom):
+    return kolom.mean()
+
+# 3. Jalankan fungsi
+rata_rata = hitung_rata_rata(df['Nilai'])
+
+# 4. Format output dengan f-string (P10)
+print(f"Rata-rata : {rata_rata:.2f}")
+
+# 5. Visualisasi (P12)
+plt.bar(df['Nama'], df['Nilai'], color='steelblue')
+plt.title("Nilai Mahasiswa")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("grafik_nilai.png")
+plt.show()
+                </code></pre>
+            </section>
+
+            <!-- === SLIDE 9: LATIHAN REVIEW === -->
+            <!-- <section>
+                <h3><i class="bi bi-pencil-square"></i> Latihan Review</h3>
                 <div class="card card-info text-left">
-                    <p class="text-small"><strong>Output Kelompok (Submit di LMS):</strong></p>
+                    <p class="text-small"><strong>Soal (kerjakan secara mandiri):</strong></p>
                     <ol class="text-small">
-                        <li>Nama Kelompok & Anggota.</li>
-                        <li>Topik yang dipilih.</li>
-                        <li>Rancangan Awal (Flowchart/Pseudocode) 1 halaman PDF.</li>
-                        <li>Deskripsi singkat dataset yang akan dipakai.</li>
+                        <li>Buat fungsi <code>bersihkan_nama(nama)</code> yang mengembalikan nama tanpa spasi ekstra dan diformat <em>title case</em>.</li>
+                        <li>Gunakan library <code>math</code> untuk menghitung panjang sisi miring segitiga siku-siku (<em>Pythagoras</em>) dengan parameter <code>a</code> dan <code>b</code>.</li>
+                        <li>Baca file <code>nilai_mhs.csv</code>, filter mahasiswa dengan nilai ≥ 75, lalu tampilkan bar chart hasil filternya.</li>
                     </ol>
+                </div>
+                <div class="card" style="margin-top: 8px; padding: 8px 12px; border-left: 5px solid #4CAF50;">
+                    <p class="text-smaller" style="margin: 0; line-height: 1.3;">
+                        <i class="bi bi-lightbulb"></i> <strong>Hint:</strong>
+                        Soal 1 pakai <code>.strip()</code> + <code>.title()</code>,
+                        soal 2 pakai <code>math.sqrt()</code> + <code>math.pow()</code>.
+                    </p>
+                </div>
+            </section> -->
+
+            <!-- === SLIDE 10: PETA KONSEP === -->
+            <section>
+                <h3>Peta Konsep: Pasca UTS</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 0.72em;">
+                    <div class="card" style="border-top: 4px solid #4CAF50; text-align: center; padding: 12px;">
+                        <strong><i class="bi bi-braces"></i> Fungsi</strong><br>
+                        <span class="text-smaller">def, return,<br>parameter, scope</span>
+                    </div>
+                    <div class="card" style="border-top: 4px solid #2196F3; text-align: center; padding: 12px;">
+                        <strong><i class="bi bi-fonts"></i> String</strong><br>
+                        <span class="text-smaller">method, slicing,<br>f-string</span>
+                    </div>
+                    <div class="card" style="border-top: 4px solid #FF9800; text-align: center; padding: 12px;">
+                        <strong><i class="bi bi-box-seam"></i> Library</strong><br>
+                        <span class="text-smaller">math, random,<br>pandas</span>
+                    </div>
+                    <div class="card" style="border-top: 4px solid #9C27B0; text-align: center; padding: 12px;">
+                        <strong><i class="bi bi-bar-chart-line"></i> Visualisasi</strong><br>
+                        <span class="text-smaller">matplotlib, seaborn,<br>bar/line/pie chart</span>
+                    </div>
+                    <div class="card" style="border-top: 4px solid #F44336; text-align: center; padding: 12px;">
+                        <strong><i class="bi bi-filetype-csv"></i> CSV &amp; Pandas</strong><br>
+                        <span class="text-smaller">read_csv, cleaning,<br>filter, sort</span>
+                    </div>
+                    <div class="card" style="border-top: 4px solid #607D8B; text-align: center; padding: 12px; background: #f0f4f8;">
+                        <strong><i class="bi bi-arrow-right-circle"></i> Next</strong><br>
+                        <span class="text-smaller">Quiz Pra-UAS +<br>UAS CBT</span>
+                    </div>
                 </div>
             </section>
 
             <!-- === SLIDE 11: CLOSING === -->
             <section>
-                <h1>Selamat Berkarya! <i class="bi bi-rocket"></i></h1>
-                <p>Manfaatkan waktu praktikum untuk diskusi kelompok.</p>
+                <h3>Persiapan ke Depan <i class="bi bi-calendar-check"></i></h3>
+                <div class="flex-container">
+                    <div class="flex-col card" style="border-top: 4px solid #FF9800;">
+                        <h4>Pertemuan 15 — Quiz Pra-UAS</h4>
+                        <ul class="text-small text-left">
+                            <li>Materi: Fungsi, String, Library, Visualisasi, CSV</li>
+                            <li>Bentuk soal: praktik coding</li>
+                            <li>Pastikan semua latihan sudah dikerjakan</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col card" style="border-top: 4px solid #4CAF50;">
+                        <h4>Pertemuan 16 — UAS CBT</h4>
+                        <ul class="text-small text-left">
+                            <li>Format ujian: Computer Based Test (CBT)</li>
+                            <li>Cakupan: seluruh materi perkuliahan</li>
+                            <li>Siapkan diri dengan latihan soal mandiri</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="card card-info" style="margin-top: 15px;">
+                    <p class="text-small"><i class="bi bi-info-circle"></i> Gunakan sisa waktu untuk review materi dan persiapan UAS.</p>
+                </div> -->
+            </section>
+
+            <!-- === SLIDE 12: Q&A === -->
+            <section>
+                <h1>Q & A</h1>
+                <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
